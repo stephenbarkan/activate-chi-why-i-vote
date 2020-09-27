@@ -1,17 +1,16 @@
 const htmlmin = require("html-minifier");
 
-module.exports = eleventyConfig => {
-
-  eleventyConfig.addFilter("markdownify", markdownString => {
-    const MarkdownIt = require("markdown-it")
+module.exports = (eleventyConfig) => {
+  eleventyConfig.addFilter("markdownify", (markdownString) => {
+    const MarkdownIt = require("markdown-it");
     const md = new MarkdownIt({
       html: true,
       linkify: true,
-      typographer: true
-    })
+      typographer: true,
+    });
 
-    return md.render(markdownString)
-  })
+    return md.render(markdownString);
+  });
 
   // Minify our HTML
   eleventyConfig.addTransform("htmlmin", (content, outputPath) => {
@@ -19,7 +18,7 @@ module.exports = eleventyConfig => {
       let minified = htmlmin.minify(content, {
         useShortDoctype: true,
         removeComments: true,
-        collapseWhitespace: true
+        collapseWhitespace: true,
       });
       return minified;
     }
@@ -27,11 +26,12 @@ module.exports = eleventyConfig => {
   });
 
   // Layout aliases
-  eleventyConfig.addLayoutAlias("default", "layouts/default.njk")
+  eleventyConfig.addLayoutAlias("default", "layouts/default.njk");
+  eleventyConfig.addLayoutAlias("reason", "layouts/reason.njk");
 
   // Include our static assets
-  eleventyConfig.addPassthroughCopy("site/images")
-  eleventyConfig.addPassthroughCopy("site/webfonts")
+  eleventyConfig.addPassthroughCopy("gallery");
+  eleventyConfig.addPassthroughCopy("assets");
 
   return {
     templateFormats: ["md", "njk"],
@@ -43,7 +43,7 @@ module.exports = eleventyConfig => {
       input: "site",
       output: "dist",
       includes: "includes",
-      data: "data"
-    }
-  }
-}
+      data: "data",
+    },
+  };
+};

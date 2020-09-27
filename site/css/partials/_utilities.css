@@ -7,3 +7,13 @@
   grid-column: 1/-1;
   grid-row: 1/-1;
 }
+
+@supports (-webkit-text-stroke: 1px black) {
+  .text-stroke {
+    -webkit-text-stroke: 1.5px theme("colors.gray");
+  }
+}
+
+.bg-blur {
+  backdrop-filter: blur(4px) saturate(1.5);
+}

@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{title}} | {{ site.name }}</title>
+  <title>{{ site.name }}</title>
   <meta name="description"
         content="{% if meta_description %}{{ meta_description }}{% else %}{{ excerpt }}{% endif %}">
   <link rel="canonical" href="{{ site.url }}{{ page.url }}">
@@ -27,9 +27,11 @@
 
   {# lastly include favicon, fonts, etc #}
   <link rel="icon" type="image/png" href="{{ site.images.favicon }}">
+  <link rel="stylesheet" href="https://use.typekit.net/qun7kft.css">
   <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 
 
 </head>
 
-<body class="min-h-screen font-sans antialiased leading-normal text-black text-default">
+<body class="min-h-screen font-text antialiased leading-normal text-gray text-default bg-yellow"
+style="background-image: url(./assets/film-grain.png); background-size: 500px; backround-repeat: repeat;"> 
