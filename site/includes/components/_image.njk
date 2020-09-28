@@ -1,0 +1,50 @@
+
+{# the component #}
+<div class="text-gray grid grid-absolute group border-gray border-2 p-6 bg-white shadow-lg rounded-sm">
+
+{# the image #}
+    <figure class="space-y-3 grid-inset-0 overflow-hidden rounded-sm">
+        <img
+            src="gallery/{{ reason.data.img }}.jpg"
+            alt="I vote because {{ reason.data.why }}"
+        />
+    </figure>
+
+{# the sharing contents #}
+    <div class="bg-gray text-white bg-blur group-hover:opacity-100 opacity-0 invisible group-hover:visible transition-all duration-300 bg-opacity-50 grid-inset-0 flex flex-col items-center justify-center p-6 space-y-12">
+        <h2 class="tracking-wide text-2xl text-center leading-tight uppercase">
+          Share your reason for voting on social:
+        </h2>
+
+        <ul class="flex space-x-6">
+            <li class="flex flex-col">
+                <h3 class="sr-only">Share image on Twitter</h3>
+                <a
+                    title="Post image to Twitter"
+                    class="w-16 h-16 rounded-full bg-white hover:shadow-lg text-gray p-4 hover:scale-105 transform transition-transform duration-150"
+                    href="https://twitter.com/home?status={{ site.permalink }}{{reason.filePathStem}}">
+                    <div class="w-full h-full">{%include "img/twitter.svg" %}</div>
+                </a>
+            </li>
+            <li class="flex flex-col">
+                <h3 class="sr-only">Share image on Facebook</h3>
+                <a
+                    title="Post image to Facebook"
+                    class="w-16 h-16 rounded-full bg-white hover:shadow-lg text-gray p-4 hover:scale-105 transform transition-transform duration-150"
+                    href="https://www.facebook.com/sharer/sharer.php?u={{site.permalink}}{{ reason.filePathStem }}">
+                     <div class="w-full h-full">{%include "img/facebook.svg" %}</div>
+                </a>
+            </li>
+            <li class="flex flex-col">
+                <h3 class="sr-only">Download image</h3>
+                <a
+                    title="Download image"
+                    class="w-16 h-16 rounded-full bg-white hover:shadow-lg text-gray p-4 hover:scale-105 transform transition-transform duration-150"
+                    href="/gallery/{{ reason.data.img }}.jpg"
+                    download>
+                    <div class="w-full h-full">{%include "img/download.svg" %}</div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>

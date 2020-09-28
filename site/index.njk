@@ -3,74 +3,12 @@ layout: default
 title: Home
 ---
 
-{# // Loop through, and create markup, for all images in /gallery #}
-<div class="space-y-12 mt-12">
-<div class="max-w-xs mx-auto transform -rotate-3">
-<a href="https://activate-chi.org">{% include "img/logo.svg" %}</a>
-</div>
+<div class="my-12 space-y-12">
+    {% include "components/_home-header.njk" %}
 
-    <header class=" px-4 text-gray text-center space-y-4 container">
-    <h1 class="hidden sm:block font-extrabold font-display uppercase text-white text-stroke tracking-tight leading-none text-6xl lg:text-7xl">
-    <span class="text-blue">Why are you</span> <span class="text-red block">voting</span> <span>this year?</span>
-    </h1>
-
-        <div class="block sm:hidden">
-    <h1 class="sr-only">Why are you voting this year?</h1>
-{% include "img/heading.svg"%}
-
-    </div>
-
-    <p class="text-2xl lg:text-3xl leading-none">Choose your reason and tap to share it on your social media:</p>
-    
-    {# svg version #}
-
-
-
-
-    
-    </header>
-    <section class="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-4">
+    <main class="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-4">
         {% for reason in collections.reason %}
-    {# the component  #}
-        <div class="text-gray grid grid-absolute group border-8 border-white">
-    {# the image #}
-            <figure class="space-y-3 grid-inset-0 shadow-lg">
-                <img src="gallery/{{reason.data.img}}.jpg" alt="I vote because {{reason.data.why}}">
-            </figure>
-    
-    {# the sharing contents #}
-            <div class="bg-gray text-white bg-blur group-hover:opacity-100 opacity-0 invisible group-hover:visible transition-all duration-300 bg-opacity-50 grid-inset-0 flex flex-col items-center justify-center p-6 space-y-12">
-                <h2 class="tracking-wide text-2xl text-center leading-tight uppercase">Share your reason for voting on social:</h2>
-                
-                <ul class="flex space-x-6">
-                    <li class="flex flex-col">
-                        <h3 class="sr-only">Share image on Twitter</h3>
-                        <a class="w-16 h-16 rounded-full bg-white text-gray p-4 hover:scale-105 transform transition-transform duration-150" href="https://twitter.com/home?status={{site.permalink}}{{reason.filePathStem}}">
-                            <div class="w-full h-full">
-                                {%include "img/twitter.svg" %}
-                            </div>
-                        </a>
-                    </li>
-                    <li class="flex flex-col">
-                        <h3 class="sr-only">Share image on Facebook</h3>
-                        <a class="w-16 h-16 rounded-full bg-white text-gray p-4 hover:scale-105 transform transition-transform duration-150" href="https://www.facebook.com/sharer/sharer.php?u={{site.permalink}}{{reason.filePathStem}}">
-                            <div class="w-full h-full">
-                                {%include "img/facebook.svg" %}
-                            </div>
-                        </a>
-                    </li>
-                    <li class="flex flex-col">
-                        <h3 class="sr-only">Download image</h3>
-                        <a class="w-16 h-16 rounded-full bg-white text-gray p-4 hover:scale-105 transform transition-transform duration-150" href="/gallery/{{reason.data.img}}.jpg" download>
-                            <div class="w-full h-full">
-                                {%include "img/download.svg" %}
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        
+            {% include "components/_image.njk" %}
         {% endfor %}
-    </section>
+    </main>
 </div>

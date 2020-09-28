@@ -27,12 +27,14 @@ module.exports = {
       },
       rotate: {
         "-3": "-3deg",
+        3: "3deg",
       },
     },
   },
   variants: {
     opacity: ["hover", "group-hover"],
     visibility: ["hover", "group-hover"],
+    rotate: ["hover", "group-hover"],
   },
   plugins: [],
 };
