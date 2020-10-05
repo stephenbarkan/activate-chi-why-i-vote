@@ -1,11 +1,11 @@
 
 {# the component #}
-<div class="text-gray grid grid-absolute group border-gray border-2 p-6 bg-white shadow-lg rounded-sm">
+<div class="text-gray grid grid-absolute group border-gray border-2 p-4 bg-white shadow-lg rounded-sm">
 
 {# the image #}
     <figure class="space-y-3 grid-inset-0 overflow-hidden rounded-sm">
         <img
-            src="gallery/{{ reason.data.img }}.jpg"
+            src="../gallery/{{ item.Filename }}.jpg"
             alt="I vote because {{ reason.data.why }}"
         />
     </figure>

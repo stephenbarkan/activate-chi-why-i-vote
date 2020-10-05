@@ -1,4 +1,10 @@
 @font-face {
   font-family: "Arial Narrow";
+  font-weight: 700;
   src: url("/assets/arial-narrow-bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Arial Narrow";
+  font-weight: 400;
+  src: url("/assets/arial-narrow.ttf") format("truetype");
 }

@@ -3,12 +3,25 @@ layout: default
 title: Home
 ---
 
-<div class="my-12 space-y-12">
-    {% include "components/_home-header.njk" %}
+{% import "components/_collection-link.njk" as collectionLink %}
 
-    <main class="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-4">
-        {% for reason in collections.reason %}
-            {% include "components/_image.njk" %}
-        {% endfor %}
+<div class="container py-12 lg:py-0 grid grid-cols-1 lg:grid-cols-7 col-gap-20 row-gap-12 relative">
+
+    <div class="lg:col-span-4 space-y-20 lg:sticky top-0 lg:py-12 self-start flex flex-col items-center lg:items-start justify-center">
+        {% include "components/_nav-logo.njk" %}
+        {% include "components/_home-header.njk" %}
+    </div>
+
+    <main class="lg:col-span-3 lg:space-y-20 lg:py-12">
+        {# to create the padding #}
+        <div class="invisible lg:block hidden">
+            {% include "components/_nav-logo.njk" %}
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-1 md:grid-cols-2">
+            {% for category in categories %}
+                {{ collectionLink.collectionLink(category) }}
+            {% endfor %}
+        </div>
     </main>
-</div>
+</div> 

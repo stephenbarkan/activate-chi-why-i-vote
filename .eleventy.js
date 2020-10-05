@@ -27,7 +27,7 @@ module.exports = (eleventyConfig) => {
 
   // Layout aliases
   eleventyConfig.addLayoutAlias("default", "layouts/default.njk");
-  eleventyConfig.addLayoutAlias("reason", "layouts/reason.njk");
+  eleventyConfig.addLayoutAlias("individual", "layouts/individual.njk");
 
   // Include our static assets
   eleventyConfig.addPassthroughCopy("gallery");

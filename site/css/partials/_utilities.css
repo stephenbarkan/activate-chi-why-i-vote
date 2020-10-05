@@ -10,7 +10,7 @@
 
 @supports (-webkit-text-stroke: 1px black) {
   .text-stroke {
-    -webkit-text-stroke: 1.5px theme("colors.gray");
+    -webkit-text-stroke: clamp(0.8px, 0.027em, 1.5px) theme("colors.gray");
   }
 }
 

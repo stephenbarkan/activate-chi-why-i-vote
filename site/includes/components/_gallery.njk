@@ -1,0 +1,23 @@
+{% macro gallery(category) %}
+    <div class="grid grid-cols-4 gap-4">
+
+        <div class="flex flex-col col-span-2">
+            {% for item in category %}
+                <button class="relative block py-2 rounded-lg first:pt-0 last:pb-0 group">
+                    <span class="flex p-6 transform bg-white rounded-lg shadow-md border-1-5 border-gray lg:p-10 xl:px-12 lg:border-2">
+                        <span class="max-w-xl text-3xl leading-tight text-left">{{item.Reason}}</span>
+                        </span>
+
+                        <span class="absolute top-0 left-0 w-32 transform -translate-x-50 -translate-y-25">
+                            <span class="hidden animate-slam group-hover:block">{% include "img/pick-me.svg" %}</span>
+                        </span>
+                </button>
+            {% endfor %}
+        </div>
+    </div>
+
+    {# {% for item in category %}
+        {% include "components/_image.njk" %}
+    {% endfor %} #}
+
+{% endmacro %} 
