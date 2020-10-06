@@ -1,5 +1,6 @@
 // write js code here
 const buttons = document.querySelectorAll("[data-button]");
+const badges = document.querySelectorAll("[data-badge]");
 const image = document.querySelector("[data-image]");
 const sitePermalink = document
   .querySelector("body")
@@ -17,6 +18,12 @@ buttons.forEach((button) => {
   const url = `/gallery/${filename}.jpg`;
 
   button.addEventListener("click", function () {
+    badges.forEach((badge) => {
+      badge.style.display = null;
+    });
+    const badge = button.querySelector("[data-badge]");
+    badge.style.display = "block";
+
     function waitForImageToLoad(imageElement) {
       return new Promise((resolve) => {
         imageElement.onload = resolve;

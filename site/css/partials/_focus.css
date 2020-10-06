@@ -1,4 +1,3 @@
-*:focus,
 button:focus {
-  @apply outline-none shadow-outline;
+  @apply shadow-outline outline-none;
 }

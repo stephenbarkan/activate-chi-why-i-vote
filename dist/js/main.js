@@ -1,5 +1,6 @@
 // write js code here
 var buttons = document.querySelectorAll("[data-button]");
+var badges = document.querySelectorAll("[data-badge]");
 var image = document.querySelector("[data-image]");
 var sitePermalink = document.querySelector("body").getAttribute("data-permalink");
 var facebookButton = document.querySelector("[data-facebook-link]");
@@ -11,6 +12,12 @@ buttons.forEach(function (button) {
   var filename = button.getAttribute("data-filename");
   var url = "/gallery/".concat(filename, ".jpg");
   button.addEventListener("click", function () {
+    badges.forEach(function (badge) {
+      badge.style.display = null;
+    });
+    var badge = button.querySelector("[data-badge]");
+    badge.style.display = "block";
+
     function waitForImageToLoad(imageElement) {
       return new Promise(function (resolve) {
         imageElement.onload = resolve;

@@ -32,6 +32,8 @@ module.exports = {
       rotate: {
         "-3": "-3deg",
         3: "3deg",
+        "-15": "-15deg",
+        15: "15deg",
       },
       spacing: {
         xs: "20rem",

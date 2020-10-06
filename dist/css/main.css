@@ -595,10 +595,9 @@ video {
   src: url("/assets/arial-narrow.ttf") format("truetype");
 }
 
-*:focus,
 button:focus {
-  outline: 0;
   box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.5);
+  outline: 0;
 }
 
 /*                                                  */
@@ -9788,6 +9787,10 @@ button:focus {
   --transform-rotate: 3deg;
 }
 
+.rotate-15 {
+  --transform-rotate: 15deg;
+}
+
 .rotate-45 {
   --transform-rotate: 45deg;
 }
@@ -9816,12 +9819,20 @@ button:focus {
   --transform-rotate: -3deg;
 }
 
+.-rotate-15 {
+  --transform-rotate: -15deg;
+}
+
 .hover\:rotate-0:hover {
   --transform-rotate: 0;
 }
 
 .hover\:rotate-3:hover {
   --transform-rotate: 3deg;
+}
+
+.hover\:rotate-15:hover {
+  --transform-rotate: 15deg;
 }
 
 .hover\:rotate-45:hover {
@@ -9852,12 +9863,20 @@ button:focus {
   --transform-rotate: -3deg;
 }
 
+.hover\:-rotate-15:hover {
+  --transform-rotate: -15deg;
+}
+
 .group:hover .group-hover\:rotate-0 {
   --transform-rotate: 0;
 }
 
 .group:hover .group-hover\:rotate-3 {
   --transform-rotate: 3deg;
+}
+
+.group:hover .group-hover\:rotate-15 {
+  --transform-rotate: 15deg;
 }
 
 .group:hover .group-hover\:rotate-45 {
@@ -9886,6 +9905,10 @@ button:focus {
 
 .group:hover .group-hover\:-rotate-3 {
   --transform-rotate: -3deg;
+}
+
+.group:hover .group-hover\:-rotate-15 {
+  --transform-rotate: -15deg;
 }
 
 .translate-x-0 {
