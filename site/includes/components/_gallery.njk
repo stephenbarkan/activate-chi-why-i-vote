@@ -3,7 +3,8 @@
 <div
     x-data="{isOpen: false}"
     class="relative grid gap-24 lg:grid-cols-2">
-    <div class="grid gap-3 lg:pt-12 md:gap-3 lg:gap-0">
+    <div class="grid gap-3 lg:pt-12 md:gap-3 lg:gap-0"
+        :class="{'pointer-events-none': isOpen}">
         {% for item in category %}
             <button
                 @click="isOpen=true"
@@ -28,7 +29,7 @@
         x-transition:leave="transition ease-out duration-150"
         x-transition:leave-start="opacity-100"
         x-transition:leave-end="opacity-0"
-        class="fixed top-0 left-0 right-0 flex flex-col items-center justify-center h-screen space-y-12 bg-opacity-75 pointer-events-none bg-blur lg:bg-opacity-0 lg:self-start lg:h-auto bg-gray lg:sticky">
+        class="fixed top-0 left-0 right-0 flex flex-col items-center h-screen py-8 space-y-8 bg-opacity-75 lg:py-0 bg-blur lg:bg-opacity-0 lg:self-start lg:h-auto bg-gray lg:sticky">
             
         <div class="container flex flex-col items-center space-y-6 lg:px-0 lg:pt-12">
             <div class="max-w-md p-4 overflow-hidden bg-white rounded-sm shadow-lg border-1-5 lg:border-2 text-gray group border-grayspace-y-3 grid-inset-0">
@@ -41,10 +42,10 @@
                     />
                 </figure>
             </div>
-            <h2 class="text-2xl font-extrabold leading-tight tracking-tight text-center text-white uppercase font-display lg:text-gray">
+            <h2 class="text-xl font-extrabold leading-tight tracking-tight text-center text-white uppercase font-display lg:text-gray">
                 Share your reason for voting on social:
             </h2>
-            <ul class="grid w-full grid-cols-3 gap-3 pointer-events-auto lg:gap-4">
+            <ul class="grid w-full grid-cols-3 gap-3 lg:gap-4">
                 <li class="flex flex-col">
                     <a data-twitter-link
                         title="Post image to Twitter"
@@ -81,7 +82,7 @@
         </div>
         <button
             @click="isOpen=false"
-            class="flex items-center justify-center px-4 py-4 mt-4 mr-4 space-x-1 transform bg-white rounded-full shadow-md pointer-events-auto hover:rotate-3 border-1-5 border-gray">
+            class="flex items-center justify-center px-4 py-4 mt-4 mr-4 space-x-2 transform bg-white rounded-full shadow-md lg:hidden hover:rotate-3 border-1-5 border-gray">
             <span class="block w-6 h-6 text-gray">{% include "img/close.svg" %}</span>
             <span class="text-xl font-bold leading-none">Return to choices</span>
         </button>
