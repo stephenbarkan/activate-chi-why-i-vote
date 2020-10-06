@@ -1,11 +1,5 @@
 //  General
-const {
-  gulp,
-  src,
-  dest,
-  watch,
-  series,
-} = require("gulp");
+const { gulp, src, dest, watch, series } = require("gulp");
 
 const rename = require("gulp-rename");
 const notify = require("gulp-notify");
@@ -13,11 +7,11 @@ const plumber = require("gulp-plumber");
 
 // Styles
 const postcss = require("gulp-postcss");
-const postcssImport = require('postcss-import');
-const postcssPresetEnv = require('postcss-preset-env')({
-  stage: 1
-})
-const tailwindCss = require('tailwindcss')
+const postcssImport = require("postcss-import");
+const postcssPresetEnv = require("postcss-preset-env")({
+  stage: 1,
+});
+const tailwindCss = require("tailwindcss");
 const cleanCSS = require("gulp-clean-css");
 
 // Scripts
@@ -31,13 +25,13 @@ const uglify = require("gulp-uglify");
 const paths = {
   css: {
     source: ["./site/css/main.css"],
-    dest: "./dist/css/"
+    dest: "./dist/css/",
   },
   js: {
-    source: ["./site/js/*.js"],
-    dest: "./dist/js/"
-  }
-}
+    source: ["./site/**/*.js"],
+    dest: "./dist/js/",
+  },
+};
 
 /**
  * Errors function
@@ -45,55 +39,55 @@ const paths = {
 var onError = function (err) {
   notify.onError({
     title: "Gulp Error - Compile Failed",
-    message: "Error: <%= error.message %>"
+    message: "Error: <%= error.message %>",
   })(err);
 
   this.emit("end");
 };
 
-
 /**
  * Compile CSS & Tailwind
  */
-const compileCSS = done => {
-
-  return src(paths.css.source)
-    .pipe(plumber({
-      errorHandler: onError
-    }))
-    .pipe(postcss([
-      postcssImport,
-      postcssPresetEnv,
-      tailwindCss,
-    ]))
-    // ...
-    .pipe(dest(paths.css.dest))
-    .pipe(
-      notify({
-        message: "Tailwind Compile Success"
-      })
-    )
-}
+const compileCSS = (done) => {
+  return (
+    src(paths.css.source)
+      .pipe(
+        plumber({
+          errorHandler: onError,
+        })
+      )
+      .pipe(postcss([postcssImport, postcssPresetEnv, tailwindCss]))
+      // ...
+      .pipe(dest(paths.css.dest))
+      .pipe(
+        notify({
+          message: "Tailwind Compile Success",
+        })
+      )
+  );
+};
 
 /**
  * Concatinate and compile scripts
  */
-const compileJS = done => {
+const compileJS = (done) => {
   return src(paths.js.source)
-    .pipe(plumber({
-      errorHandler: onError
-    }))
+    .pipe(
+      plumber({
+        errorHandler: onError,
+      })
+    )
     .pipe(
       babel({
         presets: ["@babel/env"],
-        sourceType: "script"
+        sourceType: "script",
       })
     )
     .pipe(concat("main.js"))
     .pipe(dest(paths.js.dest))
     .pipe(
       notify({
-        message: "Javascript Compile Success"
+        message: "Javascript Compile Success",
       })
     );
   done();
@@ -103,18 +97,18 @@ const compileJS = done => {
  * Minify scripts
  * This will be ran as part of our preflight task
  */
-const minifyJS = done => {
+const minifyJS = (done) => {
   return src(paths.js.dest + "main.js")
     .pipe(
       rename({
-        suffix: ".min"
+        suffix: ".min",
       })
     )
     .pipe(uglify())
     .pipe(dest(paths.js.dest))
     .pipe(
       notify({
-        message: "Javascript Minify Success"
+        message: "Javascript Minify Success",
       })
     );
   done();
@@ -123,7 +117,7 @@ const minifyJS = done => {
 /**
  * Watch files
  */
-const watchFiles = done => {
+const watchFiles = (done) => {
   watch(["site/*.njk", "site/includes/**/*.njk"], series(compileCSS));
   watch("./tailwind.config.js", series(compileCSS));
   watch("./site/css/**/*.css", series(compileCSS));
@@ -134,18 +128,18 @@ const watchFiles = done => {
 /**
  * Minify CSS [PREFLIGHT]
  */
-const minifyCSSPreflight = done => {
+const minifyCSSPreflight = (done) => {
   return src(paths.css.dest + "main.css")
     .pipe(cleanCSS())
     .pipe(
       rename({
-        suffix: ".min"
+        suffix: ".min",
       })
     )
     .pipe(dest(paths.css.dest))
     .pipe(
       notify({
-        message: "Minify CSS [PREFLIGHT] Success"
+        message: "Minify CSS [PREFLIGHT] Success",
       })
     );
 };
