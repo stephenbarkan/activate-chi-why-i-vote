@@ -28,7 +28,7 @@ const paths = {
     dest: "./dist/css/",
   },
   js: {
-    source: ["./site/**/*.js"],
+    source: ["./site/js/*.js"],
     dest: "./dist/js/",
   },
 };

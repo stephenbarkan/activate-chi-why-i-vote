@@ -1,7 +1,3 @@
-module.exports = {
-  // environment helper
-  'environment': process.env.ELEVENTY_ENV
-};
 // write js code here
 var buttons = document.querySelectorAll("[data-button]");
 var image = document.querySelector("[data-image]");
@@ -13,7 +9,7 @@ var facebookStem = "https://www.facebook.com/sharer/sharer.php?u=";
 var twitterStem = "https://twitter.com/home?status=";
 buttons.forEach(function (button) {
   var filename = button.getAttribute("data-filename");
-  var url = "../gallery/".concat(filename, ".jpg");
+  var url = "/gallery/".concat(filename, ".jpg");
   button.addEventListener("click", function () {
     function waitForImageToLoad(imageElement) {
       return new Promise(function (resolve) {

@@ -14,7 +14,7 @@ const twitterStem = "https://twitter.com/home?status=";
 
 buttons.forEach((button) => {
   const filename = button.getAttribute("data-filename");
-  const url = `../gallery/${filename}.jpg`;
+  const url = `/gallery/${filename}.jpg`;
 
   button.addEventListener("click", function () {
     function waitForImageToLoad(imageElement) {

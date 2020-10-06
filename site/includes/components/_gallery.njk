@@ -4,7 +4,7 @@
     x-data="{isOpen: false}"
     class="relative grid gap-24 lg:grid-cols-2">
     <div class="grid gap-3 lg:pt-12 md:gap-3 lg:gap-0"
-        :class="{'pointer-events-none lg:pointer-events-aut': isOpen}">
+        :class="{'pointer-events-none lg:pointer-events-auto': isOpen}">
         {% for item in category %}
             <button
                 @click="isOpen=true"
@@ -34,9 +34,9 @@
         <div class="container flex flex-col items-center space-y-6 lg:px-0 lg:pt-12">
             <div class="max-w-md p-4 overflow-hidden bg-white rounded-sm shadow-lg border-1-5 lg:border-2 text-gray group border-grayspace-y-3 grid-inset-0">
                 <figure class="bg-no-repeat bg-contain"
-                    style="background-image: url(../gallery/IG-why-vote-blank.jpg);">
+                    style="background-image: url(/gallery/IG-why-vote-blank.jpg);">
                     <img data-image
-                    src="../gallery/IG-why-vote-blank.jpg"
+                    src="/gallery/IG-why-vote-blank.jpg"
                     alt="I vote because {{ reason }}"
                     class="transition-opacity duration-300 ease-in-out transform"
                     />
