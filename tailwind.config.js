@@ -26,6 +26,9 @@ module.exports = {
         "7xl": "5rem",
         "8xl": "6rem",
       },
+      letterSpacing: {
+        narrow: ".015em",
+      },
       rotate: {
         "-3": "-3deg",
         3: "3deg",
@@ -69,6 +72,7 @@ module.exports = {
     opacity: ["hover", "group-hover"],
     visibility: ["hover", "group-hover"],
     rotate: ["hover", "group-hover"],
+    scale: ["hover", "group-hover"],
     translate: ["hover", "group-hover"],
     backgroundColor: ["hover", "even", "odd"],
     padding: ["responsive", "first", "last"],

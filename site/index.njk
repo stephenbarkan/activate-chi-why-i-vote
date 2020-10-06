@@ -5,20 +5,20 @@ title: Home
 
 {% import "components/_collection-link.njk" as collectionLink %}
 
-<div class="container py-12 lg:py-0 grid grid-cols-1 lg:grid-cols-7 col-gap-20 row-gap-12 relative">
+<div class="container relative grid grid-cols-1 row-gap-12 col-gap-20 py-12 lg:py-0 lg:grid-cols-7">
 
-    <div class="lg:col-span-4 space-y-20 lg:sticky top-0 lg:py-12 self-start flex flex-col items-center lg:items-start justify-center">
+    <div class="top-0 flex flex-col items-center self-start justify-center space-y-20 lg:col-span-4 lg:sticky lg:py-12 lg:items-start">
         {% include "components/_nav-logo.njk" %}
         {% include "components/_home-header.njk" %}
     </div>
 
     <main class="lg:col-span-3 lg:space-y-20 lg:py-12">
         {# to create the padding #}
-        <div class="invisible lg:block hidden">
+        <div class="invisible hidden lg:block">
             {% include "components/_nav-logo.njk" %}
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-1 md:grid-cols-2">
+        <div class="grid grid-cols-1 gap-3 lg:grid-cols-1 md:gap-4 lg:gap-0 md:grid-cols-2">
             {% for category in categories %}
                 {{ collectionLink.collectionLink(category) }}
             {% endfor %}

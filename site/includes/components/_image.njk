@@ -1,18 +1,18 @@
-
+{% macro image(filename, reason, url) %}
 {# the component #}
-<div class="text-gray grid grid-absolute group border-gray border-2 p-4 bg-white shadow-lg rounded-sm">
+<div class="grid p-4 bg-white border-2 rounded-sm shadow-lg text-gray grid-absolute group border-gray">
 
 {# the image #}
-    <figure class="space-y-3 grid-inset-0 overflow-hidden rounded-sm">
+    <figure class="space-y-3 overflow-hidden rounded-sm grid-inset-0">
         <img
-            src="../gallery/{{ item.Filename }}.jpg"
-            alt="I vote because {{ reason.data.why }}"
+            src="../gallery/{{ filename }}.jpg"
+            alt="I vote because {{ reason }}"
         />
     </figure>
 
 {# the sharing contents #}
-    <div class="bg-gray text-white bg-blur group-hover:opacity-100 opacity-0 invisible group-hover:visible transition-all duration-300 bg-opacity-50 grid-inset-0 flex flex-col items-center justify-center p-6 space-y-12">
-        <h2 class="tracking-wide text-2xl text-center leading-tight uppercase">
+    <div class="flex flex-col items-center justify-center invisible p-6 space-y-12 text-white transition-all duration-300 bg-opacity-50 opacity-0 bg-gray bg-blur group-hover:opacity-100 group-hover:visible grid-inset-0">
+        <h2 class="text-2xl leading-tight tracking-wide text-center uppercase">
           Share your reason for voting on social:
         </h2>
 
@@ -21,8 +21,8 @@
                 <h3 class="sr-only">Share image on Twitter</h3>
                 <a
                     title="Post image to Twitter"
-                    class="w-16 h-16 rounded-full bg-white hover:shadow-lg text-gray p-4 hover:scale-105 transform transition-transform duration-150"
-                    href="https://twitter.com/home?status={{ site.permalink }}{{reason.filePathStem}}">
+                    class="w-16 h-16 p-4 transition-transform duration-150 transform bg-white rounded-full hover:shadow-lg text-gray hover:scale-105"
+                    href="https://twitter.com/home?status={{ site.permalink }}{{ url }}">
                     <div class="w-full h-full">{%include "img/twitter.svg" %}</div>
                 </a>
             </li>
@@ -30,8 +30,8 @@
                 <h3 class="sr-only">Share image on Facebook</h3>
                 <a
                     title="Post image to Facebook"
-                    class="w-16 h-16 rounded-full bg-white hover:shadow-lg text-gray p-4 hover:scale-105 transform transition-transform duration-150"
-                    href="https://www.facebook.com/sharer/sharer.php?u={{site.permalink}}{{ reason.filePathStem }}">
+                    class="w-16 h-16 p-4 transition-transform duration-150 transform bg-white rounded-full hover:shadow-lg text-gray hover:scale-105"
+                    href="https://www.facebook.com/sharer/sharer.php?u={{site.permalink}}{{ url }}">
                      <div class="w-full h-full">{%include "img/facebook.svg" %}</div>
                 </a>
             </li>
@@ -39,8 +39,8 @@
                 <h3 class="sr-only">Download image</h3>
                 <a
                     title="Download image"
-                    class="w-16 h-16 rounded-full bg-white hover:shadow-lg text-gray p-4 hover:scale-105 transform transition-transform duration-150"
-                    href="/gallery/{{ reason.data.img }}.jpg"
+                    class="w-16 h-16 p-4 transition-transform duration-150 transform bg-white rounded-full hover:shadow-lg text-gray hover:scale-105"
+                    href="/gallery/{{ filename }}.jpg"
                     download>
                     <div class="w-full h-full">{%include "img/download.svg" %}</div>
                 </a>
@@ -48,3 +48,4 @@
         </ul>
     </div>
 </div>
+{% endmacro %}
