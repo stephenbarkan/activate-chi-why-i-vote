@@ -14,12 +14,7 @@
 
   <meta property="og:description" content="A full description of the page."/>
 
-  <meta property="og:image" content="
-      {% if meta_image %}
-        {{ meta_image }}
-      {% else %}
-        ../img/og-image.png
-      {% endif %} 
+  <meta property="og:image" content="{% if meta_image %}{{ meta_image }}{% else %}/gallery/og-image.png{% endif %} 
   "/>
 
 
