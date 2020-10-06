@@ -4,7 +4,7 @@
     x-data="{isOpen: false}"
     class="relative grid gap-24 lg:grid-cols-2">
     <div class="grid gap-3 lg:pt-12 md:gap-3 lg:gap-0"
-        :class="{'pointer-events-none': isOpen}">
+        :class="{'pointer-events-none lg:pointer-events-aut': isOpen}">
         {% for item in category %}
             <button
                 @click="isOpen=true"
@@ -12,7 +12,7 @@
                 class="relative block rounded-lg lg:py-2 first:pt-0 last:pb-0 group"
                 data-filename="{{item.Filename}}">
                 <span class="flex p-6 transform bg-white rounded-lg shadow-md border-1-5 border-gray lg:p-10 xl:px-12 lg:border-2">
-                    <span class="max-w-xl text-xl leading-tight text-left md:text-3xl tracking-narrow">{{item.Reason}}</span>
+                    <span class="max-w-xl text-xl leading-tight md:text-3xl tracking-narrow">{{item.Reason}}</span>
                     </span>
 
                     <span class="absolute top-0 left-0 hidden w-32 transform lg:block -translate-x-50 -translate-y-25">

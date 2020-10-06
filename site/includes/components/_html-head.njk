@@ -9,6 +9,20 @@
         content="{% if meta_description %}{{ meta_description }}{% else %}{{ excerpt }}{% endif %}">
   <link rel="canonical" href="{{ site.url }}{{ page.url }}">
 
+
+  <meta property="og:title" content="Your Title"/>
+
+  <meta property="og:description" content="A full description of the page."/>
+
+  <meta property="og:image" content="
+      {% if meta_image %}
+        {{ meta_image }}
+      {% else %}
+        ../img/og-image.png
+      {% endif %}
+  "/>
+
+
   {% if helpers.environment == "development" %}
   <link rel="stylesheet" href="/css/main.css">
   {% else %}
