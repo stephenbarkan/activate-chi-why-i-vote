@@ -41,6 +41,7 @@ module.exports = {
         md: "28rem",
         lg: "32rem",
         xl: "36rem",
+        full: "100%",
       },
       lineHeight: {
         tight: "1.15",
@@ -75,7 +76,7 @@ module.exports = {
     visibility: ["hover", "group-hover"],
     rotate: ["hover", "group-hover"],
     scale: ["hover", "group-hover"],
-    translate: ["hover", "group-hover"],
+    translate: ["hover", "group-hover", "responsive"],
     backgroundColor: ["hover", "even", "odd"],
     padding: ["responsive", "first", "last"],
     display: ["responsive", "hover", "group-hover"],

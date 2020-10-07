@@ -926,6 +926,18 @@ button:focus {
   margin-left: calc(36rem * calc(1 - var(--space-x-reverse)));
 }
 
+.space-y-full > :not(template) ~ :not(template) {
+  --space-y-reverse: 0;
+  margin-top: calc(100% * calc(1 - var(--space-y-reverse)));
+  margin-bottom: calc(100% * var(--space-y-reverse));
+}
+
+.space-x-full > :not(template) ~ :not(template) {
+  --space-x-reverse: 0;
+  margin-right: calc(100% * var(--space-x-reverse));
+  margin-left: calc(100% * calc(1 - var(--space-x-reverse)));
+}
+
 .-space-y-1 > :not(template) ~ :not(template) {
   --space-y-reverse: 0;
   margin-top: calc(-0.25rem * calc(1 - var(--space-y-reverse)));
@@ -1200,6 +1212,18 @@ button:focus {
   --space-x-reverse: 0;
   margin-right: calc(-36rem * var(--space-x-reverse));
   margin-left: calc(-36rem * calc(1 - var(--space-x-reverse)));
+}
+
+.-space-y-full > :not(template) ~ :not(template) {
+  --space-y-reverse: 0;
+  margin-top: calc(-100% * calc(1 - var(--space-y-reverse)));
+  margin-bottom: calc(-100% * var(--space-y-reverse));
+}
+
+.-space-x-full > :not(template) ~ :not(template) {
+  --space-x-reverse: 0;
+  margin-right: calc(-100% * var(--space-x-reverse));
+  margin-left: calc(-100% * calc(1 - var(--space-x-reverse)));
 }
 
 .space-y-reverse > :not(template) ~ :not(template) {
@@ -3568,6 +3592,10 @@ button:focus {
   margin: 36rem;
 }
 
+.m-full {
+  margin: 100%;
+}
+
 .-m-1 {
   margin: -0.25rem;
 }
@@ -3658,6 +3686,10 @@ button:focus {
 
 .-m-xl {
   margin: -36rem;
+}
+
+.-m-full {
+  margin: -100%;
 }
 
 .my-0 {
@@ -3910,6 +3942,16 @@ button:focus {
   margin-right: 36rem;
 }
 
+.my-full {
+  margin-top: 100%;
+  margin-bottom: 100%;
+}
+
+.mx-full {
+  margin-left: 100%;
+  margin-right: 100%;
+}
+
 .-my-1 {
   margin-top: -0.25rem;
   margin-bottom: -0.25rem;
@@ -4138,6 +4180,16 @@ button:focus {
 .-mx-xl {
   margin-left: -36rem;
   margin-right: -36rem;
+}
+
+.-my-full {
+  margin-top: -100%;
+  margin-bottom: -100%;
+}
+
+.-mx-full {
+  margin-left: -100%;
+  margin-right: -100%;
 }
 
 .mt-0 {
@@ -4540,6 +4592,22 @@ button:focus {
   margin-left: 36rem;
 }
 
+.mt-full {
+  margin-top: 100%;
+}
+
+.mr-full {
+  margin-right: 100%;
+}
+
+.mb-full {
+  margin-bottom: 100%;
+}
+
+.ml-full {
+  margin-left: 100%;
+}
+
 .-mt-1 {
   margin-top: -0.25rem;
 }
@@ -4906,6 +4974,22 @@ button:focus {
 
 .-ml-xl {
   margin-left: -36rem;
+}
+
+.-mt-full {
+  margin-top: -100%;
+}
+
+.-mr-full {
+  margin-right: -100%;
+}
+
+.-mb-full {
+  margin-bottom: -100%;
+}
+
+.-ml-full {
+  margin-left: -100%;
 }
 
 .max-h-full {
@@ -5312,6 +5396,10 @@ button:focus {
   padding: 36rem;
 }
 
+.p-full {
+  padding: 100%;
+}
+
 .py-0 {
   padding-top: 0;
   padding-bottom: 0;
@@ -5550,6 +5638,16 @@ button:focus {
 .px-xl {
   padding-left: 36rem;
   padding-right: 36rem;
+}
+
+.py-full {
+  padding-top: 100%;
+  padding-bottom: 100%;
+}
+
+.px-full {
+  padding-left: 100%;
+  padding-right: 100%;
 }
 
 .pt-0 {
@@ -5936,6 +6034,22 @@ button:focus {
   padding-left: 36rem;
 }
 
+.pt-full {
+  padding-top: 100%;
+}
+
+.pr-full {
+  padding-right: 100%;
+}
+
+.pb-full {
+  padding-bottom: 100%;
+}
+
+.pl-full {
+  padding-left: 100%;
+}
+
 .first\:p-0:first-child {
   padding: 0;
 }
@@ -6030,6 +6144,10 @@ button:focus {
 
 .first\:p-xl:first-child {
   padding: 36rem;
+}
+
+.first\:p-full:first-child {
+  padding: 100%;
 }
 
 .first\:py-0:first-child {
@@ -6270,6 +6388,16 @@ button:focus {
 .first\:px-xl:first-child {
   padding-left: 36rem;
   padding-right: 36rem;
+}
+
+.first\:py-full:first-child {
+  padding-top: 100%;
+  padding-bottom: 100%;
+}
+
+.first\:px-full:first-child {
+  padding-left: 100%;
+  padding-right: 100%;
 }
 
 .first\:pt-0:first-child {
@@ -6656,6 +6784,22 @@ button:focus {
   padding-left: 36rem;
 }
 
+.first\:pt-full:first-child {
+  padding-top: 100%;
+}
+
+.first\:pr-full:first-child {
+  padding-right: 100%;
+}
+
+.first\:pb-full:first-child {
+  padding-bottom: 100%;
+}
+
+.first\:pl-full:first-child {
+  padding-left: 100%;
+}
+
 .last\:p-0:last-child {
   padding: 0;
 }
@@ -6750,6 +6894,10 @@ button:focus {
 
 .last\:p-xl:last-child {
   padding: 36rem;
+}
+
+.last\:p-full:last-child {
+  padding: 100%;
 }
 
 .last\:py-0:last-child {
@@ -6990,6 +7138,16 @@ button:focus {
 .last\:px-xl:last-child {
   padding-left: 36rem;
   padding-right: 36rem;
+}
+
+.last\:py-full:last-child {
+  padding-top: 100%;
+  padding-bottom: 100%;
+}
+
+.last\:px-full:last-child {
+  padding-left: 100%;
+  padding-right: 100%;
 }
 
 .last\:pt-0:last-child {
@@ -7374,6 +7532,22 @@ button:focus {
 
 .last\:pl-xl:last-child {
   padding-left: 36rem;
+}
+
+.last\:pt-full:last-child {
+  padding-top: 100%;
+}
+
+.last\:pr-full:last-child {
+  padding-right: 100%;
+}
+
+.last\:pb-full:last-child {
+  padding-bottom: 100%;
+}
+
+.last\:pl-full:last-child {
+  padding-left: 100%;
 }
 
 .placeholder-gray::placeholder {
@@ -8246,6 +8420,10 @@ button:focus {
   width: 36rem;
 }
 
+.w-full {
+  width: 100%;
+}
+
 .w-1\/2 {
   width: 50%;
 }
@@ -8348,10 +8526,6 @@ button:focus {
 
 .w-11\/12 {
   width: 91.666667%;
-}
-
-.w-full {
-  width: 100%;
 }
 
 .w-screen {
@@ -8506,6 +8680,11 @@ button:focus {
   gap: 36rem;
 }
 
+.gap-full {
+  grid-gap: 100%;
+  gap: 100%;
+}
+
 .col-gap-0 {
   grid-column-gap: 0;
   column-gap: 0;
@@ -8624,6 +8803,11 @@ button:focus {
 .col-gap-xl {
   grid-column-gap: 36rem;
   column-gap: 36rem;
+}
+
+.col-gap-full {
+  grid-column-gap: 100%;
+  column-gap: 100%;
 }
 
 .gap-x-0 {
@@ -8746,6 +8930,11 @@ button:focus {
   column-gap: 36rem;
 }
 
+.gap-x-full {
+  grid-column-gap: 100%;
+  column-gap: 100%;
+}
+
 .row-gap-0 {
   grid-row-gap: 0;
   row-gap: 0;
@@ -8866,6 +9055,11 @@ button:focus {
   row-gap: 36rem;
 }
 
+.row-gap-full {
+  grid-row-gap: 100%;
+  row-gap: 100%;
+}
+
 .gap-y-0 {
   grid-row-gap: 0;
   row-gap: 0;
@@ -8984,6 +9178,11 @@ button:focus {
 .gap-y-xl {
   grid-row-gap: 36rem;
   row-gap: 36rem;
+}
+
+.gap-y-full {
+  grid-row-gap: 100%;
+  row-gap: 100%;
 }
 
 .grid-flow-row {
@@ -10015,6 +10214,10 @@ button:focus {
   --transform-translate-x: 36rem;
 }
 
+.translate-x-full {
+  --transform-translate-x: 100%;
+}
+
 .-translate-x-1 {
   --transform-translate-x: -0.25rem;
 }
@@ -10117,10 +10320,6 @@ button:focus {
 
 .translate-x-1\/2 {
   --transform-translate-x: 50%;
-}
-
-.translate-x-full {
-  --transform-translate-x: 100%;
 }
 
 .-translate-x-50 {
@@ -10235,6 +10434,10 @@ button:focus {
   --transform-translate-y: 36rem;
 }
 
+.translate-y-full {
+  --transform-translate-y: 100%;
+}
+
 .-translate-y-1 {
   --transform-translate-y: -0.25rem;
 }
@@ -10337,10 +10540,6 @@ button:focus {
 
 .translate-y-1\/2 {
   --transform-translate-y: 50%;
-}
-
-.translate-y-full {
-  --transform-translate-y: 100%;
 }
 
 .-translate-y-50 {
@@ -10455,6 +10654,10 @@ button:focus {
   --transform-translate-x: 36rem;
 }
 
+.hover\:translate-x-full:hover {
+  --transform-translate-x: 100%;
+}
+
 .hover\:-translate-x-1:hover {
   --transform-translate-x: -0.25rem;
 }
@@ -10557,10 +10760,6 @@ button:focus {
 
 .hover\:translate-x-1\/2:hover {
   --transform-translate-x: 50%;
-}
-
-.hover\:translate-x-full:hover {
-  --transform-translate-x: 100%;
 }
 
 .hover\:-translate-x-50:hover {
@@ -10675,6 +10874,10 @@ button:focus {
   --transform-translate-y: 36rem;
 }
 
+.hover\:translate-y-full:hover {
+  --transform-translate-y: 100%;
+}
+
 .hover\:-translate-y-1:hover {
   --transform-translate-y: -0.25rem;
 }
@@ -10777,10 +10980,6 @@ button:focus {
 
 .hover\:translate-y-1\/2:hover {
   --transform-translate-y: 50%;
-}
-
-.hover\:translate-y-full:hover {
-  --transform-translate-y: 100%;
 }
 
 .hover\:-translate-y-50:hover {
@@ -10895,6 +11094,10 @@ button:focus {
   --transform-translate-x: 36rem;
 }
 
+.group:hover .group-hover\:translate-x-full {
+  --transform-translate-x: 100%;
+}
+
 .group:hover .group-hover\:-translate-x-1 {
   --transform-translate-x: -0.25rem;
 }
@@ -10997,10 +11200,6 @@ button:focus {
 
 .group:hover .group-hover\:translate-x-1\/2 {
   --transform-translate-x: 50%;
-}
-
-.group:hover .group-hover\:translate-x-full {
-  --transform-translate-x: 100%;
 }
 
 .group:hover .group-hover\:-translate-x-50 {
@@ -11115,6 +11314,10 @@ button:focus {
   --transform-translate-y: 36rem;
 }
 
+.group:hover .group-hover\:translate-y-full {
+  --transform-translate-y: 100%;
+}
+
 .group:hover .group-hover\:-translate-y-1 {
   --transform-translate-y: -0.25rem;
 }
@@ -11217,10 +11420,6 @@ button:focus {
 
 .group:hover .group-hover\:translate-y-1\/2 {
   --transform-translate-y: 50%;
-}
-
-.group:hover .group-hover\:translate-y-full {
-  --transform-translate-y: 100%;
 }
 
 .group:hover .group-hover\:-translate-y-50 {
@@ -11920,6 +12119,18 @@ button:focus {
     margin-left: calc(36rem * calc(1 - var(--space-x-reverse)));
   }
 
+  .sm\:space-y-full > :not(template) ~ :not(template) {
+    --space-y-reverse: 0;
+    margin-top: calc(100% * calc(1 - var(--space-y-reverse)));
+    margin-bottom: calc(100% * var(--space-y-reverse));
+  }
+
+  .sm\:space-x-full > :not(template) ~ :not(template) {
+    --space-x-reverse: 0;
+    margin-right: calc(100% * var(--space-x-reverse));
+    margin-left: calc(100% * calc(1 - var(--space-x-reverse)));
+  }
+
   .sm\:-space-y-1 > :not(template) ~ :not(template) {
     --space-y-reverse: 0;
     margin-top: calc(-0.25rem * calc(1 - var(--space-y-reverse)));
@@ -12194,6 +12405,18 @@ button:focus {
     --space-x-reverse: 0;
     margin-right: calc(-36rem * var(--space-x-reverse));
     margin-left: calc(-36rem * calc(1 - var(--space-x-reverse)));
+  }
+
+  .sm\:-space-y-full > :not(template) ~ :not(template) {
+    --space-y-reverse: 0;
+    margin-top: calc(-100% * calc(1 - var(--space-y-reverse)));
+    margin-bottom: calc(-100% * var(--space-y-reverse));
+  }
+
+  .sm\:-space-x-full > :not(template) ~ :not(template) {
+    --space-x-reverse: 0;
+    margin-right: calc(-100% * var(--space-x-reverse));
+    margin-left: calc(-100% * calc(1 - var(--space-x-reverse)));
   }
 
   .sm\:space-y-reverse > :not(template) ~ :not(template) {
@@ -14442,6 +14665,10 @@ button:focus {
     margin: 36rem;
   }
 
+  .sm\:m-full {
+    margin: 100%;
+  }
+
   .sm\:-m-1 {
     margin: -0.25rem;
   }
@@ -14532,6 +14759,10 @@ button:focus {
 
   .sm\:-m-xl {
     margin: -36rem;
+  }
+
+  .sm\:-m-full {
+    margin: -100%;
   }
 
   .sm\:my-0 {
@@ -14784,6 +15015,16 @@ button:focus {
     margin-right: 36rem;
   }
 
+  .sm\:my-full {
+    margin-top: 100%;
+    margin-bottom: 100%;
+  }
+
+  .sm\:mx-full {
+    margin-left: 100%;
+    margin-right: 100%;
+  }
+
   .sm\:-my-1 {
     margin-top: -0.25rem;
     margin-bottom: -0.25rem;
@@ -15012,6 +15253,16 @@ button:focus {
   .sm\:-mx-xl {
     margin-left: -36rem;
     margin-right: -36rem;
+  }
+
+  .sm\:-my-full {
+    margin-top: -100%;
+    margin-bottom: -100%;
+  }
+
+  .sm\:-mx-full {
+    margin-left: -100%;
+    margin-right: -100%;
   }
 
   .sm\:mt-0 {
@@ -15414,6 +15665,22 @@ button:focus {
     margin-left: 36rem;
   }
 
+  .sm\:mt-full {
+    margin-top: 100%;
+  }
+
+  .sm\:mr-full {
+    margin-right: 100%;
+  }
+
+  .sm\:mb-full {
+    margin-bottom: 100%;
+  }
+
+  .sm\:ml-full {
+    margin-left: 100%;
+  }
+
   .sm\:-mt-1 {
     margin-top: -0.25rem;
   }
@@ -15782,6 +16049,22 @@ button:focus {
     margin-left: -36rem;
   }
 
+  .sm\:-mt-full {
+    margin-top: -100%;
+  }
+
+  .sm\:-mr-full {
+    margin-right: -100%;
+  }
+
+  .sm\:-mb-full {
+    margin-bottom: -100%;
+  }
+
+  .sm\:-ml-full {
+    margin-left: -100%;
+  }
+
   .sm\:max-h-full {
     max-height: 100%;
   }
@@ -16126,6 +16409,10 @@ button:focus {
     padding: 36rem;
   }
 
+  .sm\:p-full {
+    padding: 100%;
+  }
+
   .sm\:py-0 {
     padding-top: 0;
     padding-bottom: 0;
@@ -16364,6 +16651,16 @@ button:focus {
   .sm\:px-xl {
     padding-left: 36rem;
     padding-right: 36rem;
+  }
+
+  .sm\:py-full {
+    padding-top: 100%;
+    padding-bottom: 100%;
+  }
+
+  .sm\:px-full {
+    padding-left: 100%;
+    padding-right: 100%;
   }
 
   .sm\:pt-0 {
@@ -16750,6 +17047,22 @@ button:focus {
     padding-left: 36rem;
   }
 
+  .sm\:pt-full {
+    padding-top: 100%;
+  }
+
+  .sm\:pr-full {
+    padding-right: 100%;
+  }
+
+  .sm\:pb-full {
+    padding-bottom: 100%;
+  }
+
+  .sm\:pl-full {
+    padding-left: 100%;
+  }
+
   .sm\:first\:p-0:first-child {
     padding: 0;
   }
@@ -16844,6 +17157,10 @@ button:focus {
 
   .sm\:first\:p-xl:first-child {
     padding: 36rem;
+  }
+
+  .sm\:first\:p-full:first-child {
+    padding: 100%;
   }
 
   .sm\:first\:py-0:first-child {
@@ -17084,6 +17401,16 @@ button:focus {
   .sm\:first\:px-xl:first-child {
     padding-left: 36rem;
     padding-right: 36rem;
+  }
+
+  .sm\:first\:py-full:first-child {
+    padding-top: 100%;
+    padding-bottom: 100%;
+  }
+
+  .sm\:first\:px-full:first-child {
+    padding-left: 100%;
+    padding-right: 100%;
   }
 
   .sm\:first\:pt-0:first-child {
@@ -17470,6 +17797,22 @@ button:focus {
     padding-left: 36rem;
   }
 
+  .sm\:first\:pt-full:first-child {
+    padding-top: 100%;
+  }
+
+  .sm\:first\:pr-full:first-child {
+    padding-right: 100%;
+  }
+
+  .sm\:first\:pb-full:first-child {
+    padding-bottom: 100%;
+  }
+
+  .sm\:first\:pl-full:first-child {
+    padding-left: 100%;
+  }
+
   .sm\:last\:p-0:last-child {
     padding: 0;
   }
@@ -17564,6 +17907,10 @@ button:focus {
 
   .sm\:last\:p-xl:last-child {
     padding: 36rem;
+  }
+
+  .sm\:last\:p-full:last-child {
+    padding: 100%;
   }
 
   .sm\:last\:py-0:last-child {
@@ -17804,6 +18151,16 @@ button:focus {
   .sm\:last\:px-xl:last-child {
     padding-left: 36rem;
     padding-right: 36rem;
+  }
+
+  .sm\:last\:py-full:last-child {
+    padding-top: 100%;
+    padding-bottom: 100%;
+  }
+
+  .sm\:last\:px-full:last-child {
+    padding-left: 100%;
+    padding-right: 100%;
   }
 
   .sm\:last\:pt-0:last-child {
@@ -18188,6 +18545,22 @@ button:focus {
 
   .sm\:last\:pl-xl:last-child {
     padding-left: 36rem;
+  }
+
+  .sm\:last\:pt-full:last-child {
+    padding-top: 100%;
+  }
+
+  .sm\:last\:pr-full:last-child {
+    padding-right: 100%;
+  }
+
+  .sm\:last\:pb-full:last-child {
+    padding-bottom: 100%;
+  }
+
+  .sm\:last\:pl-full:last-child {
+    padding-left: 100%;
   }
 
   .sm\:placeholder-gray::placeholder {
@@ -19036,6 +19409,10 @@ button:focus {
     width: 36rem;
   }
 
+  .sm\:w-full {
+    width: 100%;
+  }
+
   .sm\:w-1\/2 {
     width: 50%;
   }
@@ -19138,10 +19515,6 @@ button:focus {
 
   .sm\:w-11\/12 {
     width: 91.666667%;
-  }
-
-  .sm\:w-full {
-    width: 100%;
   }
 
   .sm\:w-screen {
@@ -19296,6 +19669,11 @@ button:focus {
     gap: 36rem;
   }
 
+  .sm\:gap-full {
+    grid-gap: 100%;
+    gap: 100%;
+  }
+
   .sm\:col-gap-0 {
     grid-column-gap: 0;
     column-gap: 0;
@@ -19414,6 +19792,11 @@ button:focus {
   .sm\:col-gap-xl {
     grid-column-gap: 36rem;
     column-gap: 36rem;
+  }
+
+  .sm\:col-gap-full {
+    grid-column-gap: 100%;
+    column-gap: 100%;
   }
 
   .sm\:gap-x-0 {
@@ -19536,6 +19919,11 @@ button:focus {
     column-gap: 36rem;
   }
 
+  .sm\:gap-x-full {
+    grid-column-gap: 100%;
+    column-gap: 100%;
+  }
+
   .sm\:row-gap-0 {
     grid-row-gap: 0;
     row-gap: 0;
@@ -19656,6 +20044,11 @@ button:focus {
     row-gap: 36rem;
   }
 
+  .sm\:row-gap-full {
+    grid-row-gap: 100%;
+    row-gap: 100%;
+  }
+
   .sm\:gap-y-0 {
     grid-row-gap: 0;
     row-gap: 0;
@@ -19774,6 +20167,11 @@ button:focus {
   .sm\:gap-y-xl {
     grid-row-gap: 36rem;
     row-gap: 36rem;
+  }
+
+  .sm\:gap-y-full {
+    grid-row-gap: 100%;
+    row-gap: 100%;
   }
 
   .sm\:grid-flow-row {
@@ -20177,6 +20575,1326 @@ button:focus {
 
   .sm\:origin-top-left {
     transform-origin: top left;
+  }
+
+  .sm\:translate-x-0 {
+    --transform-translate-x: 0;
+  }
+
+  .sm\:translate-x-1 {
+    --transform-translate-x: 0.25rem;
+  }
+
+  .sm\:translate-x-2 {
+    --transform-translate-x: 0.5rem;
+  }
+
+  .sm\:translate-x-3 {
+    --transform-translate-x: 0.75rem;
+  }
+
+  .sm\:translate-x-4 {
+    --transform-translate-x: 1rem;
+  }
+
+  .sm\:translate-x-5 {
+    --transform-translate-x: 1.25rem;
+  }
+
+  .sm\:translate-x-6 {
+    --transform-translate-x: 1.5rem;
+  }
+
+  .sm\:translate-x-8 {
+    --transform-translate-x: 2rem;
+  }
+
+  .sm\:translate-x-10 {
+    --transform-translate-x: 2.5rem;
+  }
+
+  .sm\:translate-x-12 {
+    --transform-translate-x: 3rem;
+  }
+
+  .sm\:translate-x-16 {
+    --transform-translate-x: 4rem;
+  }
+
+  .sm\:translate-x-20 {
+    --transform-translate-x: 5rem;
+  }
+
+  .sm\:translate-x-24 {
+    --transform-translate-x: 6rem;
+  }
+
+  .sm\:translate-x-25 {
+    --transform-translate-x: 25%;
+  }
+
+  .sm\:translate-x-32 {
+    --transform-translate-x: 8rem;
+  }
+
+  .sm\:translate-x-40 {
+    --transform-translate-x: 10rem;
+  }
+
+  .sm\:translate-x-48 {
+    --transform-translate-x: 12rem;
+  }
+
+  .sm\:translate-x-50 {
+    --transform-translate-x: 50%;
+  }
+
+  .sm\:translate-x-56 {
+    --transform-translate-x: 14rem;
+  }
+
+  .sm\:translate-x-64 {
+    --transform-translate-x: 16rem;
+  }
+
+  .sm\:translate-x-px {
+    --transform-translate-x: 1px;
+  }
+
+  .sm\:translate-x-xs {
+    --transform-translate-x: 20rem;
+  }
+
+  .sm\:translate-x-sm {
+    --transform-translate-x: 24rem;
+  }
+
+  .sm\:translate-x-md {
+    --transform-translate-x: 28rem;
+  }
+
+  .sm\:translate-x-lg {
+    --transform-translate-x: 32rem;
+  }
+
+  .sm\:translate-x-xl {
+    --transform-translate-x: 36rem;
+  }
+
+  .sm\:translate-x-full {
+    --transform-translate-x: 100%;
+  }
+
+  .sm\:-translate-x-1 {
+    --transform-translate-x: -0.25rem;
+  }
+
+  .sm\:-translate-x-2 {
+    --transform-translate-x: -0.5rem;
+  }
+
+  .sm\:-translate-x-3 {
+    --transform-translate-x: -0.75rem;
+  }
+
+  .sm\:-translate-x-4 {
+    --transform-translate-x: -1rem;
+  }
+
+  .sm\:-translate-x-5 {
+    --transform-translate-x: -1.25rem;
+  }
+
+  .sm\:-translate-x-6 {
+    --transform-translate-x: -1.5rem;
+  }
+
+  .sm\:-translate-x-8 {
+    --transform-translate-x: -2rem;
+  }
+
+  .sm\:-translate-x-10 {
+    --transform-translate-x: -2.5rem;
+  }
+
+  .sm\:-translate-x-12 {
+    --transform-translate-x: -3rem;
+  }
+
+  .sm\:-translate-x-16 {
+    --transform-translate-x: -4rem;
+  }
+
+  .sm\:-translate-x-20 {
+    --transform-translate-x: -5rem;
+  }
+
+  .sm\:-translate-x-24 {
+    --transform-translate-x: -6rem;
+  }
+
+  .sm\:-translate-x-32 {
+    --transform-translate-x: -8rem;
+  }
+
+  .sm\:-translate-x-40 {
+    --transform-translate-x: -10rem;
+  }
+
+  .sm\:-translate-x-48 {
+    --transform-translate-x: -12rem;
+  }
+
+  .sm\:-translate-x-56 {
+    --transform-translate-x: -14rem;
+  }
+
+  .sm\:-translate-x-64 {
+    --transform-translate-x: -16rem;
+  }
+
+  .sm\:-translate-x-px {
+    --transform-translate-x: -1px;
+  }
+
+  .sm\:-translate-x-xs {
+    --transform-translate-x: -20rem;
+  }
+
+  .sm\:-translate-x-sm {
+    --transform-translate-x: -24rem;
+  }
+
+  .sm\:-translate-x-md {
+    --transform-translate-x: -28rem;
+  }
+
+  .sm\:-translate-x-lg {
+    --transform-translate-x: -32rem;
+  }
+
+  .sm\:-translate-x-xl {
+    --transform-translate-x: -36rem;
+  }
+
+  .sm\:-translate-x-full {
+    --transform-translate-x: -100%;
+  }
+
+  .sm\:-translate-x-1\/2 {
+    --transform-translate-x: -50%;
+  }
+
+  .sm\:translate-x-1\/2 {
+    --transform-translate-x: 50%;
+  }
+
+  .sm\:-translate-x-50 {
+    --transform-translate-x: -50%;
+  }
+
+  .sm\:-translate-x-25 {
+    --transform-translate-x: -25%;
+  }
+
+  .sm\:translate-y-0 {
+    --transform-translate-y: 0;
+  }
+
+  .sm\:translate-y-1 {
+    --transform-translate-y: 0.25rem;
+  }
+
+  .sm\:translate-y-2 {
+    --transform-translate-y: 0.5rem;
+  }
+
+  .sm\:translate-y-3 {
+    --transform-translate-y: 0.75rem;
+  }
+
+  .sm\:translate-y-4 {
+    --transform-translate-y: 1rem;
+  }
+
+  .sm\:translate-y-5 {
+    --transform-translate-y: 1.25rem;
+  }
+
+  .sm\:translate-y-6 {
+    --transform-translate-y: 1.5rem;
+  }
+
+  .sm\:translate-y-8 {
+    --transform-translate-y: 2rem;
+  }
+
+  .sm\:translate-y-10 {
+    --transform-translate-y: 2.5rem;
+  }
+
+  .sm\:translate-y-12 {
+    --transform-translate-y: 3rem;
+  }
+
+  .sm\:translate-y-16 {
+    --transform-translate-y: 4rem;
+  }
+
+  .sm\:translate-y-20 {
+    --transform-translate-y: 5rem;
+  }
+
+  .sm\:translate-y-24 {
+    --transform-translate-y: 6rem;
+  }
+
+  .sm\:translate-y-25 {
+    --transform-translate-y: 25%;
+  }
+
+  .sm\:translate-y-32 {
+    --transform-translate-y: 8rem;
+  }
+
+  .sm\:translate-y-40 {
+    --transform-translate-y: 10rem;
+  }
+
+  .sm\:translate-y-48 {
+    --transform-translate-y: 12rem;
+  }
+
+  .sm\:translate-y-50 {
+    --transform-translate-y: 50%;
+  }
+
+  .sm\:translate-y-56 {
+    --transform-translate-y: 14rem;
+  }
+
+  .sm\:translate-y-64 {
+    --transform-translate-y: 16rem;
+  }
+
+  .sm\:translate-y-px {
+    --transform-translate-y: 1px;
+  }
+
+  .sm\:translate-y-xs {
+    --transform-translate-y: 20rem;
+  }
+
+  .sm\:translate-y-sm {
+    --transform-translate-y: 24rem;
+  }
+
+  .sm\:translate-y-md {
+    --transform-translate-y: 28rem;
+  }
+
+  .sm\:translate-y-lg {
+    --transform-translate-y: 32rem;
+  }
+
+  .sm\:translate-y-xl {
+    --transform-translate-y: 36rem;
+  }
+
+  .sm\:translate-y-full {
+    --transform-translate-y: 100%;
+  }
+
+  .sm\:-translate-y-1 {
+    --transform-translate-y: -0.25rem;
+  }
+
+  .sm\:-translate-y-2 {
+    --transform-translate-y: -0.5rem;
+  }
+
+  .sm\:-translate-y-3 {
+    --transform-translate-y: -0.75rem;
+  }
+
+  .sm\:-translate-y-4 {
+    --transform-translate-y: -1rem;
+  }
+
+  .sm\:-translate-y-5 {
+    --transform-translate-y: -1.25rem;
+  }
+
+  .sm\:-translate-y-6 {
+    --transform-translate-y: -1.5rem;
+  }
+
+  .sm\:-translate-y-8 {
+    --transform-translate-y: -2rem;
+  }
+
+  .sm\:-translate-y-10 {
+    --transform-translate-y: -2.5rem;
+  }
+
+  .sm\:-translate-y-12 {
+    --transform-translate-y: -3rem;
+  }
+
+  .sm\:-translate-y-16 {
+    --transform-translate-y: -4rem;
+  }
+
+  .sm\:-translate-y-20 {
+    --transform-translate-y: -5rem;
+  }
+
+  .sm\:-translate-y-24 {
+    --transform-translate-y: -6rem;
+  }
+
+  .sm\:-translate-y-32 {
+    --transform-translate-y: -8rem;
+  }
+
+  .sm\:-translate-y-40 {
+    --transform-translate-y: -10rem;
+  }
+
+  .sm\:-translate-y-48 {
+    --transform-translate-y: -12rem;
+  }
+
+  .sm\:-translate-y-56 {
+    --transform-translate-y: -14rem;
+  }
+
+  .sm\:-translate-y-64 {
+    --transform-translate-y: -16rem;
+  }
+
+  .sm\:-translate-y-px {
+    --transform-translate-y: -1px;
+  }
+
+  .sm\:-translate-y-xs {
+    --transform-translate-y: -20rem;
+  }
+
+  .sm\:-translate-y-sm {
+    --transform-translate-y: -24rem;
+  }
+
+  .sm\:-translate-y-md {
+    --transform-translate-y: -28rem;
+  }
+
+  .sm\:-translate-y-lg {
+    --transform-translate-y: -32rem;
+  }
+
+  .sm\:-translate-y-xl {
+    --transform-translate-y: -36rem;
+  }
+
+  .sm\:-translate-y-full {
+    --transform-translate-y: -100%;
+  }
+
+  .sm\:-translate-y-1\/2 {
+    --transform-translate-y: -50%;
+  }
+
+  .sm\:translate-y-1\/2 {
+    --transform-translate-y: 50%;
+  }
+
+  .sm\:-translate-y-50 {
+    --transform-translate-y: -50%;
+  }
+
+  .sm\:-translate-y-25 {
+    --transform-translate-y: -25%;
+  }
+
+  .sm\:hover\:translate-x-0:hover {
+    --transform-translate-x: 0;
+  }
+
+  .sm\:hover\:translate-x-1:hover {
+    --transform-translate-x: 0.25rem;
+  }
+
+  .sm\:hover\:translate-x-2:hover {
+    --transform-translate-x: 0.5rem;
+  }
+
+  .sm\:hover\:translate-x-3:hover {
+    --transform-translate-x: 0.75rem;
+  }
+
+  .sm\:hover\:translate-x-4:hover {
+    --transform-translate-x: 1rem;
+  }
+
+  .sm\:hover\:translate-x-5:hover {
+    --transform-translate-x: 1.25rem;
+  }
+
+  .sm\:hover\:translate-x-6:hover {
+    --transform-translate-x: 1.5rem;
+  }
+
+  .sm\:hover\:translate-x-8:hover {
+    --transform-translate-x: 2rem;
+  }
+
+  .sm\:hover\:translate-x-10:hover {
+    --transform-translate-x: 2.5rem;
+  }
+
+  .sm\:hover\:translate-x-12:hover {
+    --transform-translate-x: 3rem;
+  }
+
+  .sm\:hover\:translate-x-16:hover {
+    --transform-translate-x: 4rem;
+  }
+
+  .sm\:hover\:translate-x-20:hover {
+    --transform-translate-x: 5rem;
+  }
+
+  .sm\:hover\:translate-x-24:hover {
+    --transform-translate-x: 6rem;
+  }
+
+  .sm\:hover\:translate-x-25:hover {
+    --transform-translate-x: 25%;
+  }
+
+  .sm\:hover\:translate-x-32:hover {
+    --transform-translate-x: 8rem;
+  }
+
+  .sm\:hover\:translate-x-40:hover {
+    --transform-translate-x: 10rem;
+  }
+
+  .sm\:hover\:translate-x-48:hover {
+    --transform-translate-x: 12rem;
+  }
+
+  .sm\:hover\:translate-x-50:hover {
+    --transform-translate-x: 50%;
+  }
+
+  .sm\:hover\:translate-x-56:hover {
+    --transform-translate-x: 14rem;
+  }
+
+  .sm\:hover\:translate-x-64:hover {
+    --transform-translate-x: 16rem;
+  }
+
+  .sm\:hover\:translate-x-px:hover {
+    --transform-translate-x: 1px;
+  }
+
+  .sm\:hover\:translate-x-xs:hover {
+    --transform-translate-x: 20rem;
+  }
+
+  .sm\:hover\:translate-x-sm:hover {
+    --transform-translate-x: 24rem;
+  }
+
+  .sm\:hover\:translate-x-md:hover {
+    --transform-translate-x: 28rem;
+  }
+
+  .sm\:hover\:translate-x-lg:hover {
+    --transform-translate-x: 32rem;
+  }
+
+  .sm\:hover\:translate-x-xl:hover {
+    --transform-translate-x: 36rem;
+  }
+
+  .sm\:hover\:translate-x-full:hover {
+    --transform-translate-x: 100%;
+  }
+
+  .sm\:hover\:-translate-x-1:hover {
+    --transform-translate-x: -0.25rem;
+  }
+
+  .sm\:hover\:-translate-x-2:hover {
+    --transform-translate-x: -0.5rem;
+  }
+
+  .sm\:hover\:-translate-x-3:hover {
+    --transform-translate-x: -0.75rem;
+  }
+
+  .sm\:hover\:-translate-x-4:hover {
+    --transform-translate-x: -1rem;
+  }
+
+  .sm\:hover\:-translate-x-5:hover {
+    --transform-translate-x: -1.25rem;
+  }
+
+  .sm\:hover\:-translate-x-6:hover {
+    --transform-translate-x: -1.5rem;
+  }
+
+  .sm\:hover\:-translate-x-8:hover {
+    --transform-translate-x: -2rem;
+  }
+
+  .sm\:hover\:-translate-x-10:hover {
+    --transform-translate-x: -2.5rem;
+  }
+
+  .sm\:hover\:-translate-x-12:hover {
+    --transform-translate-x: -3rem;
+  }
+
+  .sm\:hover\:-translate-x-16:hover {
+    --transform-translate-x: -4rem;
+  }
+
+  .sm\:hover\:-translate-x-20:hover {
+    --transform-translate-x: -5rem;
+  }
+
+  .sm\:hover\:-translate-x-24:hover {
+    --transform-translate-x: -6rem;
+  }
+
+  .sm\:hover\:-translate-x-32:hover {
+    --transform-translate-x: -8rem;
+  }
+
+  .sm\:hover\:-translate-x-40:hover {
+    --transform-translate-x: -10rem;
+  }
+
+  .sm\:hover\:-translate-x-48:hover {
+    --transform-translate-x: -12rem;
+  }
+
+  .sm\:hover\:-translate-x-56:hover {
+    --transform-translate-x: -14rem;
+  }
+
+  .sm\:hover\:-translate-x-64:hover {
+    --transform-translate-x: -16rem;
+  }
+
+  .sm\:hover\:-translate-x-px:hover {
+    --transform-translate-x: -1px;
+  }
+
+  .sm\:hover\:-translate-x-xs:hover {
+    --transform-translate-x: -20rem;
+  }
+
+  .sm\:hover\:-translate-x-sm:hover {
+    --transform-translate-x: -24rem;
+  }
+
+  .sm\:hover\:-translate-x-md:hover {
+    --transform-translate-x: -28rem;
+  }
+
+  .sm\:hover\:-translate-x-lg:hover {
+    --transform-translate-x: -32rem;
+  }
+
+  .sm\:hover\:-translate-x-xl:hover {
+    --transform-translate-x: -36rem;
+  }
+
+  .sm\:hover\:-translate-x-full:hover {
+    --transform-translate-x: -100%;
+  }
+
+  .sm\:hover\:-translate-x-1\/2:hover {
+    --transform-translate-x: -50%;
+  }
+
+  .sm\:hover\:translate-x-1\/2:hover {
+    --transform-translate-x: 50%;
+  }
+
+  .sm\:hover\:-translate-x-50:hover {
+    --transform-translate-x: -50%;
+  }
+
+  .sm\:hover\:-translate-x-25:hover {
+    --transform-translate-x: -25%;
+  }
+
+  .sm\:hover\:translate-y-0:hover {
+    --transform-translate-y: 0;
+  }
+
+  .sm\:hover\:translate-y-1:hover {
+    --transform-translate-y: 0.25rem;
+  }
+
+  .sm\:hover\:translate-y-2:hover {
+    --transform-translate-y: 0.5rem;
+  }
+
+  .sm\:hover\:translate-y-3:hover {
+    --transform-translate-y: 0.75rem;
+  }
+
+  .sm\:hover\:translate-y-4:hover {
+    --transform-translate-y: 1rem;
+  }
+
+  .sm\:hover\:translate-y-5:hover {
+    --transform-translate-y: 1.25rem;
+  }
+
+  .sm\:hover\:translate-y-6:hover {
+    --transform-translate-y: 1.5rem;
+  }
+
+  .sm\:hover\:translate-y-8:hover {
+    --transform-translate-y: 2rem;
+  }
+
+  .sm\:hover\:translate-y-10:hover {
+    --transform-translate-y: 2.5rem;
+  }
+
+  .sm\:hover\:translate-y-12:hover {
+    --transform-translate-y: 3rem;
+  }
+
+  .sm\:hover\:translate-y-16:hover {
+    --transform-translate-y: 4rem;
+  }
+
+  .sm\:hover\:translate-y-20:hover {
+    --transform-translate-y: 5rem;
+  }
+
+  .sm\:hover\:translate-y-24:hover {
+    --transform-translate-y: 6rem;
+  }
+
+  .sm\:hover\:translate-y-25:hover {
+    --transform-translate-y: 25%;
+  }
+
+  .sm\:hover\:translate-y-32:hover {
+    --transform-translate-y: 8rem;
+  }
+
+  .sm\:hover\:translate-y-40:hover {
+    --transform-translate-y: 10rem;
+  }
+
+  .sm\:hover\:translate-y-48:hover {
+    --transform-translate-y: 12rem;
+  }
+
+  .sm\:hover\:translate-y-50:hover {
+    --transform-translate-y: 50%;
+  }
+
+  .sm\:hover\:translate-y-56:hover {
+    --transform-translate-y: 14rem;
+  }
+
+  .sm\:hover\:translate-y-64:hover {
+    --transform-translate-y: 16rem;
+  }
+
+  .sm\:hover\:translate-y-px:hover {
+    --transform-translate-y: 1px;
+  }
+
+  .sm\:hover\:translate-y-xs:hover {
+    --transform-translate-y: 20rem;
+  }
+
+  .sm\:hover\:translate-y-sm:hover {
+    --transform-translate-y: 24rem;
+  }
+
+  .sm\:hover\:translate-y-md:hover {
+    --transform-translate-y: 28rem;
+  }
+
+  .sm\:hover\:translate-y-lg:hover {
+    --transform-translate-y: 32rem;
+  }
+
+  .sm\:hover\:translate-y-xl:hover {
+    --transform-translate-y: 36rem;
+  }
+
+  .sm\:hover\:translate-y-full:hover {
+    --transform-translate-y: 100%;
+  }
+
+  .sm\:hover\:-translate-y-1:hover {
+    --transform-translate-y: -0.25rem;
+  }
+
+  .sm\:hover\:-translate-y-2:hover {
+    --transform-translate-y: -0.5rem;
+  }
+
+  .sm\:hover\:-translate-y-3:hover {
+    --transform-translate-y: -0.75rem;
+  }
+
+  .sm\:hover\:-translate-y-4:hover {
+    --transform-translate-y: -1rem;
+  }
+
+  .sm\:hover\:-translate-y-5:hover {
+    --transform-translate-y: -1.25rem;
+  }
+
+  .sm\:hover\:-translate-y-6:hover {
+    --transform-translate-y: -1.5rem;
+  }
+
+  .sm\:hover\:-translate-y-8:hover {
+    --transform-translate-y: -2rem;
+  }
+
+  .sm\:hover\:-translate-y-10:hover {
+    --transform-translate-y: -2.5rem;
+  }
+
+  .sm\:hover\:-translate-y-12:hover {
+    --transform-translate-y: -3rem;
+  }
+
+  .sm\:hover\:-translate-y-16:hover {
+    --transform-translate-y: -4rem;
+  }
+
+  .sm\:hover\:-translate-y-20:hover {
+    --transform-translate-y: -5rem;
+  }
+
+  .sm\:hover\:-translate-y-24:hover {
+    --transform-translate-y: -6rem;
+  }
+
+  .sm\:hover\:-translate-y-32:hover {
+    --transform-translate-y: -8rem;
+  }
+
+  .sm\:hover\:-translate-y-40:hover {
+    --transform-translate-y: -10rem;
+  }
+
+  .sm\:hover\:-translate-y-48:hover {
+    --transform-translate-y: -12rem;
+  }
+
+  .sm\:hover\:-translate-y-56:hover {
+    --transform-translate-y: -14rem;
+  }
+
+  .sm\:hover\:-translate-y-64:hover {
+    --transform-translate-y: -16rem;
+  }
+
+  .sm\:hover\:-translate-y-px:hover {
+    --transform-translate-y: -1px;
+  }
+
+  .sm\:hover\:-translate-y-xs:hover {
+    --transform-translate-y: -20rem;
+  }
+
+  .sm\:hover\:-translate-y-sm:hover {
+    --transform-translate-y: -24rem;
+  }
+
+  .sm\:hover\:-translate-y-md:hover {
+    --transform-translate-y: -28rem;
+  }
+
+  .sm\:hover\:-translate-y-lg:hover {
+    --transform-translate-y: -32rem;
+  }
+
+  .sm\:hover\:-translate-y-xl:hover {
+    --transform-translate-y: -36rem;
+  }
+
+  .sm\:hover\:-translate-y-full:hover {
+    --transform-translate-y: -100%;
+  }
+
+  .sm\:hover\:-translate-y-1\/2:hover {
+    --transform-translate-y: -50%;
+  }
+
+  .sm\:hover\:translate-y-1\/2:hover {
+    --transform-translate-y: 50%;
+  }
+
+  .sm\:hover\:-translate-y-50:hover {
+    --transform-translate-y: -50%;
+  }
+
+  .sm\:hover\:-translate-y-25:hover {
+    --transform-translate-y: -25%;
+  }
+
+  .group:hover .sm\:group-hover\:translate-x-0 {
+    --transform-translate-x: 0;
+  }
+
+  .group:hover .sm\:group-hover\:translate-x-1 {
+    --transform-translate-x: 0.25rem;
+  }
+
+  .group:hover .sm\:group-hover\:translate-x-2 {
+    --transform-translate-x: 0.5rem;
+  }
+
+  .group:hover .sm\:group-hover\:translate-x-3 {
+    --transform-translate-x: 0.75rem;
+  }
+
+  .group:hover .sm\:group-hover\:translate-x-4 {
+    --transform-translate-x: 1rem;
+  }
+
+  .group:hover .sm\:group-hover\:translate-x-5 {
+    --transform-translate-x: 1.25rem;
+  }
+
+  .group:hover .sm\:group-hover\:translate-x-6 {
+    --transform-translate-x: 1.5rem;
+  }
+
+  .group:hover .sm\:group-hover\:translate-x-8 {
+    --transform-translate-x: 2rem;
+  }
+
+  .group:hover .sm\:group-hover\:translate-x-10 {
+    --transform-translate-x: 2.5rem;
+  }
+
+  .group:hover .sm\:group-hover\:translate-x-12 {
+    --transform-translate-x: 3rem;
+  }
+
+  .group:hover .sm\:group-hover\:translate-x-16 {
+    --transform-translate-x: 4rem;
+  }
+
+  .group:hover .sm\:group-hover\:translate-x-20 {
+    --transform-translate-x: 5rem;
+  }
+
+  .group:hover .sm\:group-hover\:translate-x-24 {
+    --transform-translate-x: 6rem;
+  }
+
+  .group:hover .sm\:group-hover\:translate-x-25 {
+    --transform-translate-x: 25%;
+  }
+
+  .group:hover .sm\:group-hover\:translate-x-32 {
+    --transform-translate-x: 8rem;
+  }
+
+  .group:hover .sm\:group-hover\:translate-x-40 {
+    --transform-translate-x: 10rem;
+  }
+
+  .group:hover .sm\:group-hover\:translate-x-48 {
+    --transform-translate-x: 12rem;
+  }
+
+  .group:hover .sm\:group-hover\:translate-x-50 {
+    --transform-translate-x: 50%;
+  }
+
+  .group:hover .sm\:group-hover\:translate-x-56 {
+    --transform-translate-x: 14rem;
+  }
+
+  .group:hover .sm\:group-hover\:translate-x-64 {
+    --transform-translate-x: 16rem;
+  }
+
+  .group:hover .sm\:group-hover\:translate-x-px {
+    --transform-translate-x: 1px;
+  }
+
+  .group:hover .sm\:group-hover\:translate-x-xs {
+    --transform-translate-x: 20rem;
+  }
+
+  .group:hover .sm\:group-hover\:translate-x-sm {
+    --transform-translate-x: 24rem;
+  }
+
+  .group:hover .sm\:group-hover\:translate-x-md {
+    --transform-translate-x: 28rem;
+  }
+
+  .group:hover .sm\:group-hover\:translate-x-lg {
+    --transform-translate-x: 32rem;
+  }
+
+  .group:hover .sm\:group-hover\:translate-x-xl {
+    --transform-translate-x: 36rem;
+  }
+
+  .group:hover .sm\:group-hover\:translate-x-full {
+    --transform-translate-x: 100%;
+  }
+
+  .group:hover .sm\:group-hover\:-translate-x-1 {
+    --transform-translate-x: -0.25rem;
+  }
+
+  .group:hover .sm\:group-hover\:-translate-x-2 {
+    --transform-translate-x: -0.5rem;
+  }
+
+  .group:hover .sm\:group-hover\:-translate-x-3 {
+    --transform-translate-x: -0.75rem;
+  }
+
+  .group:hover .sm\:group-hover\:-translate-x-4 {
+    --transform-translate-x: -1rem;
+  }
+
+  .group:hover .sm\:group-hover\:-translate-x-5 {
+    --transform-translate-x: -1.25rem;
+  }
+
+  .group:hover .sm\:group-hover\:-translate-x-6 {
+    --transform-translate-x: -1.5rem;
+  }
+
+  .group:hover .sm\:group-hover\:-translate-x-8 {
+    --transform-translate-x: -2rem;
+  }
+
+  .group:hover .sm\:group-hover\:-translate-x-10 {
+    --transform-translate-x: -2.5rem;
+  }
+
+  .group:hover .sm\:group-hover\:-translate-x-12 {
+    --transform-translate-x: -3rem;
+  }
+
+  .group:hover .sm\:group-hover\:-translate-x-16 {
+    --transform-translate-x: -4rem;
+  }
+
+  .group:hover .sm\:group-hover\:-translate-x-20 {
+    --transform-translate-x: -5rem;
+  }
+
+  .group:hover .sm\:group-hover\:-translate-x-24 {
+    --transform-translate-x: -6rem;
+  }
+
+  .group:hover .sm\:group-hover\:-translate-x-32 {
+    --transform-translate-x: -8rem;
+  }
+
+  .group:hover .sm\:group-hover\:-translate-x-40 {
+    --transform-translate-x: -10rem;
+  }
+
+  .group:hover .sm\:group-hover\:-translate-x-48 {
+    --transform-translate-x: -12rem;
+  }
+
+  .group:hover .sm\:group-hover\:-translate-x-56 {
+    --transform-translate-x: -14rem;
+  }
+
+  .group:hover .sm\:group-hover\:-translate-x-64 {
+    --transform-translate-x: -16rem;
+  }
+
+  .group:hover .sm\:group-hover\:-translate-x-px {
+    --transform-translate-x: -1px;
+  }
+
+  .group:hover .sm\:group-hover\:-translate-x-xs {
+    --transform-translate-x: -20rem;
+  }
+
+  .group:hover .sm\:group-hover\:-translate-x-sm {
+    --transform-translate-x: -24rem;
+  }
+
+  .group:hover .sm\:group-hover\:-translate-x-md {
+    --transform-translate-x: -28rem;
+  }
+
+  .group:hover .sm\:group-hover\:-translate-x-lg {
+    --transform-translate-x: -32rem;
+  }
+
+  .group:hover .sm\:group-hover\:-translate-x-xl {
+    --transform-translate-x: -36rem;
+  }
+
+  .group:hover .sm\:group-hover\:-translate-x-full {
+    --transform-translate-x: -100%;
+  }
+
+  .group:hover .sm\:group-hover\:-translate-x-1\/2 {
+    --transform-translate-x: -50%;
+  }
+
+  .group:hover .sm\:group-hover\:translate-x-1\/2 {
+    --transform-translate-x: 50%;
+  }
+
+  .group:hover .sm\:group-hover\:-translate-x-50 {
+    --transform-translate-x: -50%;
+  }
+
+  .group:hover .sm\:group-hover\:-translate-x-25 {
+    --transform-translate-x: -25%;
+  }
+
+  .group:hover .sm\:group-hover\:translate-y-0 {
+    --transform-translate-y: 0;
+  }
+
+  .group:hover .sm\:group-hover\:translate-y-1 {
+    --transform-translate-y: 0.25rem;
+  }
+
+  .group:hover .sm\:group-hover\:translate-y-2 {
+    --transform-translate-y: 0.5rem;
+  }
+
+  .group:hover .sm\:group-hover\:translate-y-3 {
+    --transform-translate-y: 0.75rem;
+  }
+
+  .group:hover .sm\:group-hover\:translate-y-4 {
+    --transform-translate-y: 1rem;
+  }
+
+  .group:hover .sm\:group-hover\:translate-y-5 {
+    --transform-translate-y: 1.25rem;
+  }
+
+  .group:hover .sm\:group-hover\:translate-y-6 {
+    --transform-translate-y: 1.5rem;
+  }
+
+  .group:hover .sm\:group-hover\:translate-y-8 {
+    --transform-translate-y: 2rem;
+  }
+
+  .group:hover .sm\:group-hover\:translate-y-10 {
+    --transform-translate-y: 2.5rem;
+  }
+
+  .group:hover .sm\:group-hover\:translate-y-12 {
+    --transform-translate-y: 3rem;
+  }
+
+  .group:hover .sm\:group-hover\:translate-y-16 {
+    --transform-translate-y: 4rem;
+  }
+
+  .group:hover .sm\:group-hover\:translate-y-20 {
+    --transform-translate-y: 5rem;
+  }
+
+  .group:hover .sm\:group-hover\:translate-y-24 {
+    --transform-translate-y: 6rem;
+  }
+
+  .group:hover .sm\:group-hover\:translate-y-25 {
+    --transform-translate-y: 25%;
+  }
+
+  .group:hover .sm\:group-hover\:translate-y-32 {
+    --transform-translate-y: 8rem;
+  }
+
+  .group:hover .sm\:group-hover\:translate-y-40 {
+    --transform-translate-y: 10rem;
+  }
+
+  .group:hover .sm\:group-hover\:translate-y-48 {
+    --transform-translate-y: 12rem;
+  }
+
+  .group:hover .sm\:group-hover\:translate-y-50 {
+    --transform-translate-y: 50%;
+  }
+
+  .group:hover .sm\:group-hover\:translate-y-56 {
+    --transform-translate-y: 14rem;
+  }
+
+  .group:hover .sm\:group-hover\:translate-y-64 {
+    --transform-translate-y: 16rem;
+  }
+
+  .group:hover .sm\:group-hover\:translate-y-px {
+    --transform-translate-y: 1px;
+  }
+
+  .group:hover .sm\:group-hover\:translate-y-xs {
+    --transform-translate-y: 20rem;
+  }
+
+  .group:hover .sm\:group-hover\:translate-y-sm {
+    --transform-translate-y: 24rem;
+  }
+
+  .group:hover .sm\:group-hover\:translate-y-md {
+    --transform-translate-y: 28rem;
+  }
+
+  .group:hover .sm\:group-hover\:translate-y-lg {
+    --transform-translate-y: 32rem;
+  }
+
+  .group:hover .sm\:group-hover\:translate-y-xl {
+    --transform-translate-y: 36rem;
+  }
+
+  .group:hover .sm\:group-hover\:translate-y-full {
+    --transform-translate-y: 100%;
+  }
+
+  .group:hover .sm\:group-hover\:-translate-y-1 {
+    --transform-translate-y: -0.25rem;
+  }
+
+  .group:hover .sm\:group-hover\:-translate-y-2 {
+    --transform-translate-y: -0.5rem;
+  }
+
+  .group:hover .sm\:group-hover\:-translate-y-3 {
+    --transform-translate-y: -0.75rem;
+  }
+
+  .group:hover .sm\:group-hover\:-translate-y-4 {
+    --transform-translate-y: -1rem;
+  }
+
+  .group:hover .sm\:group-hover\:-translate-y-5 {
+    --transform-translate-y: -1.25rem;
+  }
+
+  .group:hover .sm\:group-hover\:-translate-y-6 {
+    --transform-translate-y: -1.5rem;
+  }
+
+  .group:hover .sm\:group-hover\:-translate-y-8 {
+    --transform-translate-y: -2rem;
+  }
+
+  .group:hover .sm\:group-hover\:-translate-y-10 {
+    --transform-translate-y: -2.5rem;
+  }
+
+  .group:hover .sm\:group-hover\:-translate-y-12 {
+    --transform-translate-y: -3rem;
+  }
+
+  .group:hover .sm\:group-hover\:-translate-y-16 {
+    --transform-translate-y: -4rem;
+  }
+
+  .group:hover .sm\:group-hover\:-translate-y-20 {
+    --transform-translate-y: -5rem;
+  }
+
+  .group:hover .sm\:group-hover\:-translate-y-24 {
+    --transform-translate-y: -6rem;
+  }
+
+  .group:hover .sm\:group-hover\:-translate-y-32 {
+    --transform-translate-y: -8rem;
+  }
+
+  .group:hover .sm\:group-hover\:-translate-y-40 {
+    --transform-translate-y: -10rem;
+  }
+
+  .group:hover .sm\:group-hover\:-translate-y-48 {
+    --transform-translate-y: -12rem;
+  }
+
+  .group:hover .sm\:group-hover\:-translate-y-56 {
+    --transform-translate-y: -14rem;
+  }
+
+  .group:hover .sm\:group-hover\:-translate-y-64 {
+    --transform-translate-y: -16rem;
+  }
+
+  .group:hover .sm\:group-hover\:-translate-y-px {
+    --transform-translate-y: -1px;
+  }
+
+  .group:hover .sm\:group-hover\:-translate-y-xs {
+    --transform-translate-y: -20rem;
+  }
+
+  .group:hover .sm\:group-hover\:-translate-y-sm {
+    --transform-translate-y: -24rem;
+  }
+
+  .group:hover .sm\:group-hover\:-translate-y-md {
+    --transform-translate-y: -28rem;
+  }
+
+  .group:hover .sm\:group-hover\:-translate-y-lg {
+    --transform-translate-y: -32rem;
+  }
+
+  .group:hover .sm\:group-hover\:-translate-y-xl {
+    --transform-translate-y: -36rem;
+  }
+
+  .group:hover .sm\:group-hover\:-translate-y-full {
+    --transform-translate-y: -100%;
+  }
+
+  .group:hover .sm\:group-hover\:-translate-y-1\/2 {
+    --transform-translate-y: -50%;
+  }
+
+  .group:hover .sm\:group-hover\:translate-y-1\/2 {
+    --transform-translate-y: 50%;
+  }
+
+  .group:hover .sm\:group-hover\:-translate-y-50 {
+    --transform-translate-y: -50%;
+  }
+
+  .group:hover .sm\:group-hover\:-translate-y-25 {
+    --transform-translate-y: -25%;
   }
 
   .sm\:skew-x-0 {
@@ -20805,6 +22523,18 @@ button:focus {
     margin-left: calc(36rem * calc(1 - var(--space-x-reverse)));
   }
 
+  .md\:space-y-full > :not(template) ~ :not(template) {
+    --space-y-reverse: 0;
+    margin-top: calc(100% * calc(1 - var(--space-y-reverse)));
+    margin-bottom: calc(100% * var(--space-y-reverse));
+  }
+
+  .md\:space-x-full > :not(template) ~ :not(template) {
+    --space-x-reverse: 0;
+    margin-right: calc(100% * var(--space-x-reverse));
+    margin-left: calc(100% * calc(1 - var(--space-x-reverse)));
+  }
+
   .md\:-space-y-1 > :not(template) ~ :not(template) {
     --space-y-reverse: 0;
     margin-top: calc(-0.25rem * calc(1 - var(--space-y-reverse)));
@@ -21079,6 +22809,18 @@ button:focus {
     --space-x-reverse: 0;
     margin-right: calc(-36rem * var(--space-x-reverse));
     margin-left: calc(-36rem * calc(1 - var(--space-x-reverse)));
+  }
+
+  .md\:-space-y-full > :not(template) ~ :not(template) {
+    --space-y-reverse: 0;
+    margin-top: calc(-100% * calc(1 - var(--space-y-reverse)));
+    margin-bottom: calc(-100% * var(--space-y-reverse));
+  }
+
+  .md\:-space-x-full > :not(template) ~ :not(template) {
+    --space-x-reverse: 0;
+    margin-right: calc(-100% * var(--space-x-reverse));
+    margin-left: calc(-100% * calc(1 - var(--space-x-reverse)));
   }
 
   .md\:space-y-reverse > :not(template) ~ :not(template) {
@@ -23327,6 +25069,10 @@ button:focus {
     margin: 36rem;
   }
 
+  .md\:m-full {
+    margin: 100%;
+  }
+
   .md\:-m-1 {
     margin: -0.25rem;
   }
@@ -23417,6 +25163,10 @@ button:focus {
 
   .md\:-m-xl {
     margin: -36rem;
+  }
+
+  .md\:-m-full {
+    margin: -100%;
   }
 
   .md\:my-0 {
@@ -23669,6 +25419,16 @@ button:focus {
     margin-right: 36rem;
   }
 
+  .md\:my-full {
+    margin-top: 100%;
+    margin-bottom: 100%;
+  }
+
+  .md\:mx-full {
+    margin-left: 100%;
+    margin-right: 100%;
+  }
+
   .md\:-my-1 {
     margin-top: -0.25rem;
     margin-bottom: -0.25rem;
@@ -23897,6 +25657,16 @@ button:focus {
   .md\:-mx-xl {
     margin-left: -36rem;
     margin-right: -36rem;
+  }
+
+  .md\:-my-full {
+    margin-top: -100%;
+    margin-bottom: -100%;
+  }
+
+  .md\:-mx-full {
+    margin-left: -100%;
+    margin-right: -100%;
   }
 
   .md\:mt-0 {
@@ -24299,6 +26069,22 @@ button:focus {
     margin-left: 36rem;
   }
 
+  .md\:mt-full {
+    margin-top: 100%;
+  }
+
+  .md\:mr-full {
+    margin-right: 100%;
+  }
+
+  .md\:mb-full {
+    margin-bottom: 100%;
+  }
+
+  .md\:ml-full {
+    margin-left: 100%;
+  }
+
   .md\:-mt-1 {
     margin-top: -0.25rem;
   }
@@ -24667,6 +26453,22 @@ button:focus {
     margin-left: -36rem;
   }
 
+  .md\:-mt-full {
+    margin-top: -100%;
+  }
+
+  .md\:-mr-full {
+    margin-right: -100%;
+  }
+
+  .md\:-mb-full {
+    margin-bottom: -100%;
+  }
+
+  .md\:-ml-full {
+    margin-left: -100%;
+  }
+
   .md\:max-h-full {
     max-height: 100%;
   }
@@ -25011,6 +26813,10 @@ button:focus {
     padding: 36rem;
   }
 
+  .md\:p-full {
+    padding: 100%;
+  }
+
   .md\:py-0 {
     padding-top: 0;
     padding-bottom: 0;
@@ -25249,6 +27055,16 @@ button:focus {
   .md\:px-xl {
     padding-left: 36rem;
     padding-right: 36rem;
+  }
+
+  .md\:py-full {
+    padding-top: 100%;
+    padding-bottom: 100%;
+  }
+
+  .md\:px-full {
+    padding-left: 100%;
+    padding-right: 100%;
   }
 
   .md\:pt-0 {
@@ -25635,6 +27451,22 @@ button:focus {
     padding-left: 36rem;
   }
 
+  .md\:pt-full {
+    padding-top: 100%;
+  }
+
+  .md\:pr-full {
+    padding-right: 100%;
+  }
+
+  .md\:pb-full {
+    padding-bottom: 100%;
+  }
+
+  .md\:pl-full {
+    padding-left: 100%;
+  }
+
   .md\:first\:p-0:first-child {
     padding: 0;
   }
@@ -25729,6 +27561,10 @@ button:focus {
 
   .md\:first\:p-xl:first-child {
     padding: 36rem;
+  }
+
+  .md\:first\:p-full:first-child {
+    padding: 100%;
   }
 
   .md\:first\:py-0:first-child {
@@ -25969,6 +27805,16 @@ button:focus {
   .md\:first\:px-xl:first-child {
     padding-left: 36rem;
     padding-right: 36rem;
+  }
+
+  .md\:first\:py-full:first-child {
+    padding-top: 100%;
+    padding-bottom: 100%;
+  }
+
+  .md\:first\:px-full:first-child {
+    padding-left: 100%;
+    padding-right: 100%;
   }
 
   .md\:first\:pt-0:first-child {
@@ -26355,6 +28201,22 @@ button:focus {
     padding-left: 36rem;
   }
 
+  .md\:first\:pt-full:first-child {
+    padding-top: 100%;
+  }
+
+  .md\:first\:pr-full:first-child {
+    padding-right: 100%;
+  }
+
+  .md\:first\:pb-full:first-child {
+    padding-bottom: 100%;
+  }
+
+  .md\:first\:pl-full:first-child {
+    padding-left: 100%;
+  }
+
   .md\:last\:p-0:last-child {
     padding: 0;
   }
@@ -26449,6 +28311,10 @@ button:focus {
 
   .md\:last\:p-xl:last-child {
     padding: 36rem;
+  }
+
+  .md\:last\:p-full:last-child {
+    padding: 100%;
   }
 
   .md\:last\:py-0:last-child {
@@ -26689,6 +28555,16 @@ button:focus {
   .md\:last\:px-xl:last-child {
     padding-left: 36rem;
     padding-right: 36rem;
+  }
+
+  .md\:last\:py-full:last-child {
+    padding-top: 100%;
+    padding-bottom: 100%;
+  }
+
+  .md\:last\:px-full:last-child {
+    padding-left: 100%;
+    padding-right: 100%;
   }
 
   .md\:last\:pt-0:last-child {
@@ -27073,6 +28949,22 @@ button:focus {
 
   .md\:last\:pl-xl:last-child {
     padding-left: 36rem;
+  }
+
+  .md\:last\:pt-full:last-child {
+    padding-top: 100%;
+  }
+
+  .md\:last\:pr-full:last-child {
+    padding-right: 100%;
+  }
+
+  .md\:last\:pb-full:last-child {
+    padding-bottom: 100%;
+  }
+
+  .md\:last\:pl-full:last-child {
+    padding-left: 100%;
   }
 
   .md\:placeholder-gray::placeholder {
@@ -27921,6 +29813,10 @@ button:focus {
     width: 36rem;
   }
 
+  .md\:w-full {
+    width: 100%;
+  }
+
   .md\:w-1\/2 {
     width: 50%;
   }
@@ -28023,10 +29919,6 @@ button:focus {
 
   .md\:w-11\/12 {
     width: 91.666667%;
-  }
-
-  .md\:w-full {
-    width: 100%;
   }
 
   .md\:w-screen {
@@ -28181,6 +30073,11 @@ button:focus {
     gap: 36rem;
   }
 
+  .md\:gap-full {
+    grid-gap: 100%;
+    gap: 100%;
+  }
+
   .md\:col-gap-0 {
     grid-column-gap: 0;
     column-gap: 0;
@@ -28299,6 +30196,11 @@ button:focus {
   .md\:col-gap-xl {
     grid-column-gap: 36rem;
     column-gap: 36rem;
+  }
+
+  .md\:col-gap-full {
+    grid-column-gap: 100%;
+    column-gap: 100%;
   }
 
   .md\:gap-x-0 {
@@ -28421,6 +30323,11 @@ button:focus {
     column-gap: 36rem;
   }
 
+  .md\:gap-x-full {
+    grid-column-gap: 100%;
+    column-gap: 100%;
+  }
+
   .md\:row-gap-0 {
     grid-row-gap: 0;
     row-gap: 0;
@@ -28541,6 +30448,11 @@ button:focus {
     row-gap: 36rem;
   }
 
+  .md\:row-gap-full {
+    grid-row-gap: 100%;
+    row-gap: 100%;
+  }
+
   .md\:gap-y-0 {
     grid-row-gap: 0;
     row-gap: 0;
@@ -28659,6 +30571,11 @@ button:focus {
   .md\:gap-y-xl {
     grid-row-gap: 36rem;
     row-gap: 36rem;
+  }
+
+  .md\:gap-y-full {
+    grid-row-gap: 100%;
+    row-gap: 100%;
   }
 
   .md\:grid-flow-row {
@@ -29062,6 +30979,1326 @@ button:focus {
 
   .md\:origin-top-left {
     transform-origin: top left;
+  }
+
+  .md\:translate-x-0 {
+    --transform-translate-x: 0;
+  }
+
+  .md\:translate-x-1 {
+    --transform-translate-x: 0.25rem;
+  }
+
+  .md\:translate-x-2 {
+    --transform-translate-x: 0.5rem;
+  }
+
+  .md\:translate-x-3 {
+    --transform-translate-x: 0.75rem;
+  }
+
+  .md\:translate-x-4 {
+    --transform-translate-x: 1rem;
+  }
+
+  .md\:translate-x-5 {
+    --transform-translate-x: 1.25rem;
+  }
+
+  .md\:translate-x-6 {
+    --transform-translate-x: 1.5rem;
+  }
+
+  .md\:translate-x-8 {
+    --transform-translate-x: 2rem;
+  }
+
+  .md\:translate-x-10 {
+    --transform-translate-x: 2.5rem;
+  }
+
+  .md\:translate-x-12 {
+    --transform-translate-x: 3rem;
+  }
+
+  .md\:translate-x-16 {
+    --transform-translate-x: 4rem;
+  }
+
+  .md\:translate-x-20 {
+    --transform-translate-x: 5rem;
+  }
+
+  .md\:translate-x-24 {
+    --transform-translate-x: 6rem;
+  }
+
+  .md\:translate-x-25 {
+    --transform-translate-x: 25%;
+  }
+
+  .md\:translate-x-32 {
+    --transform-translate-x: 8rem;
+  }
+
+  .md\:translate-x-40 {
+    --transform-translate-x: 10rem;
+  }
+
+  .md\:translate-x-48 {
+    --transform-translate-x: 12rem;
+  }
+
+  .md\:translate-x-50 {
+    --transform-translate-x: 50%;
+  }
+
+  .md\:translate-x-56 {
+    --transform-translate-x: 14rem;
+  }
+
+  .md\:translate-x-64 {
+    --transform-translate-x: 16rem;
+  }
+
+  .md\:translate-x-px {
+    --transform-translate-x: 1px;
+  }
+
+  .md\:translate-x-xs {
+    --transform-translate-x: 20rem;
+  }
+
+  .md\:translate-x-sm {
+    --transform-translate-x: 24rem;
+  }
+
+  .md\:translate-x-md {
+    --transform-translate-x: 28rem;
+  }
+
+  .md\:translate-x-lg {
+    --transform-translate-x: 32rem;
+  }
+
+  .md\:translate-x-xl {
+    --transform-translate-x: 36rem;
+  }
+
+  .md\:translate-x-full {
+    --transform-translate-x: 100%;
+  }
+
+  .md\:-translate-x-1 {
+    --transform-translate-x: -0.25rem;
+  }
+
+  .md\:-translate-x-2 {
+    --transform-translate-x: -0.5rem;
+  }
+
+  .md\:-translate-x-3 {
+    --transform-translate-x: -0.75rem;
+  }
+
+  .md\:-translate-x-4 {
+    --transform-translate-x: -1rem;
+  }
+
+  .md\:-translate-x-5 {
+    --transform-translate-x: -1.25rem;
+  }
+
+  .md\:-translate-x-6 {
+    --transform-translate-x: -1.5rem;
+  }
+
+  .md\:-translate-x-8 {
+    --transform-translate-x: -2rem;
+  }
+
+  .md\:-translate-x-10 {
+    --transform-translate-x: -2.5rem;
+  }
+
+  .md\:-translate-x-12 {
+    --transform-translate-x: -3rem;
+  }
+
+  .md\:-translate-x-16 {
+    --transform-translate-x: -4rem;
+  }
+
+  .md\:-translate-x-20 {
+    --transform-translate-x: -5rem;
+  }
+
+  .md\:-translate-x-24 {
+    --transform-translate-x: -6rem;
+  }
+
+  .md\:-translate-x-32 {
+    --transform-translate-x: -8rem;
+  }
+
+  .md\:-translate-x-40 {
+    --transform-translate-x: -10rem;
+  }
+
+  .md\:-translate-x-48 {
+    --transform-translate-x: -12rem;
+  }
+
+  .md\:-translate-x-56 {
+    --transform-translate-x: -14rem;
+  }
+
+  .md\:-translate-x-64 {
+    --transform-translate-x: -16rem;
+  }
+
+  .md\:-translate-x-px {
+    --transform-translate-x: -1px;
+  }
+
+  .md\:-translate-x-xs {
+    --transform-translate-x: -20rem;
+  }
+
+  .md\:-translate-x-sm {
+    --transform-translate-x: -24rem;
+  }
+
+  .md\:-translate-x-md {
+    --transform-translate-x: -28rem;
+  }
+
+  .md\:-translate-x-lg {
+    --transform-translate-x: -32rem;
+  }
+
+  .md\:-translate-x-xl {
+    --transform-translate-x: -36rem;
+  }
+
+  .md\:-translate-x-full {
+    --transform-translate-x: -100%;
+  }
+
+  .md\:-translate-x-1\/2 {
+    --transform-translate-x: -50%;
+  }
+
+  .md\:translate-x-1\/2 {
+    --transform-translate-x: 50%;
+  }
+
+  .md\:-translate-x-50 {
+    --transform-translate-x: -50%;
+  }
+
+  .md\:-translate-x-25 {
+    --transform-translate-x: -25%;
+  }
+
+  .md\:translate-y-0 {
+    --transform-translate-y: 0;
+  }
+
+  .md\:translate-y-1 {
+    --transform-translate-y: 0.25rem;
+  }
+
+  .md\:translate-y-2 {
+    --transform-translate-y: 0.5rem;
+  }
+
+  .md\:translate-y-3 {
+    --transform-translate-y: 0.75rem;
+  }
+
+  .md\:translate-y-4 {
+    --transform-translate-y: 1rem;
+  }
+
+  .md\:translate-y-5 {
+    --transform-translate-y: 1.25rem;
+  }
+
+  .md\:translate-y-6 {
+    --transform-translate-y: 1.5rem;
+  }
+
+  .md\:translate-y-8 {
+    --transform-translate-y: 2rem;
+  }
+
+  .md\:translate-y-10 {
+    --transform-translate-y: 2.5rem;
+  }
+
+  .md\:translate-y-12 {
+    --transform-translate-y: 3rem;
+  }
+
+  .md\:translate-y-16 {
+    --transform-translate-y: 4rem;
+  }
+
+  .md\:translate-y-20 {
+    --transform-translate-y: 5rem;
+  }
+
+  .md\:translate-y-24 {
+    --transform-translate-y: 6rem;
+  }
+
+  .md\:translate-y-25 {
+    --transform-translate-y: 25%;
+  }
+
+  .md\:translate-y-32 {
+    --transform-translate-y: 8rem;
+  }
+
+  .md\:translate-y-40 {
+    --transform-translate-y: 10rem;
+  }
+
+  .md\:translate-y-48 {
+    --transform-translate-y: 12rem;
+  }
+
+  .md\:translate-y-50 {
+    --transform-translate-y: 50%;
+  }
+
+  .md\:translate-y-56 {
+    --transform-translate-y: 14rem;
+  }
+
+  .md\:translate-y-64 {
+    --transform-translate-y: 16rem;
+  }
+
+  .md\:translate-y-px {
+    --transform-translate-y: 1px;
+  }
+
+  .md\:translate-y-xs {
+    --transform-translate-y: 20rem;
+  }
+
+  .md\:translate-y-sm {
+    --transform-translate-y: 24rem;
+  }
+
+  .md\:translate-y-md {
+    --transform-translate-y: 28rem;
+  }
+
+  .md\:translate-y-lg {
+    --transform-translate-y: 32rem;
+  }
+
+  .md\:translate-y-xl {
+    --transform-translate-y: 36rem;
+  }
+
+  .md\:translate-y-full {
+    --transform-translate-y: 100%;
+  }
+
+  .md\:-translate-y-1 {
+    --transform-translate-y: -0.25rem;
+  }
+
+  .md\:-translate-y-2 {
+    --transform-translate-y: -0.5rem;
+  }
+
+  .md\:-translate-y-3 {
+    --transform-translate-y: -0.75rem;
+  }
+
+  .md\:-translate-y-4 {
+    --transform-translate-y: -1rem;
+  }
+
+  .md\:-translate-y-5 {
+    --transform-translate-y: -1.25rem;
+  }
+
+  .md\:-translate-y-6 {
+    --transform-translate-y: -1.5rem;
+  }
+
+  .md\:-translate-y-8 {
+    --transform-translate-y: -2rem;
+  }
+
+  .md\:-translate-y-10 {
+    --transform-translate-y: -2.5rem;
+  }
+
+  .md\:-translate-y-12 {
+    --transform-translate-y: -3rem;
+  }
+
+  .md\:-translate-y-16 {
+    --transform-translate-y: -4rem;
+  }
+
+  .md\:-translate-y-20 {
+    --transform-translate-y: -5rem;
+  }
+
+  .md\:-translate-y-24 {
+    --transform-translate-y: -6rem;
+  }
+
+  .md\:-translate-y-32 {
+    --transform-translate-y: -8rem;
+  }
+
+  .md\:-translate-y-40 {
+    --transform-translate-y: -10rem;
+  }
+
+  .md\:-translate-y-48 {
+    --transform-translate-y: -12rem;
+  }
+
+  .md\:-translate-y-56 {
+    --transform-translate-y: -14rem;
+  }
+
+  .md\:-translate-y-64 {
+    --transform-translate-y: -16rem;
+  }
+
+  .md\:-translate-y-px {
+    --transform-translate-y: -1px;
+  }
+
+  .md\:-translate-y-xs {
+    --transform-translate-y: -20rem;
+  }
+
+  .md\:-translate-y-sm {
+    --transform-translate-y: -24rem;
+  }
+
+  .md\:-translate-y-md {
+    --transform-translate-y: -28rem;
+  }
+
+  .md\:-translate-y-lg {
+    --transform-translate-y: -32rem;
+  }
+
+  .md\:-translate-y-xl {
+    --transform-translate-y: -36rem;
+  }
+
+  .md\:-translate-y-full {
+    --transform-translate-y: -100%;
+  }
+
+  .md\:-translate-y-1\/2 {
+    --transform-translate-y: -50%;
+  }
+
+  .md\:translate-y-1\/2 {
+    --transform-translate-y: 50%;
+  }
+
+  .md\:-translate-y-50 {
+    --transform-translate-y: -50%;
+  }
+
+  .md\:-translate-y-25 {
+    --transform-translate-y: -25%;
+  }
+
+  .md\:hover\:translate-x-0:hover {
+    --transform-translate-x: 0;
+  }
+
+  .md\:hover\:translate-x-1:hover {
+    --transform-translate-x: 0.25rem;
+  }
+
+  .md\:hover\:translate-x-2:hover {
+    --transform-translate-x: 0.5rem;
+  }
+
+  .md\:hover\:translate-x-3:hover {
+    --transform-translate-x: 0.75rem;
+  }
+
+  .md\:hover\:translate-x-4:hover {
+    --transform-translate-x: 1rem;
+  }
+
+  .md\:hover\:translate-x-5:hover {
+    --transform-translate-x: 1.25rem;
+  }
+
+  .md\:hover\:translate-x-6:hover {
+    --transform-translate-x: 1.5rem;
+  }
+
+  .md\:hover\:translate-x-8:hover {
+    --transform-translate-x: 2rem;
+  }
+
+  .md\:hover\:translate-x-10:hover {
+    --transform-translate-x: 2.5rem;
+  }
+
+  .md\:hover\:translate-x-12:hover {
+    --transform-translate-x: 3rem;
+  }
+
+  .md\:hover\:translate-x-16:hover {
+    --transform-translate-x: 4rem;
+  }
+
+  .md\:hover\:translate-x-20:hover {
+    --transform-translate-x: 5rem;
+  }
+
+  .md\:hover\:translate-x-24:hover {
+    --transform-translate-x: 6rem;
+  }
+
+  .md\:hover\:translate-x-25:hover {
+    --transform-translate-x: 25%;
+  }
+
+  .md\:hover\:translate-x-32:hover {
+    --transform-translate-x: 8rem;
+  }
+
+  .md\:hover\:translate-x-40:hover {
+    --transform-translate-x: 10rem;
+  }
+
+  .md\:hover\:translate-x-48:hover {
+    --transform-translate-x: 12rem;
+  }
+
+  .md\:hover\:translate-x-50:hover {
+    --transform-translate-x: 50%;
+  }
+
+  .md\:hover\:translate-x-56:hover {
+    --transform-translate-x: 14rem;
+  }
+
+  .md\:hover\:translate-x-64:hover {
+    --transform-translate-x: 16rem;
+  }
+
+  .md\:hover\:translate-x-px:hover {
+    --transform-translate-x: 1px;
+  }
+
+  .md\:hover\:translate-x-xs:hover {
+    --transform-translate-x: 20rem;
+  }
+
+  .md\:hover\:translate-x-sm:hover {
+    --transform-translate-x: 24rem;
+  }
+
+  .md\:hover\:translate-x-md:hover {
+    --transform-translate-x: 28rem;
+  }
+
+  .md\:hover\:translate-x-lg:hover {
+    --transform-translate-x: 32rem;
+  }
+
+  .md\:hover\:translate-x-xl:hover {
+    --transform-translate-x: 36rem;
+  }
+
+  .md\:hover\:translate-x-full:hover {
+    --transform-translate-x: 100%;
+  }
+
+  .md\:hover\:-translate-x-1:hover {
+    --transform-translate-x: -0.25rem;
+  }
+
+  .md\:hover\:-translate-x-2:hover {
+    --transform-translate-x: -0.5rem;
+  }
+
+  .md\:hover\:-translate-x-3:hover {
+    --transform-translate-x: -0.75rem;
+  }
+
+  .md\:hover\:-translate-x-4:hover {
+    --transform-translate-x: -1rem;
+  }
+
+  .md\:hover\:-translate-x-5:hover {
+    --transform-translate-x: -1.25rem;
+  }
+
+  .md\:hover\:-translate-x-6:hover {
+    --transform-translate-x: -1.5rem;
+  }
+
+  .md\:hover\:-translate-x-8:hover {
+    --transform-translate-x: -2rem;
+  }
+
+  .md\:hover\:-translate-x-10:hover {
+    --transform-translate-x: -2.5rem;
+  }
+
+  .md\:hover\:-translate-x-12:hover {
+    --transform-translate-x: -3rem;
+  }
+
+  .md\:hover\:-translate-x-16:hover {
+    --transform-translate-x: -4rem;
+  }
+
+  .md\:hover\:-translate-x-20:hover {
+    --transform-translate-x: -5rem;
+  }
+
+  .md\:hover\:-translate-x-24:hover {
+    --transform-translate-x: -6rem;
+  }
+
+  .md\:hover\:-translate-x-32:hover {
+    --transform-translate-x: -8rem;
+  }
+
+  .md\:hover\:-translate-x-40:hover {
+    --transform-translate-x: -10rem;
+  }
+
+  .md\:hover\:-translate-x-48:hover {
+    --transform-translate-x: -12rem;
+  }
+
+  .md\:hover\:-translate-x-56:hover {
+    --transform-translate-x: -14rem;
+  }
+
+  .md\:hover\:-translate-x-64:hover {
+    --transform-translate-x: -16rem;
+  }
+
+  .md\:hover\:-translate-x-px:hover {
+    --transform-translate-x: -1px;
+  }
+
+  .md\:hover\:-translate-x-xs:hover {
+    --transform-translate-x: -20rem;
+  }
+
+  .md\:hover\:-translate-x-sm:hover {
+    --transform-translate-x: -24rem;
+  }
+
+  .md\:hover\:-translate-x-md:hover {
+    --transform-translate-x: -28rem;
+  }
+
+  .md\:hover\:-translate-x-lg:hover {
+    --transform-translate-x: -32rem;
+  }
+
+  .md\:hover\:-translate-x-xl:hover {
+    --transform-translate-x: -36rem;
+  }
+
+  .md\:hover\:-translate-x-full:hover {
+    --transform-translate-x: -100%;
+  }
+
+  .md\:hover\:-translate-x-1\/2:hover {
+    --transform-translate-x: -50%;
+  }
+
+  .md\:hover\:translate-x-1\/2:hover {
+    --transform-translate-x: 50%;
+  }
+
+  .md\:hover\:-translate-x-50:hover {
+    --transform-translate-x: -50%;
+  }
+
+  .md\:hover\:-translate-x-25:hover {
+    --transform-translate-x: -25%;
+  }
+
+  .md\:hover\:translate-y-0:hover {
+    --transform-translate-y: 0;
+  }
+
+  .md\:hover\:translate-y-1:hover {
+    --transform-translate-y: 0.25rem;
+  }
+
+  .md\:hover\:translate-y-2:hover {
+    --transform-translate-y: 0.5rem;
+  }
+
+  .md\:hover\:translate-y-3:hover {
+    --transform-translate-y: 0.75rem;
+  }
+
+  .md\:hover\:translate-y-4:hover {
+    --transform-translate-y: 1rem;
+  }
+
+  .md\:hover\:translate-y-5:hover {
+    --transform-translate-y: 1.25rem;
+  }
+
+  .md\:hover\:translate-y-6:hover {
+    --transform-translate-y: 1.5rem;
+  }
+
+  .md\:hover\:translate-y-8:hover {
+    --transform-translate-y: 2rem;
+  }
+
+  .md\:hover\:translate-y-10:hover {
+    --transform-translate-y: 2.5rem;
+  }
+
+  .md\:hover\:translate-y-12:hover {
+    --transform-translate-y: 3rem;
+  }
+
+  .md\:hover\:translate-y-16:hover {
+    --transform-translate-y: 4rem;
+  }
+
+  .md\:hover\:translate-y-20:hover {
+    --transform-translate-y: 5rem;
+  }
+
+  .md\:hover\:translate-y-24:hover {
+    --transform-translate-y: 6rem;
+  }
+
+  .md\:hover\:translate-y-25:hover {
+    --transform-translate-y: 25%;
+  }
+
+  .md\:hover\:translate-y-32:hover {
+    --transform-translate-y: 8rem;
+  }
+
+  .md\:hover\:translate-y-40:hover {
+    --transform-translate-y: 10rem;
+  }
+
+  .md\:hover\:translate-y-48:hover {
+    --transform-translate-y: 12rem;
+  }
+
+  .md\:hover\:translate-y-50:hover {
+    --transform-translate-y: 50%;
+  }
+
+  .md\:hover\:translate-y-56:hover {
+    --transform-translate-y: 14rem;
+  }
+
+  .md\:hover\:translate-y-64:hover {
+    --transform-translate-y: 16rem;
+  }
+
+  .md\:hover\:translate-y-px:hover {
+    --transform-translate-y: 1px;
+  }
+
+  .md\:hover\:translate-y-xs:hover {
+    --transform-translate-y: 20rem;
+  }
+
+  .md\:hover\:translate-y-sm:hover {
+    --transform-translate-y: 24rem;
+  }
+
+  .md\:hover\:translate-y-md:hover {
+    --transform-translate-y: 28rem;
+  }
+
+  .md\:hover\:translate-y-lg:hover {
+    --transform-translate-y: 32rem;
+  }
+
+  .md\:hover\:translate-y-xl:hover {
+    --transform-translate-y: 36rem;
+  }
+
+  .md\:hover\:translate-y-full:hover {
+    --transform-translate-y: 100%;
+  }
+
+  .md\:hover\:-translate-y-1:hover {
+    --transform-translate-y: -0.25rem;
+  }
+
+  .md\:hover\:-translate-y-2:hover {
+    --transform-translate-y: -0.5rem;
+  }
+
+  .md\:hover\:-translate-y-3:hover {
+    --transform-translate-y: -0.75rem;
+  }
+
+  .md\:hover\:-translate-y-4:hover {
+    --transform-translate-y: -1rem;
+  }
+
+  .md\:hover\:-translate-y-5:hover {
+    --transform-translate-y: -1.25rem;
+  }
+
+  .md\:hover\:-translate-y-6:hover {
+    --transform-translate-y: -1.5rem;
+  }
+
+  .md\:hover\:-translate-y-8:hover {
+    --transform-translate-y: -2rem;
+  }
+
+  .md\:hover\:-translate-y-10:hover {
+    --transform-translate-y: -2.5rem;
+  }
+
+  .md\:hover\:-translate-y-12:hover {
+    --transform-translate-y: -3rem;
+  }
+
+  .md\:hover\:-translate-y-16:hover {
+    --transform-translate-y: -4rem;
+  }
+
+  .md\:hover\:-translate-y-20:hover {
+    --transform-translate-y: -5rem;
+  }
+
+  .md\:hover\:-translate-y-24:hover {
+    --transform-translate-y: -6rem;
+  }
+
+  .md\:hover\:-translate-y-32:hover {
+    --transform-translate-y: -8rem;
+  }
+
+  .md\:hover\:-translate-y-40:hover {
+    --transform-translate-y: -10rem;
+  }
+
+  .md\:hover\:-translate-y-48:hover {
+    --transform-translate-y: -12rem;
+  }
+
+  .md\:hover\:-translate-y-56:hover {
+    --transform-translate-y: -14rem;
+  }
+
+  .md\:hover\:-translate-y-64:hover {
+    --transform-translate-y: -16rem;
+  }
+
+  .md\:hover\:-translate-y-px:hover {
+    --transform-translate-y: -1px;
+  }
+
+  .md\:hover\:-translate-y-xs:hover {
+    --transform-translate-y: -20rem;
+  }
+
+  .md\:hover\:-translate-y-sm:hover {
+    --transform-translate-y: -24rem;
+  }
+
+  .md\:hover\:-translate-y-md:hover {
+    --transform-translate-y: -28rem;
+  }
+
+  .md\:hover\:-translate-y-lg:hover {
+    --transform-translate-y: -32rem;
+  }
+
+  .md\:hover\:-translate-y-xl:hover {
+    --transform-translate-y: -36rem;
+  }
+
+  .md\:hover\:-translate-y-full:hover {
+    --transform-translate-y: -100%;
+  }
+
+  .md\:hover\:-translate-y-1\/2:hover {
+    --transform-translate-y: -50%;
+  }
+
+  .md\:hover\:translate-y-1\/2:hover {
+    --transform-translate-y: 50%;
+  }
+
+  .md\:hover\:-translate-y-50:hover {
+    --transform-translate-y: -50%;
+  }
+
+  .md\:hover\:-translate-y-25:hover {
+    --transform-translate-y: -25%;
+  }
+
+  .group:hover .md\:group-hover\:translate-x-0 {
+    --transform-translate-x: 0;
+  }
+
+  .group:hover .md\:group-hover\:translate-x-1 {
+    --transform-translate-x: 0.25rem;
+  }
+
+  .group:hover .md\:group-hover\:translate-x-2 {
+    --transform-translate-x: 0.5rem;
+  }
+
+  .group:hover .md\:group-hover\:translate-x-3 {
+    --transform-translate-x: 0.75rem;
+  }
+
+  .group:hover .md\:group-hover\:translate-x-4 {
+    --transform-translate-x: 1rem;
+  }
+
+  .group:hover .md\:group-hover\:translate-x-5 {
+    --transform-translate-x: 1.25rem;
+  }
+
+  .group:hover .md\:group-hover\:translate-x-6 {
+    --transform-translate-x: 1.5rem;
+  }
+
+  .group:hover .md\:group-hover\:translate-x-8 {
+    --transform-translate-x: 2rem;
+  }
+
+  .group:hover .md\:group-hover\:translate-x-10 {
+    --transform-translate-x: 2.5rem;
+  }
+
+  .group:hover .md\:group-hover\:translate-x-12 {
+    --transform-translate-x: 3rem;
+  }
+
+  .group:hover .md\:group-hover\:translate-x-16 {
+    --transform-translate-x: 4rem;
+  }
+
+  .group:hover .md\:group-hover\:translate-x-20 {
+    --transform-translate-x: 5rem;
+  }
+
+  .group:hover .md\:group-hover\:translate-x-24 {
+    --transform-translate-x: 6rem;
+  }
+
+  .group:hover .md\:group-hover\:translate-x-25 {
+    --transform-translate-x: 25%;
+  }
+
+  .group:hover .md\:group-hover\:translate-x-32 {
+    --transform-translate-x: 8rem;
+  }
+
+  .group:hover .md\:group-hover\:translate-x-40 {
+    --transform-translate-x: 10rem;
+  }
+
+  .group:hover .md\:group-hover\:translate-x-48 {
+    --transform-translate-x: 12rem;
+  }
+
+  .group:hover .md\:group-hover\:translate-x-50 {
+    --transform-translate-x: 50%;
+  }
+
+  .group:hover .md\:group-hover\:translate-x-56 {
+    --transform-translate-x: 14rem;
+  }
+
+  .group:hover .md\:group-hover\:translate-x-64 {
+    --transform-translate-x: 16rem;
+  }
+
+  .group:hover .md\:group-hover\:translate-x-px {
+    --transform-translate-x: 1px;
+  }
+
+  .group:hover .md\:group-hover\:translate-x-xs {
+    --transform-translate-x: 20rem;
+  }
+
+  .group:hover .md\:group-hover\:translate-x-sm {
+    --transform-translate-x: 24rem;
+  }
+
+  .group:hover .md\:group-hover\:translate-x-md {
+    --transform-translate-x: 28rem;
+  }
+
+  .group:hover .md\:group-hover\:translate-x-lg {
+    --transform-translate-x: 32rem;
+  }
+
+  .group:hover .md\:group-hover\:translate-x-xl {
+    --transform-translate-x: 36rem;
+  }
+
+  .group:hover .md\:group-hover\:translate-x-full {
+    --transform-translate-x: 100%;
+  }
+
+  .group:hover .md\:group-hover\:-translate-x-1 {
+    --transform-translate-x: -0.25rem;
+  }
+
+  .group:hover .md\:group-hover\:-translate-x-2 {
+    --transform-translate-x: -0.5rem;
+  }
+
+  .group:hover .md\:group-hover\:-translate-x-3 {
+    --transform-translate-x: -0.75rem;
+  }
+
+  .group:hover .md\:group-hover\:-translate-x-4 {
+    --transform-translate-x: -1rem;
+  }
+
+  .group:hover .md\:group-hover\:-translate-x-5 {
+    --transform-translate-x: -1.25rem;
+  }
+
+  .group:hover .md\:group-hover\:-translate-x-6 {
+    --transform-translate-x: -1.5rem;
+  }
+
+  .group:hover .md\:group-hover\:-translate-x-8 {
+    --transform-translate-x: -2rem;
+  }
+
+  .group:hover .md\:group-hover\:-translate-x-10 {
+    --transform-translate-x: -2.5rem;
+  }
+
+  .group:hover .md\:group-hover\:-translate-x-12 {
+    --transform-translate-x: -3rem;
+  }
+
+  .group:hover .md\:group-hover\:-translate-x-16 {
+    --transform-translate-x: -4rem;
+  }
+
+  .group:hover .md\:group-hover\:-translate-x-20 {
+    --transform-translate-x: -5rem;
+  }
+
+  .group:hover .md\:group-hover\:-translate-x-24 {
+    --transform-translate-x: -6rem;
+  }
+
+  .group:hover .md\:group-hover\:-translate-x-32 {
+    --transform-translate-x: -8rem;
+  }
+
+  .group:hover .md\:group-hover\:-translate-x-40 {
+    --transform-translate-x: -10rem;
+  }
+
+  .group:hover .md\:group-hover\:-translate-x-48 {
+    --transform-translate-x: -12rem;
+  }
+
+  .group:hover .md\:group-hover\:-translate-x-56 {
+    --transform-translate-x: -14rem;
+  }
+
+  .group:hover .md\:group-hover\:-translate-x-64 {
+    --transform-translate-x: -16rem;
+  }
+
+  .group:hover .md\:group-hover\:-translate-x-px {
+    --transform-translate-x: -1px;
+  }
+
+  .group:hover .md\:group-hover\:-translate-x-xs {
+    --transform-translate-x: -20rem;
+  }
+
+  .group:hover .md\:group-hover\:-translate-x-sm {
+    --transform-translate-x: -24rem;
+  }
+
+  .group:hover .md\:group-hover\:-translate-x-md {
+    --transform-translate-x: -28rem;
+  }
+
+  .group:hover .md\:group-hover\:-translate-x-lg {
+    --transform-translate-x: -32rem;
+  }
+
+  .group:hover .md\:group-hover\:-translate-x-xl {
+    --transform-translate-x: -36rem;
+  }
+
+  .group:hover .md\:group-hover\:-translate-x-full {
+    --transform-translate-x: -100%;
+  }
+
+  .group:hover .md\:group-hover\:-translate-x-1\/2 {
+    --transform-translate-x: -50%;
+  }
+
+  .group:hover .md\:group-hover\:translate-x-1\/2 {
+    --transform-translate-x: 50%;
+  }
+
+  .group:hover .md\:group-hover\:-translate-x-50 {
+    --transform-translate-x: -50%;
+  }
+
+  .group:hover .md\:group-hover\:-translate-x-25 {
+    --transform-translate-x: -25%;
+  }
+
+  .group:hover .md\:group-hover\:translate-y-0 {
+    --transform-translate-y: 0;
+  }
+
+  .group:hover .md\:group-hover\:translate-y-1 {
+    --transform-translate-y: 0.25rem;
+  }
+
+  .group:hover .md\:group-hover\:translate-y-2 {
+    --transform-translate-y: 0.5rem;
+  }
+
+  .group:hover .md\:group-hover\:translate-y-3 {
+    --transform-translate-y: 0.75rem;
+  }
+
+  .group:hover .md\:group-hover\:translate-y-4 {
+    --transform-translate-y: 1rem;
+  }
+
+  .group:hover .md\:group-hover\:translate-y-5 {
+    --transform-translate-y: 1.25rem;
+  }
+
+  .group:hover .md\:group-hover\:translate-y-6 {
+    --transform-translate-y: 1.5rem;
+  }
+
+  .group:hover .md\:group-hover\:translate-y-8 {
+    --transform-translate-y: 2rem;
+  }
+
+  .group:hover .md\:group-hover\:translate-y-10 {
+    --transform-translate-y: 2.5rem;
+  }
+
+  .group:hover .md\:group-hover\:translate-y-12 {
+    --transform-translate-y: 3rem;
+  }
+
+  .group:hover .md\:group-hover\:translate-y-16 {
+    --transform-translate-y: 4rem;
+  }
+
+  .group:hover .md\:group-hover\:translate-y-20 {
+    --transform-translate-y: 5rem;
+  }
+
+  .group:hover .md\:group-hover\:translate-y-24 {
+    --transform-translate-y: 6rem;
+  }
+
+  .group:hover .md\:group-hover\:translate-y-25 {
+    --transform-translate-y: 25%;
+  }
+
+  .group:hover .md\:group-hover\:translate-y-32 {
+    --transform-translate-y: 8rem;
+  }
+
+  .group:hover .md\:group-hover\:translate-y-40 {
+    --transform-translate-y: 10rem;
+  }
+
+  .group:hover .md\:group-hover\:translate-y-48 {
+    --transform-translate-y: 12rem;
+  }
+
+  .group:hover .md\:group-hover\:translate-y-50 {
+    --transform-translate-y: 50%;
+  }
+
+  .group:hover .md\:group-hover\:translate-y-56 {
+    --transform-translate-y: 14rem;
+  }
+
+  .group:hover .md\:group-hover\:translate-y-64 {
+    --transform-translate-y: 16rem;
+  }
+
+  .group:hover .md\:group-hover\:translate-y-px {
+    --transform-translate-y: 1px;
+  }
+
+  .group:hover .md\:group-hover\:translate-y-xs {
+    --transform-translate-y: 20rem;
+  }
+
+  .group:hover .md\:group-hover\:translate-y-sm {
+    --transform-translate-y: 24rem;
+  }
+
+  .group:hover .md\:group-hover\:translate-y-md {
+    --transform-translate-y: 28rem;
+  }
+
+  .group:hover .md\:group-hover\:translate-y-lg {
+    --transform-translate-y: 32rem;
+  }
+
+  .group:hover .md\:group-hover\:translate-y-xl {
+    --transform-translate-y: 36rem;
+  }
+
+  .group:hover .md\:group-hover\:translate-y-full {
+    --transform-translate-y: 100%;
+  }
+
+  .group:hover .md\:group-hover\:-translate-y-1 {
+    --transform-translate-y: -0.25rem;
+  }
+
+  .group:hover .md\:group-hover\:-translate-y-2 {
+    --transform-translate-y: -0.5rem;
+  }
+
+  .group:hover .md\:group-hover\:-translate-y-3 {
+    --transform-translate-y: -0.75rem;
+  }
+
+  .group:hover .md\:group-hover\:-translate-y-4 {
+    --transform-translate-y: -1rem;
+  }
+
+  .group:hover .md\:group-hover\:-translate-y-5 {
+    --transform-translate-y: -1.25rem;
+  }
+
+  .group:hover .md\:group-hover\:-translate-y-6 {
+    --transform-translate-y: -1.5rem;
+  }
+
+  .group:hover .md\:group-hover\:-translate-y-8 {
+    --transform-translate-y: -2rem;
+  }
+
+  .group:hover .md\:group-hover\:-translate-y-10 {
+    --transform-translate-y: -2.5rem;
+  }
+
+  .group:hover .md\:group-hover\:-translate-y-12 {
+    --transform-translate-y: -3rem;
+  }
+
+  .group:hover .md\:group-hover\:-translate-y-16 {
+    --transform-translate-y: -4rem;
+  }
+
+  .group:hover .md\:group-hover\:-translate-y-20 {
+    --transform-translate-y: -5rem;
+  }
+
+  .group:hover .md\:group-hover\:-translate-y-24 {
+    --transform-translate-y: -6rem;
+  }
+
+  .group:hover .md\:group-hover\:-translate-y-32 {
+    --transform-translate-y: -8rem;
+  }
+
+  .group:hover .md\:group-hover\:-translate-y-40 {
+    --transform-translate-y: -10rem;
+  }
+
+  .group:hover .md\:group-hover\:-translate-y-48 {
+    --transform-translate-y: -12rem;
+  }
+
+  .group:hover .md\:group-hover\:-translate-y-56 {
+    --transform-translate-y: -14rem;
+  }
+
+  .group:hover .md\:group-hover\:-translate-y-64 {
+    --transform-translate-y: -16rem;
+  }
+
+  .group:hover .md\:group-hover\:-translate-y-px {
+    --transform-translate-y: -1px;
+  }
+
+  .group:hover .md\:group-hover\:-translate-y-xs {
+    --transform-translate-y: -20rem;
+  }
+
+  .group:hover .md\:group-hover\:-translate-y-sm {
+    --transform-translate-y: -24rem;
+  }
+
+  .group:hover .md\:group-hover\:-translate-y-md {
+    --transform-translate-y: -28rem;
+  }
+
+  .group:hover .md\:group-hover\:-translate-y-lg {
+    --transform-translate-y: -32rem;
+  }
+
+  .group:hover .md\:group-hover\:-translate-y-xl {
+    --transform-translate-y: -36rem;
+  }
+
+  .group:hover .md\:group-hover\:-translate-y-full {
+    --transform-translate-y: -100%;
+  }
+
+  .group:hover .md\:group-hover\:-translate-y-1\/2 {
+    --transform-translate-y: -50%;
+  }
+
+  .group:hover .md\:group-hover\:translate-y-1\/2 {
+    --transform-translate-y: 50%;
+  }
+
+  .group:hover .md\:group-hover\:-translate-y-50 {
+    --transform-translate-y: -50%;
+  }
+
+  .group:hover .md\:group-hover\:-translate-y-25 {
+    --transform-translate-y: -25%;
   }
 
   .md\:skew-x-0 {
@@ -29690,6 +32927,18 @@ button:focus {
     margin-left: calc(36rem * calc(1 - var(--space-x-reverse)));
   }
 
+  .lg\:space-y-full > :not(template) ~ :not(template) {
+    --space-y-reverse: 0;
+    margin-top: calc(100% * calc(1 - var(--space-y-reverse)));
+    margin-bottom: calc(100% * var(--space-y-reverse));
+  }
+
+  .lg\:space-x-full > :not(template) ~ :not(template) {
+    --space-x-reverse: 0;
+    margin-right: calc(100% * var(--space-x-reverse));
+    margin-left: calc(100% * calc(1 - var(--space-x-reverse)));
+  }
+
   .lg\:-space-y-1 > :not(template) ~ :not(template) {
     --space-y-reverse: 0;
     margin-top: calc(-0.25rem * calc(1 - var(--space-y-reverse)));
@@ -29964,6 +33213,18 @@ button:focus {
     --space-x-reverse: 0;
     margin-right: calc(-36rem * var(--space-x-reverse));
     margin-left: calc(-36rem * calc(1 - var(--space-x-reverse)));
+  }
+
+  .lg\:-space-y-full > :not(template) ~ :not(template) {
+    --space-y-reverse: 0;
+    margin-top: calc(-100% * calc(1 - var(--space-y-reverse)));
+    margin-bottom: calc(-100% * var(--space-y-reverse));
+  }
+
+  .lg\:-space-x-full > :not(template) ~ :not(template) {
+    --space-x-reverse: 0;
+    margin-right: calc(-100% * var(--space-x-reverse));
+    margin-left: calc(-100% * calc(1 - var(--space-x-reverse)));
   }
 
   .lg\:space-y-reverse > :not(template) ~ :not(template) {
@@ -32212,6 +35473,10 @@ button:focus {
     margin: 36rem;
   }
 
+  .lg\:m-full {
+    margin: 100%;
+  }
+
   .lg\:-m-1 {
     margin: -0.25rem;
   }
@@ -32302,6 +35567,10 @@ button:focus {
 
   .lg\:-m-xl {
     margin: -36rem;
+  }
+
+  .lg\:-m-full {
+    margin: -100%;
   }
 
   .lg\:my-0 {
@@ -32554,6 +35823,16 @@ button:focus {
     margin-right: 36rem;
   }
 
+  .lg\:my-full {
+    margin-top: 100%;
+    margin-bottom: 100%;
+  }
+
+  .lg\:mx-full {
+    margin-left: 100%;
+    margin-right: 100%;
+  }
+
   .lg\:-my-1 {
     margin-top: -0.25rem;
     margin-bottom: -0.25rem;
@@ -32782,6 +36061,16 @@ button:focus {
   .lg\:-mx-xl {
     margin-left: -36rem;
     margin-right: -36rem;
+  }
+
+  .lg\:-my-full {
+    margin-top: -100%;
+    margin-bottom: -100%;
+  }
+
+  .lg\:-mx-full {
+    margin-left: -100%;
+    margin-right: -100%;
   }
 
   .lg\:mt-0 {
@@ -33184,6 +36473,22 @@ button:focus {
     margin-left: 36rem;
   }
 
+  .lg\:mt-full {
+    margin-top: 100%;
+  }
+
+  .lg\:mr-full {
+    margin-right: 100%;
+  }
+
+  .lg\:mb-full {
+    margin-bottom: 100%;
+  }
+
+  .lg\:ml-full {
+    margin-left: 100%;
+  }
+
   .lg\:-mt-1 {
     margin-top: -0.25rem;
   }
@@ -33552,6 +36857,22 @@ button:focus {
     margin-left: -36rem;
   }
 
+  .lg\:-mt-full {
+    margin-top: -100%;
+  }
+
+  .lg\:-mr-full {
+    margin-right: -100%;
+  }
+
+  .lg\:-mb-full {
+    margin-bottom: -100%;
+  }
+
+  .lg\:-ml-full {
+    margin-left: -100%;
+  }
+
   .lg\:max-h-full {
     max-height: 100%;
   }
@@ -33896,6 +37217,10 @@ button:focus {
     padding: 36rem;
   }
 
+  .lg\:p-full {
+    padding: 100%;
+  }
+
   .lg\:py-0 {
     padding-top: 0;
     padding-bottom: 0;
@@ -34134,6 +37459,16 @@ button:focus {
   .lg\:px-xl {
     padding-left: 36rem;
     padding-right: 36rem;
+  }
+
+  .lg\:py-full {
+    padding-top: 100%;
+    padding-bottom: 100%;
+  }
+
+  .lg\:px-full {
+    padding-left: 100%;
+    padding-right: 100%;
   }
 
   .lg\:pt-0 {
@@ -34520,6 +37855,22 @@ button:focus {
     padding-left: 36rem;
   }
 
+  .lg\:pt-full {
+    padding-top: 100%;
+  }
+
+  .lg\:pr-full {
+    padding-right: 100%;
+  }
+
+  .lg\:pb-full {
+    padding-bottom: 100%;
+  }
+
+  .lg\:pl-full {
+    padding-left: 100%;
+  }
+
   .lg\:first\:p-0:first-child {
     padding: 0;
   }
@@ -34614,6 +37965,10 @@ button:focus {
 
   .lg\:first\:p-xl:first-child {
     padding: 36rem;
+  }
+
+  .lg\:first\:p-full:first-child {
+    padding: 100%;
   }
 
   .lg\:first\:py-0:first-child {
@@ -34854,6 +38209,16 @@ button:focus {
   .lg\:first\:px-xl:first-child {
     padding-left: 36rem;
     padding-right: 36rem;
+  }
+
+  .lg\:first\:py-full:first-child {
+    padding-top: 100%;
+    padding-bottom: 100%;
+  }
+
+  .lg\:first\:px-full:first-child {
+    padding-left: 100%;
+    padding-right: 100%;
   }
 
   .lg\:first\:pt-0:first-child {
@@ -35240,6 +38605,22 @@ button:focus {
     padding-left: 36rem;
   }
 
+  .lg\:first\:pt-full:first-child {
+    padding-top: 100%;
+  }
+
+  .lg\:first\:pr-full:first-child {
+    padding-right: 100%;
+  }
+
+  .lg\:first\:pb-full:first-child {
+    padding-bottom: 100%;
+  }
+
+  .lg\:first\:pl-full:first-child {
+    padding-left: 100%;
+  }
+
   .lg\:last\:p-0:last-child {
     padding: 0;
   }
@@ -35334,6 +38715,10 @@ button:focus {
 
   .lg\:last\:p-xl:last-child {
     padding: 36rem;
+  }
+
+  .lg\:last\:p-full:last-child {
+    padding: 100%;
   }
 
   .lg\:last\:py-0:last-child {
@@ -35574,6 +38959,16 @@ button:focus {
   .lg\:last\:px-xl:last-child {
     padding-left: 36rem;
     padding-right: 36rem;
+  }
+
+  .lg\:last\:py-full:last-child {
+    padding-top: 100%;
+    padding-bottom: 100%;
+  }
+
+  .lg\:last\:px-full:last-child {
+    padding-left: 100%;
+    padding-right: 100%;
   }
 
   .lg\:last\:pt-0:last-child {
@@ -35958,6 +39353,22 @@ button:focus {
 
   .lg\:last\:pl-xl:last-child {
     padding-left: 36rem;
+  }
+
+  .lg\:last\:pt-full:last-child {
+    padding-top: 100%;
+  }
+
+  .lg\:last\:pr-full:last-child {
+    padding-right: 100%;
+  }
+
+  .lg\:last\:pb-full:last-child {
+    padding-bottom: 100%;
+  }
+
+  .lg\:last\:pl-full:last-child {
+    padding-left: 100%;
   }
 
   .lg\:placeholder-gray::placeholder {
@@ -36806,6 +40217,10 @@ button:focus {
     width: 36rem;
   }
 
+  .lg\:w-full {
+    width: 100%;
+  }
+
   .lg\:w-1\/2 {
     width: 50%;
   }
@@ -36908,10 +40323,6 @@ button:focus {
 
   .lg\:w-11\/12 {
     width: 91.666667%;
-  }
-
-  .lg\:w-full {
-    width: 100%;
   }
 
   .lg\:w-screen {
@@ -37066,6 +40477,11 @@ button:focus {
     gap: 36rem;
   }
 
+  .lg\:gap-full {
+    grid-gap: 100%;
+    gap: 100%;
+  }
+
   .lg\:col-gap-0 {
     grid-column-gap: 0;
     column-gap: 0;
@@ -37184,6 +40600,11 @@ button:focus {
   .lg\:col-gap-xl {
     grid-column-gap: 36rem;
     column-gap: 36rem;
+  }
+
+  .lg\:col-gap-full {
+    grid-column-gap: 100%;
+    column-gap: 100%;
   }
 
   .lg\:gap-x-0 {
@@ -37306,6 +40727,11 @@ button:focus {
     column-gap: 36rem;
   }
 
+  .lg\:gap-x-full {
+    grid-column-gap: 100%;
+    column-gap: 100%;
+  }
+
   .lg\:row-gap-0 {
     grid-row-gap: 0;
     row-gap: 0;
@@ -37426,6 +40852,11 @@ button:focus {
     row-gap: 36rem;
   }
 
+  .lg\:row-gap-full {
+    grid-row-gap: 100%;
+    row-gap: 100%;
+  }
+
   .lg\:gap-y-0 {
     grid-row-gap: 0;
     row-gap: 0;
@@ -37544,6 +40975,11 @@ button:focus {
   .lg\:gap-y-xl {
     grid-row-gap: 36rem;
     row-gap: 36rem;
+  }
+
+  .lg\:gap-y-full {
+    grid-row-gap: 100%;
+    row-gap: 100%;
   }
 
   .lg\:grid-flow-row {
@@ -37947,6 +41383,1326 @@ button:focus {
 
   .lg\:origin-top-left {
     transform-origin: top left;
+  }
+
+  .lg\:translate-x-0 {
+    --transform-translate-x: 0;
+  }
+
+  .lg\:translate-x-1 {
+    --transform-translate-x: 0.25rem;
+  }
+
+  .lg\:translate-x-2 {
+    --transform-translate-x: 0.5rem;
+  }
+
+  .lg\:translate-x-3 {
+    --transform-translate-x: 0.75rem;
+  }
+
+  .lg\:translate-x-4 {
+    --transform-translate-x: 1rem;
+  }
+
+  .lg\:translate-x-5 {
+    --transform-translate-x: 1.25rem;
+  }
+
+  .lg\:translate-x-6 {
+    --transform-translate-x: 1.5rem;
+  }
+
+  .lg\:translate-x-8 {
+    --transform-translate-x: 2rem;
+  }
+
+  .lg\:translate-x-10 {
+    --transform-translate-x: 2.5rem;
+  }
+
+  .lg\:translate-x-12 {
+    --transform-translate-x: 3rem;
+  }
+
+  .lg\:translate-x-16 {
+    --transform-translate-x: 4rem;
+  }
+
+  .lg\:translate-x-20 {
+    --transform-translate-x: 5rem;
+  }
+
+  .lg\:translate-x-24 {
+    --transform-translate-x: 6rem;
+  }
+
+  .lg\:translate-x-25 {
+    --transform-translate-x: 25%;
+  }
+
+  .lg\:translate-x-32 {
+    --transform-translate-x: 8rem;
+  }
+
+  .lg\:translate-x-40 {
+    --transform-translate-x: 10rem;
+  }
+
+  .lg\:translate-x-48 {
+    --transform-translate-x: 12rem;
+  }
+
+  .lg\:translate-x-50 {
+    --transform-translate-x: 50%;
+  }
+
+  .lg\:translate-x-56 {
+    --transform-translate-x: 14rem;
+  }
+
+  .lg\:translate-x-64 {
+    --transform-translate-x: 16rem;
+  }
+
+  .lg\:translate-x-px {
+    --transform-translate-x: 1px;
+  }
+
+  .lg\:translate-x-xs {
+    --transform-translate-x: 20rem;
+  }
+
+  .lg\:translate-x-sm {
+    --transform-translate-x: 24rem;
+  }
+
+  .lg\:translate-x-md {
+    --transform-translate-x: 28rem;
+  }
+
+  .lg\:translate-x-lg {
+    --transform-translate-x: 32rem;
+  }
+
+  .lg\:translate-x-xl {
+    --transform-translate-x: 36rem;
+  }
+
+  .lg\:translate-x-full {
+    --transform-translate-x: 100%;
+  }
+
+  .lg\:-translate-x-1 {
+    --transform-translate-x: -0.25rem;
+  }
+
+  .lg\:-translate-x-2 {
+    --transform-translate-x: -0.5rem;
+  }
+
+  .lg\:-translate-x-3 {
+    --transform-translate-x: -0.75rem;
+  }
+
+  .lg\:-translate-x-4 {
+    --transform-translate-x: -1rem;
+  }
+
+  .lg\:-translate-x-5 {
+    --transform-translate-x: -1.25rem;
+  }
+
+  .lg\:-translate-x-6 {
+    --transform-translate-x: -1.5rem;
+  }
+
+  .lg\:-translate-x-8 {
+    --transform-translate-x: -2rem;
+  }
+
+  .lg\:-translate-x-10 {
+    --transform-translate-x: -2.5rem;
+  }
+
+  .lg\:-translate-x-12 {
+    --transform-translate-x: -3rem;
+  }
+
+  .lg\:-translate-x-16 {
+    --transform-translate-x: -4rem;
+  }
+
+  .lg\:-translate-x-20 {
+    --transform-translate-x: -5rem;
+  }
+
+  .lg\:-translate-x-24 {
+    --transform-translate-x: -6rem;
+  }
+
+  .lg\:-translate-x-32 {
+    --transform-translate-x: -8rem;
+  }
+
+  .lg\:-translate-x-40 {
+    --transform-translate-x: -10rem;
+  }
+
+  .lg\:-translate-x-48 {
+    --transform-translate-x: -12rem;
+  }
+
+  .lg\:-translate-x-56 {
+    --transform-translate-x: -14rem;
+  }
+
+  .lg\:-translate-x-64 {
+    --transform-translate-x: -16rem;
+  }
+
+  .lg\:-translate-x-px {
+    --transform-translate-x: -1px;
+  }
+
+  .lg\:-translate-x-xs {
+    --transform-translate-x: -20rem;
+  }
+
+  .lg\:-translate-x-sm {
+    --transform-translate-x: -24rem;
+  }
+
+  .lg\:-translate-x-md {
+    --transform-translate-x: -28rem;
+  }
+
+  .lg\:-translate-x-lg {
+    --transform-translate-x: -32rem;
+  }
+
+  .lg\:-translate-x-xl {
+    --transform-translate-x: -36rem;
+  }
+
+  .lg\:-translate-x-full {
+    --transform-translate-x: -100%;
+  }
+
+  .lg\:-translate-x-1\/2 {
+    --transform-translate-x: -50%;
+  }
+
+  .lg\:translate-x-1\/2 {
+    --transform-translate-x: 50%;
+  }
+
+  .lg\:-translate-x-50 {
+    --transform-translate-x: -50%;
+  }
+
+  .lg\:-translate-x-25 {
+    --transform-translate-x: -25%;
+  }
+
+  .lg\:translate-y-0 {
+    --transform-translate-y: 0;
+  }
+
+  .lg\:translate-y-1 {
+    --transform-translate-y: 0.25rem;
+  }
+
+  .lg\:translate-y-2 {
+    --transform-translate-y: 0.5rem;
+  }
+
+  .lg\:translate-y-3 {
+    --transform-translate-y: 0.75rem;
+  }
+
+  .lg\:translate-y-4 {
+    --transform-translate-y: 1rem;
+  }
+
+  .lg\:translate-y-5 {
+    --transform-translate-y: 1.25rem;
+  }
+
+  .lg\:translate-y-6 {
+    --transform-translate-y: 1.5rem;
+  }
+
+  .lg\:translate-y-8 {
+    --transform-translate-y: 2rem;
+  }
+
+  .lg\:translate-y-10 {
+    --transform-translate-y: 2.5rem;
+  }
+
+  .lg\:translate-y-12 {
+    --transform-translate-y: 3rem;
+  }
+
+  .lg\:translate-y-16 {
+    --transform-translate-y: 4rem;
+  }
+
+  .lg\:translate-y-20 {
+    --transform-translate-y: 5rem;
+  }
+
+  .lg\:translate-y-24 {
+    --transform-translate-y: 6rem;
+  }
+
+  .lg\:translate-y-25 {
+    --transform-translate-y: 25%;
+  }
+
+  .lg\:translate-y-32 {
+    --transform-translate-y: 8rem;
+  }
+
+  .lg\:translate-y-40 {
+    --transform-translate-y: 10rem;
+  }
+
+  .lg\:translate-y-48 {
+    --transform-translate-y: 12rem;
+  }
+
+  .lg\:translate-y-50 {
+    --transform-translate-y: 50%;
+  }
+
+  .lg\:translate-y-56 {
+    --transform-translate-y: 14rem;
+  }
+
+  .lg\:translate-y-64 {
+    --transform-translate-y: 16rem;
+  }
+
+  .lg\:translate-y-px {
+    --transform-translate-y: 1px;
+  }
+
+  .lg\:translate-y-xs {
+    --transform-translate-y: 20rem;
+  }
+
+  .lg\:translate-y-sm {
+    --transform-translate-y: 24rem;
+  }
+
+  .lg\:translate-y-md {
+    --transform-translate-y: 28rem;
+  }
+
+  .lg\:translate-y-lg {
+    --transform-translate-y: 32rem;
+  }
+
+  .lg\:translate-y-xl {
+    --transform-translate-y: 36rem;
+  }
+
+  .lg\:translate-y-full {
+    --transform-translate-y: 100%;
+  }
+
+  .lg\:-translate-y-1 {
+    --transform-translate-y: -0.25rem;
+  }
+
+  .lg\:-translate-y-2 {
+    --transform-translate-y: -0.5rem;
+  }
+
+  .lg\:-translate-y-3 {
+    --transform-translate-y: -0.75rem;
+  }
+
+  .lg\:-translate-y-4 {
+    --transform-translate-y: -1rem;
+  }
+
+  .lg\:-translate-y-5 {
+    --transform-translate-y: -1.25rem;
+  }
+
+  .lg\:-translate-y-6 {
+    --transform-translate-y: -1.5rem;
+  }
+
+  .lg\:-translate-y-8 {
+    --transform-translate-y: -2rem;
+  }
+
+  .lg\:-translate-y-10 {
+    --transform-translate-y: -2.5rem;
+  }
+
+  .lg\:-translate-y-12 {
+    --transform-translate-y: -3rem;
+  }
+
+  .lg\:-translate-y-16 {
+    --transform-translate-y: -4rem;
+  }
+
+  .lg\:-translate-y-20 {
+    --transform-translate-y: -5rem;
+  }
+
+  .lg\:-translate-y-24 {
+    --transform-translate-y: -6rem;
+  }
+
+  .lg\:-translate-y-32 {
+    --transform-translate-y: -8rem;
+  }
+
+  .lg\:-translate-y-40 {
+    --transform-translate-y: -10rem;
+  }
+
+  .lg\:-translate-y-48 {
+    --transform-translate-y: -12rem;
+  }
+
+  .lg\:-translate-y-56 {
+    --transform-translate-y: -14rem;
+  }
+
+  .lg\:-translate-y-64 {
+    --transform-translate-y: -16rem;
+  }
+
+  .lg\:-translate-y-px {
+    --transform-translate-y: -1px;
+  }
+
+  .lg\:-translate-y-xs {
+    --transform-translate-y: -20rem;
+  }
+
+  .lg\:-translate-y-sm {
+    --transform-translate-y: -24rem;
+  }
+
+  .lg\:-translate-y-md {
+    --transform-translate-y: -28rem;
+  }
+
+  .lg\:-translate-y-lg {
+    --transform-translate-y: -32rem;
+  }
+
+  .lg\:-translate-y-xl {
+    --transform-translate-y: -36rem;
+  }
+
+  .lg\:-translate-y-full {
+    --transform-translate-y: -100%;
+  }
+
+  .lg\:-translate-y-1\/2 {
+    --transform-translate-y: -50%;
+  }
+
+  .lg\:translate-y-1\/2 {
+    --transform-translate-y: 50%;
+  }
+
+  .lg\:-translate-y-50 {
+    --transform-translate-y: -50%;
+  }
+
+  .lg\:-translate-y-25 {
+    --transform-translate-y: -25%;
+  }
+
+  .lg\:hover\:translate-x-0:hover {
+    --transform-translate-x: 0;
+  }
+
+  .lg\:hover\:translate-x-1:hover {
+    --transform-translate-x: 0.25rem;
+  }
+
+  .lg\:hover\:translate-x-2:hover {
+    --transform-translate-x: 0.5rem;
+  }
+
+  .lg\:hover\:translate-x-3:hover {
+    --transform-translate-x: 0.75rem;
+  }
+
+  .lg\:hover\:translate-x-4:hover {
+    --transform-translate-x: 1rem;
+  }
+
+  .lg\:hover\:translate-x-5:hover {
+    --transform-translate-x: 1.25rem;
+  }
+
+  .lg\:hover\:translate-x-6:hover {
+    --transform-translate-x: 1.5rem;
+  }
+
+  .lg\:hover\:translate-x-8:hover {
+    --transform-translate-x: 2rem;
+  }
+
+  .lg\:hover\:translate-x-10:hover {
+    --transform-translate-x: 2.5rem;
+  }
+
+  .lg\:hover\:translate-x-12:hover {
+    --transform-translate-x: 3rem;
+  }
+
+  .lg\:hover\:translate-x-16:hover {
+    --transform-translate-x: 4rem;
+  }
+
+  .lg\:hover\:translate-x-20:hover {
+    --transform-translate-x: 5rem;
+  }
+
+  .lg\:hover\:translate-x-24:hover {
+    --transform-translate-x: 6rem;
+  }
+
+  .lg\:hover\:translate-x-25:hover {
+    --transform-translate-x: 25%;
+  }
+
+  .lg\:hover\:translate-x-32:hover {
+    --transform-translate-x: 8rem;
+  }
+
+  .lg\:hover\:translate-x-40:hover {
+    --transform-translate-x: 10rem;
+  }
+
+  .lg\:hover\:translate-x-48:hover {
+    --transform-translate-x: 12rem;
+  }
+
+  .lg\:hover\:translate-x-50:hover {
+    --transform-translate-x: 50%;
+  }
+
+  .lg\:hover\:translate-x-56:hover {
+    --transform-translate-x: 14rem;
+  }
+
+  .lg\:hover\:translate-x-64:hover {
+    --transform-translate-x: 16rem;
+  }
+
+  .lg\:hover\:translate-x-px:hover {
+    --transform-translate-x: 1px;
+  }
+
+  .lg\:hover\:translate-x-xs:hover {
+    --transform-translate-x: 20rem;
+  }
+
+  .lg\:hover\:translate-x-sm:hover {
+    --transform-translate-x: 24rem;
+  }
+
+  .lg\:hover\:translate-x-md:hover {
+    --transform-translate-x: 28rem;
+  }
+
+  .lg\:hover\:translate-x-lg:hover {
+    --transform-translate-x: 32rem;
+  }
+
+  .lg\:hover\:translate-x-xl:hover {
+    --transform-translate-x: 36rem;
+  }
+
+  .lg\:hover\:translate-x-full:hover {
+    --transform-translate-x: 100%;
+  }
+
+  .lg\:hover\:-translate-x-1:hover {
+    --transform-translate-x: -0.25rem;
+  }
+
+  .lg\:hover\:-translate-x-2:hover {
+    --transform-translate-x: -0.5rem;
+  }
+
+  .lg\:hover\:-translate-x-3:hover {
+    --transform-translate-x: -0.75rem;
+  }
+
+  .lg\:hover\:-translate-x-4:hover {
+    --transform-translate-x: -1rem;
+  }
+
+  .lg\:hover\:-translate-x-5:hover {
+    --transform-translate-x: -1.25rem;
+  }
+
+  .lg\:hover\:-translate-x-6:hover {
+    --transform-translate-x: -1.5rem;
+  }
+
+  .lg\:hover\:-translate-x-8:hover {
+    --transform-translate-x: -2rem;
+  }
+
+  .lg\:hover\:-translate-x-10:hover {
+    --transform-translate-x: -2.5rem;
+  }
+
+  .lg\:hover\:-translate-x-12:hover {
+    --transform-translate-x: -3rem;
+  }
+
+  .lg\:hover\:-translate-x-16:hover {
+    --transform-translate-x: -4rem;
+  }
+
+  .lg\:hover\:-translate-x-20:hover {
+    --transform-translate-x: -5rem;
+  }
+
+  .lg\:hover\:-translate-x-24:hover {
+    --transform-translate-x: -6rem;
+  }
+
+  .lg\:hover\:-translate-x-32:hover {
+    --transform-translate-x: -8rem;
+  }
+
+  .lg\:hover\:-translate-x-40:hover {
+    --transform-translate-x: -10rem;
+  }
+
+  .lg\:hover\:-translate-x-48:hover {
+    --transform-translate-x: -12rem;
+  }
+
+  .lg\:hover\:-translate-x-56:hover {
+    --transform-translate-x: -14rem;
+  }
+
+  .lg\:hover\:-translate-x-64:hover {
+    --transform-translate-x: -16rem;
+  }
+
+  .lg\:hover\:-translate-x-px:hover {
+    --transform-translate-x: -1px;
+  }
+
+  .lg\:hover\:-translate-x-xs:hover {
+    --transform-translate-x: -20rem;
+  }
+
+  .lg\:hover\:-translate-x-sm:hover {
+    --transform-translate-x: -24rem;
+  }
+
+  .lg\:hover\:-translate-x-md:hover {
+    --transform-translate-x: -28rem;
+  }
+
+  .lg\:hover\:-translate-x-lg:hover {
+    --transform-translate-x: -32rem;
+  }
+
+  .lg\:hover\:-translate-x-xl:hover {
+    --transform-translate-x: -36rem;
+  }
+
+  .lg\:hover\:-translate-x-full:hover {
+    --transform-translate-x: -100%;
+  }
+
+  .lg\:hover\:-translate-x-1\/2:hover {
+    --transform-translate-x: -50%;
+  }
+
+  .lg\:hover\:translate-x-1\/2:hover {
+    --transform-translate-x: 50%;
+  }
+
+  .lg\:hover\:-translate-x-50:hover {
+    --transform-translate-x: -50%;
+  }
+
+  .lg\:hover\:-translate-x-25:hover {
+    --transform-translate-x: -25%;
+  }
+
+  .lg\:hover\:translate-y-0:hover {
+    --transform-translate-y: 0;
+  }
+
+  .lg\:hover\:translate-y-1:hover {
+    --transform-translate-y: 0.25rem;
+  }
+
+  .lg\:hover\:translate-y-2:hover {
+    --transform-translate-y: 0.5rem;
+  }
+
+  .lg\:hover\:translate-y-3:hover {
+    --transform-translate-y: 0.75rem;
+  }
+
+  .lg\:hover\:translate-y-4:hover {
+    --transform-translate-y: 1rem;
+  }
+
+  .lg\:hover\:translate-y-5:hover {
+    --transform-translate-y: 1.25rem;
+  }
+
+  .lg\:hover\:translate-y-6:hover {
+    --transform-translate-y: 1.5rem;
+  }
+
+  .lg\:hover\:translate-y-8:hover {
+    --transform-translate-y: 2rem;
+  }
+
+  .lg\:hover\:translate-y-10:hover {
+    --transform-translate-y: 2.5rem;
+  }
+
+  .lg\:hover\:translate-y-12:hover {
+    --transform-translate-y: 3rem;
+  }
+
+  .lg\:hover\:translate-y-16:hover {
+    --transform-translate-y: 4rem;
+  }
+
+  .lg\:hover\:translate-y-20:hover {
+    --transform-translate-y: 5rem;
+  }
+
+  .lg\:hover\:translate-y-24:hover {
+    --transform-translate-y: 6rem;
+  }
+
+  .lg\:hover\:translate-y-25:hover {
+    --transform-translate-y: 25%;
+  }
+
+  .lg\:hover\:translate-y-32:hover {
+    --transform-translate-y: 8rem;
+  }
+
+  .lg\:hover\:translate-y-40:hover {
+    --transform-translate-y: 10rem;
+  }
+
+  .lg\:hover\:translate-y-48:hover {
+    --transform-translate-y: 12rem;
+  }
+
+  .lg\:hover\:translate-y-50:hover {
+    --transform-translate-y: 50%;
+  }
+
+  .lg\:hover\:translate-y-56:hover {
+    --transform-translate-y: 14rem;
+  }
+
+  .lg\:hover\:translate-y-64:hover {
+    --transform-translate-y: 16rem;
+  }
+
+  .lg\:hover\:translate-y-px:hover {
+    --transform-translate-y: 1px;
+  }
+
+  .lg\:hover\:translate-y-xs:hover {
+    --transform-translate-y: 20rem;
+  }
+
+  .lg\:hover\:translate-y-sm:hover {
+    --transform-translate-y: 24rem;
+  }
+
+  .lg\:hover\:translate-y-md:hover {
+    --transform-translate-y: 28rem;
+  }
+
+  .lg\:hover\:translate-y-lg:hover {
+    --transform-translate-y: 32rem;
+  }
+
+  .lg\:hover\:translate-y-xl:hover {
+    --transform-translate-y: 36rem;
+  }
+
+  .lg\:hover\:translate-y-full:hover {
+    --transform-translate-y: 100%;
+  }
+
+  .lg\:hover\:-translate-y-1:hover {
+    --transform-translate-y: -0.25rem;
+  }
+
+  .lg\:hover\:-translate-y-2:hover {
+    --transform-translate-y: -0.5rem;
+  }
+
+  .lg\:hover\:-translate-y-3:hover {
+    --transform-translate-y: -0.75rem;
+  }
+
+  .lg\:hover\:-translate-y-4:hover {
+    --transform-translate-y: -1rem;
+  }
+
+  .lg\:hover\:-translate-y-5:hover {
+    --transform-translate-y: -1.25rem;
+  }
+
+  .lg\:hover\:-translate-y-6:hover {
+    --transform-translate-y: -1.5rem;
+  }
+
+  .lg\:hover\:-translate-y-8:hover {
+    --transform-translate-y: -2rem;
+  }
+
+  .lg\:hover\:-translate-y-10:hover {
+    --transform-translate-y: -2.5rem;
+  }
+
+  .lg\:hover\:-translate-y-12:hover {
+    --transform-translate-y: -3rem;
+  }
+
+  .lg\:hover\:-translate-y-16:hover {
+    --transform-translate-y: -4rem;
+  }
+
+  .lg\:hover\:-translate-y-20:hover {
+    --transform-translate-y: -5rem;
+  }
+
+  .lg\:hover\:-translate-y-24:hover {
+    --transform-translate-y: -6rem;
+  }
+
+  .lg\:hover\:-translate-y-32:hover {
+    --transform-translate-y: -8rem;
+  }
+
+  .lg\:hover\:-translate-y-40:hover {
+    --transform-translate-y: -10rem;
+  }
+
+  .lg\:hover\:-translate-y-48:hover {
+    --transform-translate-y: -12rem;
+  }
+
+  .lg\:hover\:-translate-y-56:hover {
+    --transform-translate-y: -14rem;
+  }
+
+  .lg\:hover\:-translate-y-64:hover {
+    --transform-translate-y: -16rem;
+  }
+
+  .lg\:hover\:-translate-y-px:hover {
+    --transform-translate-y: -1px;
+  }
+
+  .lg\:hover\:-translate-y-xs:hover {
+    --transform-translate-y: -20rem;
+  }
+
+  .lg\:hover\:-translate-y-sm:hover {
+    --transform-translate-y: -24rem;
+  }
+
+  .lg\:hover\:-translate-y-md:hover {
+    --transform-translate-y: -28rem;
+  }
+
+  .lg\:hover\:-translate-y-lg:hover {
+    --transform-translate-y: -32rem;
+  }
+
+  .lg\:hover\:-translate-y-xl:hover {
+    --transform-translate-y: -36rem;
+  }
+
+  .lg\:hover\:-translate-y-full:hover {
+    --transform-translate-y: -100%;
+  }
+
+  .lg\:hover\:-translate-y-1\/2:hover {
+    --transform-translate-y: -50%;
+  }
+
+  .lg\:hover\:translate-y-1\/2:hover {
+    --transform-translate-y: 50%;
+  }
+
+  .lg\:hover\:-translate-y-50:hover {
+    --transform-translate-y: -50%;
+  }
+
+  .lg\:hover\:-translate-y-25:hover {
+    --transform-translate-y: -25%;
+  }
+
+  .group:hover .lg\:group-hover\:translate-x-0 {
+    --transform-translate-x: 0;
+  }
+
+  .group:hover .lg\:group-hover\:translate-x-1 {
+    --transform-translate-x: 0.25rem;
+  }
+
+  .group:hover .lg\:group-hover\:translate-x-2 {
+    --transform-translate-x: 0.5rem;
+  }
+
+  .group:hover .lg\:group-hover\:translate-x-3 {
+    --transform-translate-x: 0.75rem;
+  }
+
+  .group:hover .lg\:group-hover\:translate-x-4 {
+    --transform-translate-x: 1rem;
+  }
+
+  .group:hover .lg\:group-hover\:translate-x-5 {
+    --transform-translate-x: 1.25rem;
+  }
+
+  .group:hover .lg\:group-hover\:translate-x-6 {
+    --transform-translate-x: 1.5rem;
+  }
+
+  .group:hover .lg\:group-hover\:translate-x-8 {
+    --transform-translate-x: 2rem;
+  }
+
+  .group:hover .lg\:group-hover\:translate-x-10 {
+    --transform-translate-x: 2.5rem;
+  }
+
+  .group:hover .lg\:group-hover\:translate-x-12 {
+    --transform-translate-x: 3rem;
+  }
+
+  .group:hover .lg\:group-hover\:translate-x-16 {
+    --transform-translate-x: 4rem;
+  }
+
+  .group:hover .lg\:group-hover\:translate-x-20 {
+    --transform-translate-x: 5rem;
+  }
+
+  .group:hover .lg\:group-hover\:translate-x-24 {
+    --transform-translate-x: 6rem;
+  }
+
+  .group:hover .lg\:group-hover\:translate-x-25 {
+    --transform-translate-x: 25%;
+  }
+
+  .group:hover .lg\:group-hover\:translate-x-32 {
+    --transform-translate-x: 8rem;
+  }
+
+  .group:hover .lg\:group-hover\:translate-x-40 {
+    --transform-translate-x: 10rem;
+  }
+
+  .group:hover .lg\:group-hover\:translate-x-48 {
+    --transform-translate-x: 12rem;
+  }
+
+  .group:hover .lg\:group-hover\:translate-x-50 {
+    --transform-translate-x: 50%;
+  }
+
+  .group:hover .lg\:group-hover\:translate-x-56 {
+    --transform-translate-x: 14rem;
+  }
+
+  .group:hover .lg\:group-hover\:translate-x-64 {
+    --transform-translate-x: 16rem;
+  }
+
+  .group:hover .lg\:group-hover\:translate-x-px {
+    --transform-translate-x: 1px;
+  }
+
+  .group:hover .lg\:group-hover\:translate-x-xs {
+    --transform-translate-x: 20rem;
+  }
+
+  .group:hover .lg\:group-hover\:translate-x-sm {
+    --transform-translate-x: 24rem;
+  }
+
+  .group:hover .lg\:group-hover\:translate-x-md {
+    --transform-translate-x: 28rem;
+  }
+
+  .group:hover .lg\:group-hover\:translate-x-lg {
+    --transform-translate-x: 32rem;
+  }
+
+  .group:hover .lg\:group-hover\:translate-x-xl {
+    --transform-translate-x: 36rem;
+  }
+
+  .group:hover .lg\:group-hover\:translate-x-full {
+    --transform-translate-x: 100%;
+  }
+
+  .group:hover .lg\:group-hover\:-translate-x-1 {
+    --transform-translate-x: -0.25rem;
+  }
+
+  .group:hover .lg\:group-hover\:-translate-x-2 {
+    --transform-translate-x: -0.5rem;
+  }
+
+  .group:hover .lg\:group-hover\:-translate-x-3 {
+    --transform-translate-x: -0.75rem;
+  }
+
+  .group:hover .lg\:group-hover\:-translate-x-4 {
+    --transform-translate-x: -1rem;
+  }
+
+  .group:hover .lg\:group-hover\:-translate-x-5 {
+    --transform-translate-x: -1.25rem;
+  }
+
+  .group:hover .lg\:group-hover\:-translate-x-6 {
+    --transform-translate-x: -1.5rem;
+  }
+
+  .group:hover .lg\:group-hover\:-translate-x-8 {
+    --transform-translate-x: -2rem;
+  }
+
+  .group:hover .lg\:group-hover\:-translate-x-10 {
+    --transform-translate-x: -2.5rem;
+  }
+
+  .group:hover .lg\:group-hover\:-translate-x-12 {
+    --transform-translate-x: -3rem;
+  }
+
+  .group:hover .lg\:group-hover\:-translate-x-16 {
+    --transform-translate-x: -4rem;
+  }
+
+  .group:hover .lg\:group-hover\:-translate-x-20 {
+    --transform-translate-x: -5rem;
+  }
+
+  .group:hover .lg\:group-hover\:-translate-x-24 {
+    --transform-translate-x: -6rem;
+  }
+
+  .group:hover .lg\:group-hover\:-translate-x-32 {
+    --transform-translate-x: -8rem;
+  }
+
+  .group:hover .lg\:group-hover\:-translate-x-40 {
+    --transform-translate-x: -10rem;
+  }
+
+  .group:hover .lg\:group-hover\:-translate-x-48 {
+    --transform-translate-x: -12rem;
+  }
+
+  .group:hover .lg\:group-hover\:-translate-x-56 {
+    --transform-translate-x: -14rem;
+  }
+
+  .group:hover .lg\:group-hover\:-translate-x-64 {
+    --transform-translate-x: -16rem;
+  }
+
+  .group:hover .lg\:group-hover\:-translate-x-px {
+    --transform-translate-x: -1px;
+  }
+
+  .group:hover .lg\:group-hover\:-translate-x-xs {
+    --transform-translate-x: -20rem;
+  }
+
+  .group:hover .lg\:group-hover\:-translate-x-sm {
+    --transform-translate-x: -24rem;
+  }
+
+  .group:hover .lg\:group-hover\:-translate-x-md {
+    --transform-translate-x: -28rem;
+  }
+
+  .group:hover .lg\:group-hover\:-translate-x-lg {
+    --transform-translate-x: -32rem;
+  }
+
+  .group:hover .lg\:group-hover\:-translate-x-xl {
+    --transform-translate-x: -36rem;
+  }
+
+  .group:hover .lg\:group-hover\:-translate-x-full {
+    --transform-translate-x: -100%;
+  }
+
+  .group:hover .lg\:group-hover\:-translate-x-1\/2 {
+    --transform-translate-x: -50%;
+  }
+
+  .group:hover .lg\:group-hover\:translate-x-1\/2 {
+    --transform-translate-x: 50%;
+  }
+
+  .group:hover .lg\:group-hover\:-translate-x-50 {
+    --transform-translate-x: -50%;
+  }
+
+  .group:hover .lg\:group-hover\:-translate-x-25 {
+    --transform-translate-x: -25%;
+  }
+
+  .group:hover .lg\:group-hover\:translate-y-0 {
+    --transform-translate-y: 0;
+  }
+
+  .group:hover .lg\:group-hover\:translate-y-1 {
+    --transform-translate-y: 0.25rem;
+  }
+
+  .group:hover .lg\:group-hover\:translate-y-2 {
+    --transform-translate-y: 0.5rem;
+  }
+
+  .group:hover .lg\:group-hover\:translate-y-3 {
+    --transform-translate-y: 0.75rem;
+  }
+
+  .group:hover .lg\:group-hover\:translate-y-4 {
+    --transform-translate-y: 1rem;
+  }
+
+  .group:hover .lg\:group-hover\:translate-y-5 {
+    --transform-translate-y: 1.25rem;
+  }
+
+  .group:hover .lg\:group-hover\:translate-y-6 {
+    --transform-translate-y: 1.5rem;
+  }
+
+  .group:hover .lg\:group-hover\:translate-y-8 {
+    --transform-translate-y: 2rem;
+  }
+
+  .group:hover .lg\:group-hover\:translate-y-10 {
+    --transform-translate-y: 2.5rem;
+  }
+
+  .group:hover .lg\:group-hover\:translate-y-12 {
+    --transform-translate-y: 3rem;
+  }
+
+  .group:hover .lg\:group-hover\:translate-y-16 {
+    --transform-translate-y: 4rem;
+  }
+
+  .group:hover .lg\:group-hover\:translate-y-20 {
+    --transform-translate-y: 5rem;
+  }
+
+  .group:hover .lg\:group-hover\:translate-y-24 {
+    --transform-translate-y: 6rem;
+  }
+
+  .group:hover .lg\:group-hover\:translate-y-25 {
+    --transform-translate-y: 25%;
+  }
+
+  .group:hover .lg\:group-hover\:translate-y-32 {
+    --transform-translate-y: 8rem;
+  }
+
+  .group:hover .lg\:group-hover\:translate-y-40 {
+    --transform-translate-y: 10rem;
+  }
+
+  .group:hover .lg\:group-hover\:translate-y-48 {
+    --transform-translate-y: 12rem;
+  }
+
+  .group:hover .lg\:group-hover\:translate-y-50 {
+    --transform-translate-y: 50%;
+  }
+
+  .group:hover .lg\:group-hover\:translate-y-56 {
+    --transform-translate-y: 14rem;
+  }
+
+  .group:hover .lg\:group-hover\:translate-y-64 {
+    --transform-translate-y: 16rem;
+  }
+
+  .group:hover .lg\:group-hover\:translate-y-px {
+    --transform-translate-y: 1px;
+  }
+
+  .group:hover .lg\:group-hover\:translate-y-xs {
+    --transform-translate-y: 20rem;
+  }
+
+  .group:hover .lg\:group-hover\:translate-y-sm {
+    --transform-translate-y: 24rem;
+  }
+
+  .group:hover .lg\:group-hover\:translate-y-md {
+    --transform-translate-y: 28rem;
+  }
+
+  .group:hover .lg\:group-hover\:translate-y-lg {
+    --transform-translate-y: 32rem;
+  }
+
+  .group:hover .lg\:group-hover\:translate-y-xl {
+    --transform-translate-y: 36rem;
+  }
+
+  .group:hover .lg\:group-hover\:translate-y-full {
+    --transform-translate-y: 100%;
+  }
+
+  .group:hover .lg\:group-hover\:-translate-y-1 {
+    --transform-translate-y: -0.25rem;
+  }
+
+  .group:hover .lg\:group-hover\:-translate-y-2 {
+    --transform-translate-y: -0.5rem;
+  }
+
+  .group:hover .lg\:group-hover\:-translate-y-3 {
+    --transform-translate-y: -0.75rem;
+  }
+
+  .group:hover .lg\:group-hover\:-translate-y-4 {
+    --transform-translate-y: -1rem;
+  }
+
+  .group:hover .lg\:group-hover\:-translate-y-5 {
+    --transform-translate-y: -1.25rem;
+  }
+
+  .group:hover .lg\:group-hover\:-translate-y-6 {
+    --transform-translate-y: -1.5rem;
+  }
+
+  .group:hover .lg\:group-hover\:-translate-y-8 {
+    --transform-translate-y: -2rem;
+  }
+
+  .group:hover .lg\:group-hover\:-translate-y-10 {
+    --transform-translate-y: -2.5rem;
+  }
+
+  .group:hover .lg\:group-hover\:-translate-y-12 {
+    --transform-translate-y: -3rem;
+  }
+
+  .group:hover .lg\:group-hover\:-translate-y-16 {
+    --transform-translate-y: -4rem;
+  }
+
+  .group:hover .lg\:group-hover\:-translate-y-20 {
+    --transform-translate-y: -5rem;
+  }
+
+  .group:hover .lg\:group-hover\:-translate-y-24 {
+    --transform-translate-y: -6rem;
+  }
+
+  .group:hover .lg\:group-hover\:-translate-y-32 {
+    --transform-translate-y: -8rem;
+  }
+
+  .group:hover .lg\:group-hover\:-translate-y-40 {
+    --transform-translate-y: -10rem;
+  }
+
+  .group:hover .lg\:group-hover\:-translate-y-48 {
+    --transform-translate-y: -12rem;
+  }
+
+  .group:hover .lg\:group-hover\:-translate-y-56 {
+    --transform-translate-y: -14rem;
+  }
+
+  .group:hover .lg\:group-hover\:-translate-y-64 {
+    --transform-translate-y: -16rem;
+  }
+
+  .group:hover .lg\:group-hover\:-translate-y-px {
+    --transform-translate-y: -1px;
+  }
+
+  .group:hover .lg\:group-hover\:-translate-y-xs {
+    --transform-translate-y: -20rem;
+  }
+
+  .group:hover .lg\:group-hover\:-translate-y-sm {
+    --transform-translate-y: -24rem;
+  }
+
+  .group:hover .lg\:group-hover\:-translate-y-md {
+    --transform-translate-y: -28rem;
+  }
+
+  .group:hover .lg\:group-hover\:-translate-y-lg {
+    --transform-translate-y: -32rem;
+  }
+
+  .group:hover .lg\:group-hover\:-translate-y-xl {
+    --transform-translate-y: -36rem;
+  }
+
+  .group:hover .lg\:group-hover\:-translate-y-full {
+    --transform-translate-y: -100%;
+  }
+
+  .group:hover .lg\:group-hover\:-translate-y-1\/2 {
+    --transform-translate-y: -50%;
+  }
+
+  .group:hover .lg\:group-hover\:translate-y-1\/2 {
+    --transform-translate-y: 50%;
+  }
+
+  .group:hover .lg\:group-hover\:-translate-y-50 {
+    --transform-translate-y: -50%;
+  }
+
+  .group:hover .lg\:group-hover\:-translate-y-25 {
+    --transform-translate-y: -25%;
   }
 
   .lg\:skew-x-0 {
@@ -38575,6 +43331,18 @@ button:focus {
     margin-left: calc(36rem * calc(1 - var(--space-x-reverse)));
   }
 
+  .xl\:space-y-full > :not(template) ~ :not(template) {
+    --space-y-reverse: 0;
+    margin-top: calc(100% * calc(1 - var(--space-y-reverse)));
+    margin-bottom: calc(100% * var(--space-y-reverse));
+  }
+
+  .xl\:space-x-full > :not(template) ~ :not(template) {
+    --space-x-reverse: 0;
+    margin-right: calc(100% * var(--space-x-reverse));
+    margin-left: calc(100% * calc(1 - var(--space-x-reverse)));
+  }
+
   .xl\:-space-y-1 > :not(template) ~ :not(template) {
     --space-y-reverse: 0;
     margin-top: calc(-0.25rem * calc(1 - var(--space-y-reverse)));
@@ -38849,6 +43617,18 @@ button:focus {
     --space-x-reverse: 0;
     margin-right: calc(-36rem * var(--space-x-reverse));
     margin-left: calc(-36rem * calc(1 - var(--space-x-reverse)));
+  }
+
+  .xl\:-space-y-full > :not(template) ~ :not(template) {
+    --space-y-reverse: 0;
+    margin-top: calc(-100% * calc(1 - var(--space-y-reverse)));
+    margin-bottom: calc(-100% * var(--space-y-reverse));
+  }
+
+  .xl\:-space-x-full > :not(template) ~ :not(template) {
+    --space-x-reverse: 0;
+    margin-right: calc(-100% * var(--space-x-reverse));
+    margin-left: calc(-100% * calc(1 - var(--space-x-reverse)));
   }
 
   .xl\:space-y-reverse > :not(template) ~ :not(template) {
@@ -41097,6 +45877,10 @@ button:focus {
     margin: 36rem;
   }
 
+  .xl\:m-full {
+    margin: 100%;
+  }
+
   .xl\:-m-1 {
     margin: -0.25rem;
   }
@@ -41187,6 +45971,10 @@ button:focus {
 
   .xl\:-m-xl {
     margin: -36rem;
+  }
+
+  .xl\:-m-full {
+    margin: -100%;
   }
 
   .xl\:my-0 {
@@ -41439,6 +46227,16 @@ button:focus {
     margin-right: 36rem;
   }
 
+  .xl\:my-full {
+    margin-top: 100%;
+    margin-bottom: 100%;
+  }
+
+  .xl\:mx-full {
+    margin-left: 100%;
+    margin-right: 100%;
+  }
+
   .xl\:-my-1 {
     margin-top: -0.25rem;
     margin-bottom: -0.25rem;
@@ -41667,6 +46465,16 @@ button:focus {
   .xl\:-mx-xl {
     margin-left: -36rem;
     margin-right: -36rem;
+  }
+
+  .xl\:-my-full {
+    margin-top: -100%;
+    margin-bottom: -100%;
+  }
+
+  .xl\:-mx-full {
+    margin-left: -100%;
+    margin-right: -100%;
   }
 
   .xl\:mt-0 {
@@ -42069,6 +46877,22 @@ button:focus {
     margin-left: 36rem;
   }
 
+  .xl\:mt-full {
+    margin-top: 100%;
+  }
+
+  .xl\:mr-full {
+    margin-right: 100%;
+  }
+
+  .xl\:mb-full {
+    margin-bottom: 100%;
+  }
+
+  .xl\:ml-full {
+    margin-left: 100%;
+  }
+
   .xl\:-mt-1 {
     margin-top: -0.25rem;
   }
@@ -42437,6 +47261,22 @@ button:focus {
     margin-left: -36rem;
   }
 
+  .xl\:-mt-full {
+    margin-top: -100%;
+  }
+
+  .xl\:-mr-full {
+    margin-right: -100%;
+  }
+
+  .xl\:-mb-full {
+    margin-bottom: -100%;
+  }
+
+  .xl\:-ml-full {
+    margin-left: -100%;
+  }
+
   .xl\:max-h-full {
     max-height: 100%;
   }
@@ -42781,6 +47621,10 @@ button:focus {
     padding: 36rem;
   }
 
+  .xl\:p-full {
+    padding: 100%;
+  }
+
   .xl\:py-0 {
     padding-top: 0;
     padding-bottom: 0;
@@ -43019,6 +47863,16 @@ button:focus {
   .xl\:px-xl {
     padding-left: 36rem;
     padding-right: 36rem;
+  }
+
+  .xl\:py-full {
+    padding-top: 100%;
+    padding-bottom: 100%;
+  }
+
+  .xl\:px-full {
+    padding-left: 100%;
+    padding-right: 100%;
   }
 
   .xl\:pt-0 {
@@ -43405,6 +48259,22 @@ button:focus {
     padding-left: 36rem;
   }
 
+  .xl\:pt-full {
+    padding-top: 100%;
+  }
+
+  .xl\:pr-full {
+    padding-right: 100%;
+  }
+
+  .xl\:pb-full {
+    padding-bottom: 100%;
+  }
+
+  .xl\:pl-full {
+    padding-left: 100%;
+  }
+
   .xl\:first\:p-0:first-child {
     padding: 0;
   }
@@ -43499,6 +48369,10 @@ button:focus {
 
   .xl\:first\:p-xl:first-child {
     padding: 36rem;
+  }
+
+  .xl\:first\:p-full:first-child {
+    padding: 100%;
   }
 
   .xl\:first\:py-0:first-child {
@@ -43739,6 +48613,16 @@ button:focus {
   .xl\:first\:px-xl:first-child {
     padding-left: 36rem;
     padding-right: 36rem;
+  }
+
+  .xl\:first\:py-full:first-child {
+    padding-top: 100%;
+    padding-bottom: 100%;
+  }
+
+  .xl\:first\:px-full:first-child {
+    padding-left: 100%;
+    padding-right: 100%;
   }
 
   .xl\:first\:pt-0:first-child {
@@ -44125,6 +49009,22 @@ button:focus {
     padding-left: 36rem;
   }
 
+  .xl\:first\:pt-full:first-child {
+    padding-top: 100%;
+  }
+
+  .xl\:first\:pr-full:first-child {
+    padding-right: 100%;
+  }
+
+  .xl\:first\:pb-full:first-child {
+    padding-bottom: 100%;
+  }
+
+  .xl\:first\:pl-full:first-child {
+    padding-left: 100%;
+  }
+
   .xl\:last\:p-0:last-child {
     padding: 0;
   }
@@ -44219,6 +49119,10 @@ button:focus {
 
   .xl\:last\:p-xl:last-child {
     padding: 36rem;
+  }
+
+  .xl\:last\:p-full:last-child {
+    padding: 100%;
   }
 
   .xl\:last\:py-0:last-child {
@@ -44459,6 +49363,16 @@ button:focus {
   .xl\:last\:px-xl:last-child {
     padding-left: 36rem;
     padding-right: 36rem;
+  }
+
+  .xl\:last\:py-full:last-child {
+    padding-top: 100%;
+    padding-bottom: 100%;
+  }
+
+  .xl\:last\:px-full:last-child {
+    padding-left: 100%;
+    padding-right: 100%;
   }
 
   .xl\:last\:pt-0:last-child {
@@ -44843,6 +49757,22 @@ button:focus {
 
   .xl\:last\:pl-xl:last-child {
     padding-left: 36rem;
+  }
+
+  .xl\:last\:pt-full:last-child {
+    padding-top: 100%;
+  }
+
+  .xl\:last\:pr-full:last-child {
+    padding-right: 100%;
+  }
+
+  .xl\:last\:pb-full:last-child {
+    padding-bottom: 100%;
+  }
+
+  .xl\:last\:pl-full:last-child {
+    padding-left: 100%;
   }
 
   .xl\:placeholder-gray::placeholder {
@@ -45691,6 +50621,10 @@ button:focus {
     width: 36rem;
   }
 
+  .xl\:w-full {
+    width: 100%;
+  }
+
   .xl\:w-1\/2 {
     width: 50%;
   }
@@ -45793,10 +50727,6 @@ button:focus {
 
   .xl\:w-11\/12 {
     width: 91.666667%;
-  }
-
-  .xl\:w-full {
-    width: 100%;
   }
 
   .xl\:w-screen {
@@ -45951,6 +50881,11 @@ button:focus {
     gap: 36rem;
   }
 
+  .xl\:gap-full {
+    grid-gap: 100%;
+    gap: 100%;
+  }
+
   .xl\:col-gap-0 {
     grid-column-gap: 0;
     column-gap: 0;
@@ -46069,6 +51004,11 @@ button:focus {
   .xl\:col-gap-xl {
     grid-column-gap: 36rem;
     column-gap: 36rem;
+  }
+
+  .xl\:col-gap-full {
+    grid-column-gap: 100%;
+    column-gap: 100%;
   }
 
   .xl\:gap-x-0 {
@@ -46191,6 +51131,11 @@ button:focus {
     column-gap: 36rem;
   }
 
+  .xl\:gap-x-full {
+    grid-column-gap: 100%;
+    column-gap: 100%;
+  }
+
   .xl\:row-gap-0 {
     grid-row-gap: 0;
     row-gap: 0;
@@ -46311,6 +51256,11 @@ button:focus {
     row-gap: 36rem;
   }
 
+  .xl\:row-gap-full {
+    grid-row-gap: 100%;
+    row-gap: 100%;
+  }
+
   .xl\:gap-y-0 {
     grid-row-gap: 0;
     row-gap: 0;
@@ -46429,6 +51379,11 @@ button:focus {
   .xl\:gap-y-xl {
     grid-row-gap: 36rem;
     row-gap: 36rem;
+  }
+
+  .xl\:gap-y-full {
+    grid-row-gap: 100%;
+    row-gap: 100%;
   }
 
   .xl\:grid-flow-row {
@@ -46832,6 +51787,1326 @@ button:focus {
 
   .xl\:origin-top-left {
     transform-origin: top left;
+  }
+
+  .xl\:translate-x-0 {
+    --transform-translate-x: 0;
+  }
+
+  .xl\:translate-x-1 {
+    --transform-translate-x: 0.25rem;
+  }
+
+  .xl\:translate-x-2 {
+    --transform-translate-x: 0.5rem;
+  }
+
+  .xl\:translate-x-3 {
+    --transform-translate-x: 0.75rem;
+  }
+
+  .xl\:translate-x-4 {
+    --transform-translate-x: 1rem;
+  }
+
+  .xl\:translate-x-5 {
+    --transform-translate-x: 1.25rem;
+  }
+
+  .xl\:translate-x-6 {
+    --transform-translate-x: 1.5rem;
+  }
+
+  .xl\:translate-x-8 {
+    --transform-translate-x: 2rem;
+  }
+
+  .xl\:translate-x-10 {
+    --transform-translate-x: 2.5rem;
+  }
+
+  .xl\:translate-x-12 {
+    --transform-translate-x: 3rem;
+  }
+
+  .xl\:translate-x-16 {
+    --transform-translate-x: 4rem;
+  }
+
+  .xl\:translate-x-20 {
+    --transform-translate-x: 5rem;
+  }
+
+  .xl\:translate-x-24 {
+    --transform-translate-x: 6rem;
+  }
+
+  .xl\:translate-x-25 {
+    --transform-translate-x: 25%;
+  }
+
+  .xl\:translate-x-32 {
+    --transform-translate-x: 8rem;
+  }
+
+  .xl\:translate-x-40 {
+    --transform-translate-x: 10rem;
+  }
+
+  .xl\:translate-x-48 {
+    --transform-translate-x: 12rem;
+  }
+
+  .xl\:translate-x-50 {
+    --transform-translate-x: 50%;
+  }
+
+  .xl\:translate-x-56 {
+    --transform-translate-x: 14rem;
+  }
+
+  .xl\:translate-x-64 {
+    --transform-translate-x: 16rem;
+  }
+
+  .xl\:translate-x-px {
+    --transform-translate-x: 1px;
+  }
+
+  .xl\:translate-x-xs {
+    --transform-translate-x: 20rem;
+  }
+
+  .xl\:translate-x-sm {
+    --transform-translate-x: 24rem;
+  }
+
+  .xl\:translate-x-md {
+    --transform-translate-x: 28rem;
+  }
+
+  .xl\:translate-x-lg {
+    --transform-translate-x: 32rem;
+  }
+
+  .xl\:translate-x-xl {
+    --transform-translate-x: 36rem;
+  }
+
+  .xl\:translate-x-full {
+    --transform-translate-x: 100%;
+  }
+
+  .xl\:-translate-x-1 {
+    --transform-translate-x: -0.25rem;
+  }
+
+  .xl\:-translate-x-2 {
+    --transform-translate-x: -0.5rem;
+  }
+
+  .xl\:-translate-x-3 {
+    --transform-translate-x: -0.75rem;
+  }
+
+  .xl\:-translate-x-4 {
+    --transform-translate-x: -1rem;
+  }
+
+  .xl\:-translate-x-5 {
+    --transform-translate-x: -1.25rem;
+  }
+
+  .xl\:-translate-x-6 {
+    --transform-translate-x: -1.5rem;
+  }
+
+  .xl\:-translate-x-8 {
+    --transform-translate-x: -2rem;
+  }
+
+  .xl\:-translate-x-10 {
+    --transform-translate-x: -2.5rem;
+  }
+
+  .xl\:-translate-x-12 {
+    --transform-translate-x: -3rem;
+  }
+
+  .xl\:-translate-x-16 {
+    --transform-translate-x: -4rem;
+  }
+
+  .xl\:-translate-x-20 {
+    --transform-translate-x: -5rem;
+  }
+
+  .xl\:-translate-x-24 {
+    --transform-translate-x: -6rem;
+  }
+
+  .xl\:-translate-x-32 {
+    --transform-translate-x: -8rem;
+  }
+
+  .xl\:-translate-x-40 {
+    --transform-translate-x: -10rem;
+  }
+
+  .xl\:-translate-x-48 {
+    --transform-translate-x: -12rem;
+  }
+
+  .xl\:-translate-x-56 {
+    --transform-translate-x: -14rem;
+  }
+
+  .xl\:-translate-x-64 {
+    --transform-translate-x: -16rem;
+  }
+
+  .xl\:-translate-x-px {
+    --transform-translate-x: -1px;
+  }
+
+  .xl\:-translate-x-xs {
+    --transform-translate-x: -20rem;
+  }
+
+  .xl\:-translate-x-sm {
+    --transform-translate-x: -24rem;
+  }
+
+  .xl\:-translate-x-md {
+    --transform-translate-x: -28rem;
+  }
+
+  .xl\:-translate-x-lg {
+    --transform-translate-x: -32rem;
+  }
+
+  .xl\:-translate-x-xl {
+    --transform-translate-x: -36rem;
+  }
+
+  .xl\:-translate-x-full {
+    --transform-translate-x: -100%;
+  }
+
+  .xl\:-translate-x-1\/2 {
+    --transform-translate-x: -50%;
+  }
+
+  .xl\:translate-x-1\/2 {
+    --transform-translate-x: 50%;
+  }
+
+  .xl\:-translate-x-50 {
+    --transform-translate-x: -50%;
+  }
+
+  .xl\:-translate-x-25 {
+    --transform-translate-x: -25%;
+  }
+
+  .xl\:translate-y-0 {
+    --transform-translate-y: 0;
+  }
+
+  .xl\:translate-y-1 {
+    --transform-translate-y: 0.25rem;
+  }
+
+  .xl\:translate-y-2 {
+    --transform-translate-y: 0.5rem;
+  }
+
+  .xl\:translate-y-3 {
+    --transform-translate-y: 0.75rem;
+  }
+
+  .xl\:translate-y-4 {
+    --transform-translate-y: 1rem;
+  }
+
+  .xl\:translate-y-5 {
+    --transform-translate-y: 1.25rem;
+  }
+
+  .xl\:translate-y-6 {
+    --transform-translate-y: 1.5rem;
+  }
+
+  .xl\:translate-y-8 {
+    --transform-translate-y: 2rem;
+  }
+
+  .xl\:translate-y-10 {
+    --transform-translate-y: 2.5rem;
+  }
+
+  .xl\:translate-y-12 {
+    --transform-translate-y: 3rem;
+  }
+
+  .xl\:translate-y-16 {
+    --transform-translate-y: 4rem;
+  }
+
+  .xl\:translate-y-20 {
+    --transform-translate-y: 5rem;
+  }
+
+  .xl\:translate-y-24 {
+    --transform-translate-y: 6rem;
+  }
+
+  .xl\:translate-y-25 {
+    --transform-translate-y: 25%;
+  }
+
+  .xl\:translate-y-32 {
+    --transform-translate-y: 8rem;
+  }
+
+  .xl\:translate-y-40 {
+    --transform-translate-y: 10rem;
+  }
+
+  .xl\:translate-y-48 {
+    --transform-translate-y: 12rem;
+  }
+
+  .xl\:translate-y-50 {
+    --transform-translate-y: 50%;
+  }
+
+  .xl\:translate-y-56 {
+    --transform-translate-y: 14rem;
+  }
+
+  .xl\:translate-y-64 {
+    --transform-translate-y: 16rem;
+  }
+
+  .xl\:translate-y-px {
+    --transform-translate-y: 1px;
+  }
+
+  .xl\:translate-y-xs {
+    --transform-translate-y: 20rem;
+  }
+
+  .xl\:translate-y-sm {
+    --transform-translate-y: 24rem;
+  }
+
+  .xl\:translate-y-md {
+    --transform-translate-y: 28rem;
+  }
+
+  .xl\:translate-y-lg {
+    --transform-translate-y: 32rem;
+  }
+
+  .xl\:translate-y-xl {
+    --transform-translate-y: 36rem;
+  }
+
+  .xl\:translate-y-full {
+    --transform-translate-y: 100%;
+  }
+
+  .xl\:-translate-y-1 {
+    --transform-translate-y: -0.25rem;
+  }
+
+  .xl\:-translate-y-2 {
+    --transform-translate-y: -0.5rem;
+  }
+
+  .xl\:-translate-y-3 {
+    --transform-translate-y: -0.75rem;
+  }
+
+  .xl\:-translate-y-4 {
+    --transform-translate-y: -1rem;
+  }
+
+  .xl\:-translate-y-5 {
+    --transform-translate-y: -1.25rem;
+  }
+
+  .xl\:-translate-y-6 {
+    --transform-translate-y: -1.5rem;
+  }
+
+  .xl\:-translate-y-8 {
+    --transform-translate-y: -2rem;
+  }
+
+  .xl\:-translate-y-10 {
+    --transform-translate-y: -2.5rem;
+  }
+
+  .xl\:-translate-y-12 {
+    --transform-translate-y: -3rem;
+  }
+
+  .xl\:-translate-y-16 {
+    --transform-translate-y: -4rem;
+  }
+
+  .xl\:-translate-y-20 {
+    --transform-translate-y: -5rem;
+  }
+
+  .xl\:-translate-y-24 {
+    --transform-translate-y: -6rem;
+  }
+
+  .xl\:-translate-y-32 {
+    --transform-translate-y: -8rem;
+  }
+
+  .xl\:-translate-y-40 {
+    --transform-translate-y: -10rem;
+  }
+
+  .xl\:-translate-y-48 {
+    --transform-translate-y: -12rem;
+  }
+
+  .xl\:-translate-y-56 {
+    --transform-translate-y: -14rem;
+  }
+
+  .xl\:-translate-y-64 {
+    --transform-translate-y: -16rem;
+  }
+
+  .xl\:-translate-y-px {
+    --transform-translate-y: -1px;
+  }
+
+  .xl\:-translate-y-xs {
+    --transform-translate-y: -20rem;
+  }
+
+  .xl\:-translate-y-sm {
+    --transform-translate-y: -24rem;
+  }
+
+  .xl\:-translate-y-md {
+    --transform-translate-y: -28rem;
+  }
+
+  .xl\:-translate-y-lg {
+    --transform-translate-y: -32rem;
+  }
+
+  .xl\:-translate-y-xl {
+    --transform-translate-y: -36rem;
+  }
+
+  .xl\:-translate-y-full {
+    --transform-translate-y: -100%;
+  }
+
+  .xl\:-translate-y-1\/2 {
+    --transform-translate-y: -50%;
+  }
+
+  .xl\:translate-y-1\/2 {
+    --transform-translate-y: 50%;
+  }
+
+  .xl\:-translate-y-50 {
+    --transform-translate-y: -50%;
+  }
+
+  .xl\:-translate-y-25 {
+    --transform-translate-y: -25%;
+  }
+
+  .xl\:hover\:translate-x-0:hover {
+    --transform-translate-x: 0;
+  }
+
+  .xl\:hover\:translate-x-1:hover {
+    --transform-translate-x: 0.25rem;
+  }
+
+  .xl\:hover\:translate-x-2:hover {
+    --transform-translate-x: 0.5rem;
+  }
+
+  .xl\:hover\:translate-x-3:hover {
+    --transform-translate-x: 0.75rem;
+  }
+
+  .xl\:hover\:translate-x-4:hover {
+    --transform-translate-x: 1rem;
+  }
+
+  .xl\:hover\:translate-x-5:hover {
+    --transform-translate-x: 1.25rem;
+  }
+
+  .xl\:hover\:translate-x-6:hover {
+    --transform-translate-x: 1.5rem;
+  }
+
+  .xl\:hover\:translate-x-8:hover {
+    --transform-translate-x: 2rem;
+  }
+
+  .xl\:hover\:translate-x-10:hover {
+    --transform-translate-x: 2.5rem;
+  }
+
+  .xl\:hover\:translate-x-12:hover {
+    --transform-translate-x: 3rem;
+  }
+
+  .xl\:hover\:translate-x-16:hover {
+    --transform-translate-x: 4rem;
+  }
+
+  .xl\:hover\:translate-x-20:hover {
+    --transform-translate-x: 5rem;
+  }
+
+  .xl\:hover\:translate-x-24:hover {
+    --transform-translate-x: 6rem;
+  }
+
+  .xl\:hover\:translate-x-25:hover {
+    --transform-translate-x: 25%;
+  }
+
+  .xl\:hover\:translate-x-32:hover {
+    --transform-translate-x: 8rem;
+  }
+
+  .xl\:hover\:translate-x-40:hover {
+    --transform-translate-x: 10rem;
+  }
+
+  .xl\:hover\:translate-x-48:hover {
+    --transform-translate-x: 12rem;
+  }
+
+  .xl\:hover\:translate-x-50:hover {
+    --transform-translate-x: 50%;
+  }
+
+  .xl\:hover\:translate-x-56:hover {
+    --transform-translate-x: 14rem;
+  }
+
+  .xl\:hover\:translate-x-64:hover {
+    --transform-translate-x: 16rem;
+  }
+
+  .xl\:hover\:translate-x-px:hover {
+    --transform-translate-x: 1px;
+  }
+
+  .xl\:hover\:translate-x-xs:hover {
+    --transform-translate-x: 20rem;
+  }
+
+  .xl\:hover\:translate-x-sm:hover {
+    --transform-translate-x: 24rem;
+  }
+
+  .xl\:hover\:translate-x-md:hover {
+    --transform-translate-x: 28rem;
+  }
+
+  .xl\:hover\:translate-x-lg:hover {
+    --transform-translate-x: 32rem;
+  }
+
+  .xl\:hover\:translate-x-xl:hover {
+    --transform-translate-x: 36rem;
+  }
+
+  .xl\:hover\:translate-x-full:hover {
+    --transform-translate-x: 100%;
+  }
+
+  .xl\:hover\:-translate-x-1:hover {
+    --transform-translate-x: -0.25rem;
+  }
+
+  .xl\:hover\:-translate-x-2:hover {
+    --transform-translate-x: -0.5rem;
+  }
+
+  .xl\:hover\:-translate-x-3:hover {
+    --transform-translate-x: -0.75rem;
+  }
+
+  .xl\:hover\:-translate-x-4:hover {
+    --transform-translate-x: -1rem;
+  }
+
+  .xl\:hover\:-translate-x-5:hover {
+    --transform-translate-x: -1.25rem;
+  }
+
+  .xl\:hover\:-translate-x-6:hover {
+    --transform-translate-x: -1.5rem;
+  }
+
+  .xl\:hover\:-translate-x-8:hover {
+    --transform-translate-x: -2rem;
+  }
+
+  .xl\:hover\:-translate-x-10:hover {
+    --transform-translate-x: -2.5rem;
+  }
+
+  .xl\:hover\:-translate-x-12:hover {
+    --transform-translate-x: -3rem;
+  }
+
+  .xl\:hover\:-translate-x-16:hover {
+    --transform-translate-x: -4rem;
+  }
+
+  .xl\:hover\:-translate-x-20:hover {
+    --transform-translate-x: -5rem;
+  }
+
+  .xl\:hover\:-translate-x-24:hover {
+    --transform-translate-x: -6rem;
+  }
+
+  .xl\:hover\:-translate-x-32:hover {
+    --transform-translate-x: -8rem;
+  }
+
+  .xl\:hover\:-translate-x-40:hover {
+    --transform-translate-x: -10rem;
+  }
+
+  .xl\:hover\:-translate-x-48:hover {
+    --transform-translate-x: -12rem;
+  }
+
+  .xl\:hover\:-translate-x-56:hover {
+    --transform-translate-x: -14rem;
+  }
+
+  .xl\:hover\:-translate-x-64:hover {
+    --transform-translate-x: -16rem;
+  }
+
+  .xl\:hover\:-translate-x-px:hover {
+    --transform-translate-x: -1px;
+  }
+
+  .xl\:hover\:-translate-x-xs:hover {
+    --transform-translate-x: -20rem;
+  }
+
+  .xl\:hover\:-translate-x-sm:hover {
+    --transform-translate-x: -24rem;
+  }
+
+  .xl\:hover\:-translate-x-md:hover {
+    --transform-translate-x: -28rem;
+  }
+
+  .xl\:hover\:-translate-x-lg:hover {
+    --transform-translate-x: -32rem;
+  }
+
+  .xl\:hover\:-translate-x-xl:hover {
+    --transform-translate-x: -36rem;
+  }
+
+  .xl\:hover\:-translate-x-full:hover {
+    --transform-translate-x: -100%;
+  }
+
+  .xl\:hover\:-translate-x-1\/2:hover {
+    --transform-translate-x: -50%;
+  }
+
+  .xl\:hover\:translate-x-1\/2:hover {
+    --transform-translate-x: 50%;
+  }
+
+  .xl\:hover\:-translate-x-50:hover {
+    --transform-translate-x: -50%;
+  }
+
+  .xl\:hover\:-translate-x-25:hover {
+    --transform-translate-x: -25%;
+  }
+
+  .xl\:hover\:translate-y-0:hover {
+    --transform-translate-y: 0;
+  }
+
+  .xl\:hover\:translate-y-1:hover {
+    --transform-translate-y: 0.25rem;
+  }
+
+  .xl\:hover\:translate-y-2:hover {
+    --transform-translate-y: 0.5rem;
+  }
+
+  .xl\:hover\:translate-y-3:hover {
+    --transform-translate-y: 0.75rem;
+  }
+
+  .xl\:hover\:translate-y-4:hover {
+    --transform-translate-y: 1rem;
+  }
+
+  .xl\:hover\:translate-y-5:hover {
+    --transform-translate-y: 1.25rem;
+  }
+
+  .xl\:hover\:translate-y-6:hover {
+    --transform-translate-y: 1.5rem;
+  }
+
+  .xl\:hover\:translate-y-8:hover {
+    --transform-translate-y: 2rem;
+  }
+
+  .xl\:hover\:translate-y-10:hover {
+    --transform-translate-y: 2.5rem;
+  }
+
+  .xl\:hover\:translate-y-12:hover {
+    --transform-translate-y: 3rem;
+  }
+
+  .xl\:hover\:translate-y-16:hover {
+    --transform-translate-y: 4rem;
+  }
+
+  .xl\:hover\:translate-y-20:hover {
+    --transform-translate-y: 5rem;
+  }
+
+  .xl\:hover\:translate-y-24:hover {
+    --transform-translate-y: 6rem;
+  }
+
+  .xl\:hover\:translate-y-25:hover {
+    --transform-translate-y: 25%;
+  }
+
+  .xl\:hover\:translate-y-32:hover {
+    --transform-translate-y: 8rem;
+  }
+
+  .xl\:hover\:translate-y-40:hover {
+    --transform-translate-y: 10rem;
+  }
+
+  .xl\:hover\:translate-y-48:hover {
+    --transform-translate-y: 12rem;
+  }
+
+  .xl\:hover\:translate-y-50:hover {
+    --transform-translate-y: 50%;
+  }
+
+  .xl\:hover\:translate-y-56:hover {
+    --transform-translate-y: 14rem;
+  }
+
+  .xl\:hover\:translate-y-64:hover {
+    --transform-translate-y: 16rem;
+  }
+
+  .xl\:hover\:translate-y-px:hover {
+    --transform-translate-y: 1px;
+  }
+
+  .xl\:hover\:translate-y-xs:hover {
+    --transform-translate-y: 20rem;
+  }
+
+  .xl\:hover\:translate-y-sm:hover {
+    --transform-translate-y: 24rem;
+  }
+
+  .xl\:hover\:translate-y-md:hover {
+    --transform-translate-y: 28rem;
+  }
+
+  .xl\:hover\:translate-y-lg:hover {
+    --transform-translate-y: 32rem;
+  }
+
+  .xl\:hover\:translate-y-xl:hover {
+    --transform-translate-y: 36rem;
+  }
+
+  .xl\:hover\:translate-y-full:hover {
+    --transform-translate-y: 100%;
+  }
+
+  .xl\:hover\:-translate-y-1:hover {
+    --transform-translate-y: -0.25rem;
+  }
+
+  .xl\:hover\:-translate-y-2:hover {
+    --transform-translate-y: -0.5rem;
+  }
+
+  .xl\:hover\:-translate-y-3:hover {
+    --transform-translate-y: -0.75rem;
+  }
+
+  .xl\:hover\:-translate-y-4:hover {
+    --transform-translate-y: -1rem;
+  }
+
+  .xl\:hover\:-translate-y-5:hover {
+    --transform-translate-y: -1.25rem;
+  }
+
+  .xl\:hover\:-translate-y-6:hover {
+    --transform-translate-y: -1.5rem;
+  }
+
+  .xl\:hover\:-translate-y-8:hover {
+    --transform-translate-y: -2rem;
+  }
+
+  .xl\:hover\:-translate-y-10:hover {
+    --transform-translate-y: -2.5rem;
+  }
+
+  .xl\:hover\:-translate-y-12:hover {
+    --transform-translate-y: -3rem;
+  }
+
+  .xl\:hover\:-translate-y-16:hover {
+    --transform-translate-y: -4rem;
+  }
+
+  .xl\:hover\:-translate-y-20:hover {
+    --transform-translate-y: -5rem;
+  }
+
+  .xl\:hover\:-translate-y-24:hover {
+    --transform-translate-y: -6rem;
+  }
+
+  .xl\:hover\:-translate-y-32:hover {
+    --transform-translate-y: -8rem;
+  }
+
+  .xl\:hover\:-translate-y-40:hover {
+    --transform-translate-y: -10rem;
+  }
+
+  .xl\:hover\:-translate-y-48:hover {
+    --transform-translate-y: -12rem;
+  }
+
+  .xl\:hover\:-translate-y-56:hover {
+    --transform-translate-y: -14rem;
+  }
+
+  .xl\:hover\:-translate-y-64:hover {
+    --transform-translate-y: -16rem;
+  }
+
+  .xl\:hover\:-translate-y-px:hover {
+    --transform-translate-y: -1px;
+  }
+
+  .xl\:hover\:-translate-y-xs:hover {
+    --transform-translate-y: -20rem;
+  }
+
+  .xl\:hover\:-translate-y-sm:hover {
+    --transform-translate-y: -24rem;
+  }
+
+  .xl\:hover\:-translate-y-md:hover {
+    --transform-translate-y: -28rem;
+  }
+
+  .xl\:hover\:-translate-y-lg:hover {
+    --transform-translate-y: -32rem;
+  }
+
+  .xl\:hover\:-translate-y-xl:hover {
+    --transform-translate-y: -36rem;
+  }
+
+  .xl\:hover\:-translate-y-full:hover {
+    --transform-translate-y: -100%;
+  }
+
+  .xl\:hover\:-translate-y-1\/2:hover {
+    --transform-translate-y: -50%;
+  }
+
+  .xl\:hover\:translate-y-1\/2:hover {
+    --transform-translate-y: 50%;
+  }
+
+  .xl\:hover\:-translate-y-50:hover {
+    --transform-translate-y: -50%;
+  }
+
+  .xl\:hover\:-translate-y-25:hover {
+    --transform-translate-y: -25%;
+  }
+
+  .group:hover .xl\:group-hover\:translate-x-0 {
+    --transform-translate-x: 0;
+  }
+
+  .group:hover .xl\:group-hover\:translate-x-1 {
+    --transform-translate-x: 0.25rem;
+  }
+
+  .group:hover .xl\:group-hover\:translate-x-2 {
+    --transform-translate-x: 0.5rem;
+  }
+
+  .group:hover .xl\:group-hover\:translate-x-3 {
+    --transform-translate-x: 0.75rem;
+  }
+
+  .group:hover .xl\:group-hover\:translate-x-4 {
+    --transform-translate-x: 1rem;
+  }
+
+  .group:hover .xl\:group-hover\:translate-x-5 {
+    --transform-translate-x: 1.25rem;
+  }
+
+  .group:hover .xl\:group-hover\:translate-x-6 {
+    --transform-translate-x: 1.5rem;
+  }
+
+  .group:hover .xl\:group-hover\:translate-x-8 {
+    --transform-translate-x: 2rem;
+  }
+
+  .group:hover .xl\:group-hover\:translate-x-10 {
+    --transform-translate-x: 2.5rem;
+  }
+
+  .group:hover .xl\:group-hover\:translate-x-12 {
+    --transform-translate-x: 3rem;
+  }
+
+  .group:hover .xl\:group-hover\:translate-x-16 {
+    --transform-translate-x: 4rem;
+  }
+
+  .group:hover .xl\:group-hover\:translate-x-20 {
+    --transform-translate-x: 5rem;
+  }
+
+  .group:hover .xl\:group-hover\:translate-x-24 {
+    --transform-translate-x: 6rem;
+  }
+
+  .group:hover .xl\:group-hover\:translate-x-25 {
+    --transform-translate-x: 25%;
+  }
+
+  .group:hover .xl\:group-hover\:translate-x-32 {
+    --transform-translate-x: 8rem;
+  }
+
+  .group:hover .xl\:group-hover\:translate-x-40 {
+    --transform-translate-x: 10rem;
+  }
+
+  .group:hover .xl\:group-hover\:translate-x-48 {
+    --transform-translate-x: 12rem;
+  }
+
+  .group:hover .xl\:group-hover\:translate-x-50 {
+    --transform-translate-x: 50%;
+  }
+
+  .group:hover .xl\:group-hover\:translate-x-56 {
+    --transform-translate-x: 14rem;
+  }
+
+  .group:hover .xl\:group-hover\:translate-x-64 {
+    --transform-translate-x: 16rem;
+  }
+
+  .group:hover .xl\:group-hover\:translate-x-px {
+    --transform-translate-x: 1px;
+  }
+
+  .group:hover .xl\:group-hover\:translate-x-xs {
+    --transform-translate-x: 20rem;
+  }
+
+  .group:hover .xl\:group-hover\:translate-x-sm {
+    --transform-translate-x: 24rem;
+  }
+
+  .group:hover .xl\:group-hover\:translate-x-md {
+    --transform-translate-x: 28rem;
+  }
+
+  .group:hover .xl\:group-hover\:translate-x-lg {
+    --transform-translate-x: 32rem;
+  }
+
+  .group:hover .xl\:group-hover\:translate-x-xl {
+    --transform-translate-x: 36rem;
+  }
+
+  .group:hover .xl\:group-hover\:translate-x-full {
+    --transform-translate-x: 100%;
+  }
+
+  .group:hover .xl\:group-hover\:-translate-x-1 {
+    --transform-translate-x: -0.25rem;
+  }
+
+  .group:hover .xl\:group-hover\:-translate-x-2 {
+    --transform-translate-x: -0.5rem;
+  }
+
+  .group:hover .xl\:group-hover\:-translate-x-3 {
+    --transform-translate-x: -0.75rem;
+  }
+
+  .group:hover .xl\:group-hover\:-translate-x-4 {
+    --transform-translate-x: -1rem;
+  }
+
+  .group:hover .xl\:group-hover\:-translate-x-5 {
+    --transform-translate-x: -1.25rem;
+  }
+
+  .group:hover .xl\:group-hover\:-translate-x-6 {
+    --transform-translate-x: -1.5rem;
+  }
+
+  .group:hover .xl\:group-hover\:-translate-x-8 {
+    --transform-translate-x: -2rem;
+  }
+
+  .group:hover .xl\:group-hover\:-translate-x-10 {
+    --transform-translate-x: -2.5rem;
+  }
+
+  .group:hover .xl\:group-hover\:-translate-x-12 {
+    --transform-translate-x: -3rem;
+  }
+
+  .group:hover .xl\:group-hover\:-translate-x-16 {
+    --transform-translate-x: -4rem;
+  }
+
+  .group:hover .xl\:group-hover\:-translate-x-20 {
+    --transform-translate-x: -5rem;
+  }
+
+  .group:hover .xl\:group-hover\:-translate-x-24 {
+    --transform-translate-x: -6rem;
+  }
+
+  .group:hover .xl\:group-hover\:-translate-x-32 {
+    --transform-translate-x: -8rem;
+  }
+
+  .group:hover .xl\:group-hover\:-translate-x-40 {
+    --transform-translate-x: -10rem;
+  }
+
+  .group:hover .xl\:group-hover\:-translate-x-48 {
+    --transform-translate-x: -12rem;
+  }
+
+  .group:hover .xl\:group-hover\:-translate-x-56 {
+    --transform-translate-x: -14rem;
+  }
+
+  .group:hover .xl\:group-hover\:-translate-x-64 {
+    --transform-translate-x: -16rem;
+  }
+
+  .group:hover .xl\:group-hover\:-translate-x-px {
+    --transform-translate-x: -1px;
+  }
+
+  .group:hover .xl\:group-hover\:-translate-x-xs {
+    --transform-translate-x: -20rem;
+  }
+
+  .group:hover .xl\:group-hover\:-translate-x-sm {
+    --transform-translate-x: -24rem;
+  }
+
+  .group:hover .xl\:group-hover\:-translate-x-md {
+    --transform-translate-x: -28rem;
+  }
+
+  .group:hover .xl\:group-hover\:-translate-x-lg {
+    --transform-translate-x: -32rem;
+  }
+
+  .group:hover .xl\:group-hover\:-translate-x-xl {
+    --transform-translate-x: -36rem;
+  }
+
+  .group:hover .xl\:group-hover\:-translate-x-full {
+    --transform-translate-x: -100%;
+  }
+
+  .group:hover .xl\:group-hover\:-translate-x-1\/2 {
+    --transform-translate-x: -50%;
+  }
+
+  .group:hover .xl\:group-hover\:translate-x-1\/2 {
+    --transform-translate-x: 50%;
+  }
+
+  .group:hover .xl\:group-hover\:-translate-x-50 {
+    --transform-translate-x: -50%;
+  }
+
+  .group:hover .xl\:group-hover\:-translate-x-25 {
+    --transform-translate-x: -25%;
+  }
+
+  .group:hover .xl\:group-hover\:translate-y-0 {
+    --transform-translate-y: 0;
+  }
+
+  .group:hover .xl\:group-hover\:translate-y-1 {
+    --transform-translate-y: 0.25rem;
+  }
+
+  .group:hover .xl\:group-hover\:translate-y-2 {
+    --transform-translate-y: 0.5rem;
+  }
+
+  .group:hover .xl\:group-hover\:translate-y-3 {
+    --transform-translate-y: 0.75rem;
+  }
+
+  .group:hover .xl\:group-hover\:translate-y-4 {
+    --transform-translate-y: 1rem;
+  }
+
+  .group:hover .xl\:group-hover\:translate-y-5 {
+    --transform-translate-y: 1.25rem;
+  }
+
+  .group:hover .xl\:group-hover\:translate-y-6 {
+    --transform-translate-y: 1.5rem;
+  }
+
+  .group:hover .xl\:group-hover\:translate-y-8 {
+    --transform-translate-y: 2rem;
+  }
+
+  .group:hover .xl\:group-hover\:translate-y-10 {
+    --transform-translate-y: 2.5rem;
+  }
+
+  .group:hover .xl\:group-hover\:translate-y-12 {
+    --transform-translate-y: 3rem;
+  }
+
+  .group:hover .xl\:group-hover\:translate-y-16 {
+    --transform-translate-y: 4rem;
+  }
+
+  .group:hover .xl\:group-hover\:translate-y-20 {
+    --transform-translate-y: 5rem;
+  }
+
+  .group:hover .xl\:group-hover\:translate-y-24 {
+    --transform-translate-y: 6rem;
+  }
+
+  .group:hover .xl\:group-hover\:translate-y-25 {
+    --transform-translate-y: 25%;
+  }
+
+  .group:hover .xl\:group-hover\:translate-y-32 {
+    --transform-translate-y: 8rem;
+  }
+
+  .group:hover .xl\:group-hover\:translate-y-40 {
+    --transform-translate-y: 10rem;
+  }
+
+  .group:hover .xl\:group-hover\:translate-y-48 {
+    --transform-translate-y: 12rem;
+  }
+
+  .group:hover .xl\:group-hover\:translate-y-50 {
+    --transform-translate-y: 50%;
+  }
+
+  .group:hover .xl\:group-hover\:translate-y-56 {
+    --transform-translate-y: 14rem;
+  }
+
+  .group:hover .xl\:group-hover\:translate-y-64 {
+    --transform-translate-y: 16rem;
+  }
+
+  .group:hover .xl\:group-hover\:translate-y-px {
+    --transform-translate-y: 1px;
+  }
+
+  .group:hover .xl\:group-hover\:translate-y-xs {
+    --transform-translate-y: 20rem;
+  }
+
+  .group:hover .xl\:group-hover\:translate-y-sm {
+    --transform-translate-y: 24rem;
+  }
+
+  .group:hover .xl\:group-hover\:translate-y-md {
+    --transform-translate-y: 28rem;
+  }
+
+  .group:hover .xl\:group-hover\:translate-y-lg {
+    --transform-translate-y: 32rem;
+  }
+
+  .group:hover .xl\:group-hover\:translate-y-xl {
+    --transform-translate-y: 36rem;
+  }
+
+  .group:hover .xl\:group-hover\:translate-y-full {
+    --transform-translate-y: 100%;
+  }
+
+  .group:hover .xl\:group-hover\:-translate-y-1 {
+    --transform-translate-y: -0.25rem;
+  }
+
+  .group:hover .xl\:group-hover\:-translate-y-2 {
+    --transform-translate-y: -0.5rem;
+  }
+
+  .group:hover .xl\:group-hover\:-translate-y-3 {
+    --transform-translate-y: -0.75rem;
+  }
+
+  .group:hover .xl\:group-hover\:-translate-y-4 {
+    --transform-translate-y: -1rem;
+  }
+
+  .group:hover .xl\:group-hover\:-translate-y-5 {
+    --transform-translate-y: -1.25rem;
+  }
+
+  .group:hover .xl\:group-hover\:-translate-y-6 {
+    --transform-translate-y: -1.5rem;
+  }
+
+  .group:hover .xl\:group-hover\:-translate-y-8 {
+    --transform-translate-y: -2rem;
+  }
+
+  .group:hover .xl\:group-hover\:-translate-y-10 {
+    --transform-translate-y: -2.5rem;
+  }
+
+  .group:hover .xl\:group-hover\:-translate-y-12 {
+    --transform-translate-y: -3rem;
+  }
+
+  .group:hover .xl\:group-hover\:-translate-y-16 {
+    --transform-translate-y: -4rem;
+  }
+
+  .group:hover .xl\:group-hover\:-translate-y-20 {
+    --transform-translate-y: -5rem;
+  }
+
+  .group:hover .xl\:group-hover\:-translate-y-24 {
+    --transform-translate-y: -6rem;
+  }
+
+  .group:hover .xl\:group-hover\:-translate-y-32 {
+    --transform-translate-y: -8rem;
+  }
+
+  .group:hover .xl\:group-hover\:-translate-y-40 {
+    --transform-translate-y: -10rem;
+  }
+
+  .group:hover .xl\:group-hover\:-translate-y-48 {
+    --transform-translate-y: -12rem;
+  }
+
+  .group:hover .xl\:group-hover\:-translate-y-56 {
+    --transform-translate-y: -14rem;
+  }
+
+  .group:hover .xl\:group-hover\:-translate-y-64 {
+    --transform-translate-y: -16rem;
+  }
+
+  .group:hover .xl\:group-hover\:-translate-y-px {
+    --transform-translate-y: -1px;
+  }
+
+  .group:hover .xl\:group-hover\:-translate-y-xs {
+    --transform-translate-y: -20rem;
+  }
+
+  .group:hover .xl\:group-hover\:-translate-y-sm {
+    --transform-translate-y: -24rem;
+  }
+
+  .group:hover .xl\:group-hover\:-translate-y-md {
+    --transform-translate-y: -28rem;
+  }
+
+  .group:hover .xl\:group-hover\:-translate-y-lg {
+    --transform-translate-y: -32rem;
+  }
+
+  .group:hover .xl\:group-hover\:-translate-y-xl {
+    --transform-translate-y: -36rem;
+  }
+
+  .group:hover .xl\:group-hover\:-translate-y-full {
+    --transform-translate-y: -100%;
+  }
+
+  .group:hover .xl\:group-hover\:-translate-y-1\/2 {
+    --transform-translate-y: -50%;
+  }
+
+  .group:hover .xl\:group-hover\:translate-y-1\/2 {
+    --transform-translate-y: 50%;
+  }
+
+  .group:hover .xl\:group-hover\:-translate-y-50 {
+    --transform-translate-y: -50%;
+  }
+
+  .group:hover .xl\:group-hover\:-translate-y-25 {
+    --transform-translate-y: -25%;
   }
 
   .xl\:skew-x-0 {

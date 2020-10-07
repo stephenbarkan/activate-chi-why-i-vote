@@ -1,9 +1,19 @@
-    {% include "components/_nav-logo.njk" %}
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 px-4 items-center">
-        <h1 class="font-extrabold text-center lg:text-left font-display uppercase text-white text-stroke tracking-tight leading-none text-5xl sm:text-6xl lg:text-7xl xl:text-8xl">
-            I'm <span class="text-blue">voting</span> for <span class="text-red">justice!</span>
-        </h1>
-        <div class="border-gray border-2 p-6 bg-white shadow-lg rounded-sm">
-            <img src="../../gallery/racial-justice/{{reason.Filename}}.jpg" alt="">
-        </div>
+---
+layout: default
+permalink: "reason/{{ possum.Filename }}/"
+pagination:
+    data: childcare
+    size: 1
+    alias: possum
+---
+
+    
+{% include "components/_nav-logo.njk" %}
+<div class="grid items-center grid-cols-1 gap-12 px-4 lg:grid-cols-2">
+    <h1 class="text-5xl font-extrabold leading-none tracking-tight text-center text-white uppercase lg:text-left font-display text-stroke sm:text-6xl lg:text-7xl xl:text-8xl">
+        <span class="text-blue">vote</span> for <span class="text-red">justice!</span>
+    </h1>
+    <div class="p-6 bg-white border-2 rounded-sm shadow-lg border-gray">
+        <img src="/gallery/{{possum.Filename}}.jpg" alt="">
     </div>
+</div>

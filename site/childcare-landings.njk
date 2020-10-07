@@ -1,0 +1,13 @@
+---
+layout: landing
+permalink: "reason/{{ possum.Filename }}/"
+pagination:
+    data: childcare
+    size: 1
+    alias: possum
+---
+
+{% import "components/_gallery.njk" as gallery %}
+
+{{ gallery.gallery(childcare) }}
+ 
