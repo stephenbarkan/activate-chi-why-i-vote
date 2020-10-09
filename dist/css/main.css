@@ -12311,7 +12311,7 @@ button:focus {
 }
 
 .animate-slam {
-  animation: slam .15s .1s ease-out both;
+  animation: slam .15s .35s ease-out both;
 }
 
 .animate-spin-fast {
@@ -23408,7 +23408,7 @@ button:focus {
   }
 
   .sm\:animate-slam {
-    animation: slam .15s .1s ease-out both;
+    animation: slam .15s .35s ease-out both;
   }
 
   .sm\:animate-spin-fast {
@@ -34478,7 +34478,7 @@ button:focus {
   }
 
   .md\:animate-slam {
-    animation: slam .15s .1s ease-out both;
+    animation: slam .15s .35s ease-out both;
   }
 
   .md\:animate-spin-fast {
@@ -45548,7 +45548,7 @@ button:focus {
   }
 
   .lg\:animate-slam {
-    animation: slam .15s .1s ease-out both;
+    animation: slam .15s .35s ease-out both;
   }
 
   .lg\:animate-spin-fast {
@@ -56618,7 +56618,7 @@ button:focus {
   }
 
   .xl\:animate-slam {
-    animation: slam .15s .1s ease-out both;
+    animation: slam .15s .35s ease-out both;
   }
 
   .xl\:animate-spin-fast {

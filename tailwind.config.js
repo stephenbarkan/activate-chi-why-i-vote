@@ -74,7 +74,7 @@ module.exports = {
         },
       },
       animation: {
-        slam: "slam .15s .1s ease-out both",
+        slam: "slam .15s .35s ease-out both",
         spin: "spin 30s linear infinite",
         "spin-fast": "spin 1s linear infinite",
       },
