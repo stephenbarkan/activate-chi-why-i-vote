@@ -13,7 +13,8 @@
         </div>
     </div>
     <template x-if="aboutOpen">
-        <div
+        <div 
+        @click="aboutOpen = false"
         class="fixed inset-0 z-20 flex items-center justify-center py-24 bg-opacity-75 bg-gray bg-blur"
         x-transition:enter="transition ease-in duration-150"
         x-transition:enter-start="opacity-0"
