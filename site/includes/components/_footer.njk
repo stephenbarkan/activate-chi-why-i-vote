@@ -14,8 +14,7 @@
     </div>
     <template x-if="aboutOpen">
         <div 
-        @click="aboutOpen = false"
-        class="fixed inset-0 z-20 flex items-center justify-center py-24 bg-opacity-75 bg-gray bg-blur"
+        class="fixed inset-0 z-20 flex items-center justify-center py-24"
         x-transition:enter="transition ease-in duration-150"
         x-transition:enter-start="opacity-0"
         x-transition:enter-end="opacity-100"
@@ -23,8 +22,8 @@
         x-transition:leave-start="opacity-100"
         x-transition:leave-end="opacity-0"
         >
-            <dialog open class="container flex flex-col items-center justify-center bg-none">
-                <div class="bg-white rounded-lg shadow-xl border-1-5 md:border-2 text-gray border-gray">
+            <dialog open class="container flex flex-col items-center justify-center pointer-events-none bg-none">
+                <div class="z-10 bg-white rounded-lg shadow-xl pointer-events-auto border-1-5 md:border-2 text-gray border-gray">
                     <div class="max-w-lg px-6 py-8 space-y-6 md:px-8 md:py-12 md:space-y-8">
                         <header>
                             <h2 class="text-xl font-extrabold leading-tight text-center uppercase font-display md:text-3xl">About this website</h2>
@@ -52,6 +51,9 @@
                     </div>
                 </div>
             </dialog>
+        <div
+            @click="aboutOpen = false"
+            class="absolute inset-0 bg-opacity-75 bg-gray bg-blur"></div>
         </div>
     </template>
     <div class="origin-center sr-only animate-spin"></div>
