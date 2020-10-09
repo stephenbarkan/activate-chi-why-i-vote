@@ -13,7 +13,8 @@ const downloadButton = document.querySelector("[data-download-link]");
 
 const facebookStem = "https://www.facebook.com/sharer/sharer.php?u=";
 const twitterStem =
-  "https://twitter.com/intent/tweet?text=Who's Next? I get to decide. This is why I'm voting. ";
+  "https://twitter.com/intent/tweet?text=Who's Next? We get to decide. This is why I'm voting.&url=";
+const twitterCaboose = "&hashtags=activatechi,vote2020,whyivote";
 
 buttons.forEach((button) => {
   const filename = button.getAttribute("data-filename");
@@ -55,7 +56,7 @@ buttons.forEach((button) => {
       }, 150);
     });
 
-    const twitterLink = `${twitterStem}${sitePermalink}/reason/${filename}`;
+    const twitterLink = `${twitterStem}${sitePermalink}/reason/${filename}${twitterCaboose}`;
     const facebookLink = `${facebookStem}${sitePermalink}/reason/${filename}`;
 
     downloadButton.setAttribute("href", url);
