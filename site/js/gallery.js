@@ -12,7 +12,8 @@ const twitterButton = document.querySelector("[data-twitter-link]");
 const downloadButton = document.querySelector("[data-download-link]");
 
 const facebookStem = "https://www.facebook.com/sharer/sharer.php?u=";
-const twitterStem = "https://twitter.com/intent/tweet?text=";
+const twitterStem =
+  "https://twitter.com/intent/tweet?text=Who's Next? I get to decide. This is why I'm voting. ";
 
 buttons.forEach((button) => {
   const filename = button.getAttribute("data-filename");

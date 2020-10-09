@@ -8,7 +8,7 @@ var facebookButton = document.querySelector("[data-facebook-link]");
 var twitterButton = document.querySelector("[data-twitter-link]");
 var downloadButton = document.querySelector("[data-download-link]");
 var facebookStem = "https://www.facebook.com/sharer/sharer.php?u=";
-var twitterStem = "https://twitter.com/intent/tweet?text=";
+var twitterStem = "https://twitter.com/intent/tweet?text=Who's Next? I get to decide. This is why I'm voting. ";
 buttons.forEach(function (button) {
   var filename = button.getAttribute("data-filename");
   var url = "/gallery/".concat(filename, ".jpg");
