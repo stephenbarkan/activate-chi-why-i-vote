@@ -15,6 +15,7 @@ module.exports = {
       yellow: "#FFB906",
       red: "#F86849",
       blue: "#8CCBD9",
+      none: "transparent",
     },
     fontFamily: {
       display: ["presicav", "inter", "sans-serif", "Arial"],
@@ -46,6 +47,9 @@ module.exports = {
       lineHeight: {
         tight: "1.15",
       },
+      zIndex: {
+        "-1": "-1",
+      },
       borderWidth: {
         "1-5": "1.5px",
         6: "6px",
@@ -59,6 +63,9 @@ module.exports = {
         25: "25%",
         "-25": "-25%",
       },
+      transitionDuration: {
+        0: "0",
+      },
       keyframes: {
         slam: {
           "0%": { opacity: "0", transform: "scale(2)" },
@@ -68,6 +75,7 @@ module.exports = {
       animation: {
         slam: "slam .15s .1s ease-out both",
         spin: "spin 30s linear infinite",
+        "spin-fast": "spin 1s linear infinite",
       },
     },
   },
@@ -76,10 +84,11 @@ module.exports = {
     visibility: ["hover", "group-hover"],
     rotate: ["hover", "group-hover"],
     scale: ["hover", "group-hover"],
-    translate: ["hover", "group-hover", "responsive"],
-    backgroundColor: ["hover", "even", "odd"],
+    translate: ["hover", "group-hover", "focus", "responsive"],
+    backgroundColor: ["hover", "even", "odd", "responsive"],
     padding: ["responsive", "first", "last"],
     display: ["responsive", "hover", "group-hover"],
+    boxShadow: ["responsive", "hover", "group-hover"],
   },
   plugins: [],
 };

@@ -1,51 +1,81 @@
-{% macro image(filename, reason, url) %}
-{# the component #}
-<div class="grid p-4 bg-white border-2 rounded-sm shadow-lg text-gray grid-absolute group border-gray">
+        <div 
+            x-show="isOpen"
+            x-transition:enter="transition ease-in duration-150"
+            x-transition:enter-start="opacity-0"
+            x-transition:enter-end="opacity-100"
+            x-transition:leave="transition ease-out duration-150"
+            x-transition:leave-start="opacity-100"
+            x-transition:leave-end="opacity-0"
+            class="fixed top-0 left-0 right-0 flex flex-col items-center h-screen py-8 space-y-8 bg-opacity-75 lg:pl-24 lg:py-0 bg-blur lg:bg-none lg:self-start lg:h-auto bg-gray lg:sticky">
+                
+            <div class="container flex flex-col items-center max-w-md space-y-6 lg:px-0 lg:pt-12">
+                
+                <div data-image-loader
+                    x-data="{ isLoading: false }"
+                    class="grid items-center justify-center w-full p-4 overflow-hidden bg-white rounded-sm shadow-lg grid-absolute border-1-5 lg:border-2 text-gray group border-grayspace-y-3">
+                    <figure class="relative w-full bg-no-repeat bg-contain grid-inset-0 pb-full"
+                        style="background-image: url(/gallery/reason-blank.jpg);">
+                        <img data-image
+                        src="/gallery/reason-blank.jpg"
+                        alt="I vote because {{ reason }}"
+                        class="absolute inset-0 object-cover object-center w-full h-full transition-opacity duration-300 ease-in-out transform"
+                        />
+                    </figure>
+                    <div class="z-10 w-16 h-16 mx-auto grid-inset-0 animate-spin-fast"
+                        x-show="isLoading"
+                        x-transition:enter="transition ease-in duration-150"
+                        x-transition:enter-start="opacity-0"
+                        x-transition:enter-end="opacity-100"
+                        x-transition:leave="transition ease-out duration-150"
+                        x-transition:leave-start="opacity-100"
+                        x-transition:leave-end="opacity-0"
+            >
+                        {% include "img/loading.svg" %}
+                    </div>
+                </div>
 
-{# the image #}
-    <figure class="space-y-3 overflow-hidden rounded-sm grid-inset-0">
-        <img
-            src="../gallery/{{ filename }}.jpg"
-            alt="I vote because {{ reason }}"
-        />
-    </figure>
+                <h2 class="text-xl font-extrabold leading-tight text-center text-white uppercase font-display lg:text-3xl lg:text-gray">
+                    Share this graphic on social media:
+                </h2>
+                <ul class="grid w-full grid-cols-3 gap-3 lg:gap-4">
+                    <li class="flex flex-col">
+                        <a data-twitter-link
+                            title="Post image to Twitter"
+                            class="flex flex-col items-center justify-center px-12 py-4 space-y-2 text-center transform bg-white rounded-full shadow-md hover:-rotate-3 border-1-5 lg:border-2 text-gray"
+                            href=""
+                            target="_blank">
+                            <span class="block w-8 h-8">{%include "img/twitter.svg" %}</span>
+                            <span class="text-xl font-bold leading-none sr-only">Twitter</span>
+                        </a>
+                    </li>
+                    <li class="flex flex-col">
+                        <a data-facebook-link
+                            title="Post image to Facebook"
+                            class="flex flex-col items-center justify-center px-12 py-4 space-y-2 text-center transform bg-white rounded-full shadow-md hover:shadow-xl hover:rotate-3 border-1-5 lg:border-2 text-gray"
+                            href=""
+                            target="_blank">
+                            <span class="block w-8 h-8">{%include "img/facebook.svg" %}</span>
+                            <span class="text-xl font-bold leading-none sr-only">Facebook</span>
 
-{# the sharing contents #}
-    <div class="flex flex-col items-center justify-center invisible p-6 space-y-12 text-white transition-all duration-300 bg-opacity-50 opacity-0 bg-gray bg-blur group-hover:opacity-100 group-hover:visible grid-inset-0">
-        <h2 class="text-2xl leading-tight tracking-wide text-center uppercase">
-          Share your reason for voting on social:
-        </h2>
-
-        <ul class="flex space-x-6">
-            <li class="flex flex-col">
-                <h3 class="sr-only">Share image on Twitter</h3>
-                <a
-                    title="Post image to Twitter"
-                    class="w-16 h-16 p-4 transition-transform duration-150 transform bg-white rounded-full hover:shadow-lg text-gray hover:scale-105"
-                    href="https://twitter.com/home?status={{ site.permalink }}{{ url }}">
-                    <div class="w-full h-full">{%include "img/twitter.svg" %}</div>
-                </a>
-            </li>
-            <li class="flex flex-col">
-                <h3 class="sr-only">Share image on Facebook</h3>
-                <a
-                    title="Post image to Facebook"
-                    class="w-16 h-16 p-4 transition-transform duration-150 transform bg-white rounded-full hover:shadow-lg text-gray hover:scale-105"
-                    href="https://www.facebook.com/sharer/sharer.php?u={{site.permalink}}{{ url }}">
-                     <div class="w-full h-full">{%include "img/facebook.svg" %}</div>
-                </a>
-            </li>
-            <li class="flex flex-col">
-                <h3 class="sr-only">Download image</h3>
-                <a
-                    title="Download image"
-                    class="w-16 h-16 p-4 transition-transform duration-150 transform bg-white rounded-full hover:shadow-lg text-gray hover:scale-105"
-                    href="/gallery/{{ filename }}.jpg"
-                    download>
-                    <div class="w-full h-full">{%include "img/download.svg" %}</div>
-                </a>
-            </li>
-        </ul>
-    </div>
-</div>
-{% endmacro %}
+                        </a>
+                    </li>
+                    <li class="flex flex-col">
+                        <h3 class="sr-only">Download image</h3>
+                        <a data-download-link
+                            title="Download image"
+                            class="flex flex-col items-center justify-center px-12 py-4 space-y-2 text-center transform bg-white rounded-full shadow-md hover:shadow-xl hover:-rotate-3 border-1-5 lg:border-2 text-gray"
+                            href=""
+                            download>
+                            <span class="block w-8 h-8">{%include "img/download.svg" %}</span>
+                            <span class="text-xl font-bold leading-none sr-only">Download</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <button
+                @click="isOpen=false"
+                class="flex items-center justify-center px-4 py-4 mt-4 mr-4 space-x-2 transform bg-white rounded-full shadow-md hover:shadow-xl lg:hidden hover:-rotate-3 border-1-5 border-gray">
+                <span class="block w-6 h-6 text-gray">{% include "img/close.svg" %}</span>
+                <span class="text-xl font-bold leading-none">Return to choices</span>
+            </button>
+        </div>

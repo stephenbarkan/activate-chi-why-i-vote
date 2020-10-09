@@ -1,14 +1,32 @@
 ---
 layout: default
+description: This is my reason for voting. What's yours?
 ---
 
-    
-{% include "components/_nav-logo.njk" %}
-<div class="grid items-center grid-cols-1 gap-12 px-4 lg:grid-cols-2">
-    <h1 class="text-5xl font-extrabold leading-none tracking-tight text-center text-white uppercase lg:text-left font-display text-stroke sm:text-6xl lg:text-7xl xl:text-8xl">
-        <span class="text-blue">vote</span> for <span class="text-red">justice!</span>
-    </h1>
-    <div class="p-6 bg-white border-2 rounded-sm shadow-lg border-gray">
-        <img src="/gallery/{{possum.Filename}}.jpg" alt="">
+<div class="container my-12 space-y-6 lg:space-y-0">
+    <header class="flex flex-col items-center space-y-12 md:space-y-16">
+        {% include "components/_nav-logo.njk" %}
+        <h1 class="text-5xl font-extrabold leading-none tracking-tight text-center text-white uppercase md:hidden font-display text-stroke sm:text-6xl lg:text-7xl xl:text-8xl">
+            <span class="text-blue">Vote</span> for <span class="text-red">justice!</span>
+        </h1>
+        <div class="hidden w-full md:block">
+            {% include "img/justice.svg" %}
+        </div>
+    </header>
+        <div class="flex flex-col items-center space-y-12 md:space-y-16">
+        <div class="max-w-sm space-y-6 text-2xl leading-tight text-center md:max-w-2xl md:text-4xl">
+            <p>
+                The 2020 election is only days away. It's important to participate in for so many reasons. Your friend is voting because they want a president who will:
+            </p>
+            <p> 
+                <span class="font-bold">{{ reason.Reason | replace('!', '.')}}</span>
+            </p>
+        </div>
+        <a href="/"
+            class="block rounded-full lg:py-2 first:pt-0 last:pb-0 group">
+            <span class="flex items-center justify-center p-6 font-bold leading-none tracking-wide text-center uppercase transform bg-white rounded-full shadow-md text-md md:text-xl group-hover:shadow-xl text-gray border-1-5 border-gray lg:p-8 lg:border-2 font-display group-hover:rotate-3">
+                What's your reason?
+            </span>
+        </a>
     </div>
 </div>

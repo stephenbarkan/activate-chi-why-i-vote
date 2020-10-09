@@ -2,6 +2,7 @@
 var buttons = document.querySelectorAll("[data-button]");
 var badges = document.querySelectorAll("[data-badge]");
 var image = document.querySelector("[data-image]");
+var imageLoader = document.querySelector("[data-image-loader]");
 var sitePermalink = document.querySelector("body").getAttribute("data-permalink");
 var facebookButton = document.querySelector("[data-facebook-link]");
 var twitterButton = document.querySelector("[data-twitter-link]");
@@ -12,6 +13,9 @@ buttons.forEach(function (button) {
   var filename = button.getAttribute("data-filename");
   var url = "/gallery/".concat(filename, ".jpg");
   button.addEventListener("click", function () {
+    button.scrollIntoView({
+      behavior: "smooth"
+    });
     badges.forEach(function (badge) {
       badge.style.display = null;
     });
@@ -24,13 +28,18 @@ buttons.forEach(function (button) {
       });
     }
 
+    var loadingTimeout = window.setTimeout(function () {
+      imageLoader.setAttribute("x-data", "{isLoading: true}");
+    }, 750);
     image.classList.remove("opacity-100");
     image.classList.add("opacity-0");
-    window.setTimeout(function () {
+    var initTimeout = window.setTimeout(function () {
       image.setAttribute("src", url);
     }, 300);
     waitForImageToLoad(image).then(function () {
+      window.clearTimeout(loadingTimeout);
       window.setTimeout(function () {
+        imageLoader.setAttribute("x-data", "{isLoading: false}");
         image.classList.add("opacity-100");
       }, 150);
     });

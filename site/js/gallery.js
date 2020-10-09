@@ -2,6 +2,7 @@
 const buttons = document.querySelectorAll("[data-button]");
 const badges = document.querySelectorAll("[data-badge]");
 const image = document.querySelector("[data-image]");
+const imageLoader = document.querySelector("[data-image-loader]");
 const sitePermalink = document
   .querySelector("body")
   .getAttribute("data-permalink");
@@ -18,6 +19,10 @@ buttons.forEach((button) => {
   const url = `/gallery/${filename}.jpg`;
 
   button.addEventListener("click", function () {
+    button.scrollIntoView({
+      behavior: "smooth",
+    });
+
     badges.forEach((badge) => {
       badge.style.display = null;
     });
@@ -30,14 +35,21 @@ buttons.forEach((button) => {
       });
     }
 
+    const loadingTimeout = window.setTimeout(function () {
+      imageLoader.setAttribute("x-data", "{isLoading: true}");
+    }, 750);
+
     image.classList.remove("opacity-100");
     image.classList.add("opacity-0");
-    window.setTimeout(function () {
+
+    const initTimeout = window.setTimeout(function () {
       image.setAttribute("src", url);
     }, 300);
 
     waitForImageToLoad(image).then(() => {
+      window.clearTimeout(loadingTimeout);
       window.setTimeout(function () {
+        imageLoader.setAttribute("x-data", "{isLoading: false}");
         image.classList.add("opacity-100");
       }, 150);
     });

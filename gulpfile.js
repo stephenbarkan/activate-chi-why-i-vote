@@ -118,7 +118,10 @@ const minifyJS = (done) => {
  * Watch files
  */
 const watchFiles = (done) => {
-  watch(["site/*.njk", "site/includes/**/*.njk"], series(compileCSS));
+  watch(
+    ["site/*.njk", "site/includes/**/*.njk"],
+    series(compileCSS, compileJS)
+  );
   watch("./tailwind.config.js", series(compileCSS));
   watch("./site/css/**/*.css", series(compileCSS));
   watch("./site/js/**/*.js", series(compileJS));
@@ -152,7 +155,7 @@ const minifyCSSPreflight = (done) => {
  *
  * Always double check that everything is still working. If something isn't displaying correctly, it may be because you need to add it to the PurgeCSS whitelist.
  */
-exports.build = series(compileCSS, minifyCSSPreflight, minifyJS);
+exports.build = series(compileCSS, minifyCSSPreflight, compileJS, minifyJS);
 
 /**
  * [DEFAULT] task

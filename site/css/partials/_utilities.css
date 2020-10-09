@@ -17,3 +17,9 @@
 .bg-blur {
   backdrop-filter: blur(20px) saturate(1.5);
 }
+
+@screen lg {
+  .bg-blur {
+    backdrop-filter: none;
+  }
+}

@@ -1,5 +1,24 @@
 {% include "components/_html-head.njk" %}
 
-{{ content | safe }}
+
+<body data-permalink="{{site.permalink}}" class="flex flex-col min-h-screen antialiased leading-normal font-text text-gray text-default bg-yellow"
+style="background-image: url(/assets/film-grain.png); background-size: 500px; backround-repeat: repeat;"> 
+
+<div class="flex-1 md:mb-24">
+    {{ content | safe }}
+</div>
+
+<footer class="bottom-0 left-0 w-full md:fixed bg-yellow"
+style="background-image: url(/assets/film-grain.png); background-size: 500px; backround-repeat: repeat;">
+    <div class="container flex items-center justify-between py-3 text-xl font-bold border-t-2 sm:text-2xl border-gray">
+        <ul class="flex space-x-6">
+            <li><a class="hover:underline" href="/">Home</a></li>
+            <li><a class="hover:underline" href="/about">About<span class="hidden md:inline"> this website</span></a></li>
+        </ul>
+        <div class="flex items-center space-x-2">
+            <span class="hidden md:inline-block">A project by </span> <a href="https://activate-chi.net" class="flex-1 w-32 border-b-2 border-yellow hover:border-gray sm:w-40">{% include "img/activate-chi-logo.svg" %}</a>
+        </div>
+    </div>
+</footer>
 
 {% include "components/_html-foot.njk" %}
