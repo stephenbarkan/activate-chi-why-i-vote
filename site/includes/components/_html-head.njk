@@ -15,7 +15,9 @@
   <link rel="canonical" href="{{ site.permalink }}{{ page.url }}">
   <meta property="og:url" content="{{ site.permalink }}{{ page.url }}" />
 
+  <meta name="twitter:card" content="summary_large_image">
   <meta property="og:image" content="{% if share_image %} {{site.permalink}}/gallery/{{share_image}} {% else %} {{site.permalink}}/gallery/{{ page.url | replace('/reason', '') | replace('/', '') }}.jpg{% endif %}"/>
+  <meta property="twitter:image" content="{% if share_image %} {{site.permalink}}/gallery/{{share_image}} {% else %} {{site.permalink}}/gallery/{{ page.url | replace('/reason', '') | replace('/', '') }}.jpg{% endif %}"/>
 
   <meta property="og:type" content="{% if page_type %}{{ page_type }}{% else %}{{site.page_type}}{% endif %}" />
 
