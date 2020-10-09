@@ -19,7 +19,7 @@
 }
 
 @screen lg {
-  .bg-blur {
+  .no-blur {
     backdrop-filter: none;
   }
 }

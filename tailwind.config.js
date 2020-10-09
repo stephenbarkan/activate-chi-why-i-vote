@@ -46,6 +46,7 @@ module.exports = {
       },
       lineHeight: {
         tight: "1.15",
+        snug: "1.25",
       },
       zIndex: {
         "-1": "-1",

@@ -3530,7 +3530,7 @@ button:focus {
 }
 
 .leading-snug {
-  line-height: 1.375;
+  line-height: 1.25;
 }
 
 .leading-normal {
@@ -12340,7 +12340,7 @@ button:focus {
 }
 
 @media (min-width: 1024px) {
-  .bg-blur {
+  .no-blur {
     -webkit-backdrop-filter: none;
     backdrop-filter: none;
   }
@@ -15276,7 +15276,7 @@ button:focus {
   }
 
   .sm\:leading-snug {
-    line-height: 1.375;
+    line-height: 1.25;
   }
 
   .sm\:leading-normal {
@@ -26346,7 +26346,7 @@ button:focus {
   }
 
   .md\:leading-snug {
-    line-height: 1.375;
+    line-height: 1.25;
   }
 
   .md\:leading-normal {
@@ -37416,7 +37416,7 @@ button:focus {
   }
 
   .lg\:leading-snug {
-    line-height: 1.375;
+    line-height: 1.25;
   }
 
   .lg\:leading-normal {
@@ -48486,7 +48486,7 @@ button:focus {
   }
 
   .xl\:leading-snug {
-    line-height: 1.375;
+    line-height: 1.25;
   }
 
   .xl\:leading-normal {
