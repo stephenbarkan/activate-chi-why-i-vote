@@ -5,7 +5,6 @@ share_image: share-image.jpg
 ---
 
 {% import "components/_collection-link.njk" as collectionLink %}
-{% import "components/_image.njk" as image %}
 
 <div class="container relative grid grid-cols-1 row-gap-12 col-gap-24 py-12 lg:py-0 lg:grid-cols-7">
 
@@ -15,30 +14,27 @@ share_image: share-image.jpg
     </div>
 
     <main class="lg:col-span-3 lg:space-y-12 lg:py-12">
-        {# to create the padding #}
         <div class="invisible hidden lg:block">
             {% include "components/_nav-logo.njk" %}
         </div>
 
         <div
-            x-data="{isOpen : false}"
+            x-data="{modalOpen : false}"
             class="grid grid-cols-1 gap-3 lg:grid-cols-1 md:gap-4 lg:gap-0 md:grid-cols-2">
             {% for category in categories %}
                 {{ collectionLink.collectionLink(category) }}
             {% endfor %}
-            {# <button
-                @click="isOpen = true"
-                class="transform rounded-lg hover:rotate-3 text-red-light">
+            <button
+                data-all-above-link
+                @click="modalOpen = true"
+                class="transform rounded-lg hover:rotate-3">
                 <div class="pointer-events-none">
-                {{ collectionLink.collectionLink("All of the above!") }}
+                    {{ collectionLink.collectionLink("Honestly, all of them!") }}
                 </div>
             </button>
-            <template x-if="isOpen">
-                <div class="z-10">
-                    {{ image.image() }}
 
-                </div>
-            </template>  #}
+            {% include "components/_all-of-the-above-modal.njk" %}
+
         </div>
     </main>
 </div>  

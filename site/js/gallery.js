@@ -10,6 +10,12 @@ const sitePermalink = document
 const facebookButton = document.querySelector("[data-facebook-link]");
 const twitterButton = document.querySelector("[data-twitter-link]");
 const downloadButton = document.querySelector("[data-download-link]");
+const allAboveButton = document.querySelector("[data-all-above-link]");
+
+let copyButton;
+let copyInput;
+let copyConfirmation;
+let copiedTimeout;
 
 const facebookStem = "https://www.facebook.com/sharer/sharer.php?u=";
 const twitterStem =
@@ -60,3 +66,32 @@ buttons.forEach((button) => {
     facebookButton.setAttribute("href", facebookLink);
   });
 });
+
+allAboveButton.addEventListener("click", function () {
+  window.setTimeout(function () {
+    copyButton = document.querySelector("[data-copy-link]");
+    copyInput = document.querySelector("[data-link-input]");
+    copyConfirmation = document.querySelector("[data-copy-confirmation]");
+
+    copyButton.addEventListener("click", function (e) {
+      e.preventDefault();
+      copyInput.select();
+      copyInput.setSelectionRange(0, 99999);
+      document.execCommand("copy");
+
+      window.clearTimeout(copiedTimeout);
+      copyConfirmation.classList.remove("opacity-0");
+      copyConfirmation.classList.remove("hidden");
+      copiedTimeout = window.setTimeout(resetCopied, 2000);
+    });
+  }, 150);
+});
+
+const resetCopied = function () {
+  copyConfirmation.classList.add("opacity-0");
+  copyConfirmation.classList.add("duration-500");
+  copyConfirmation.addEventListener("transitionend", () => {
+    copyConfirmation.classList.add("hidden");
+    copyConfirmation.classList.remove("opacity-0");
+  });
+};

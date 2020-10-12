@@ -1,0 +1,11 @@
+{% macro shareButton(icon, tooltip, dataattr, href, download=false) %}
+    <a
+        {{dataattr}}
+        title="{{tooltip}}"
+        class="flex flex-col items-center justify-center px-12 py-4 space-y-2 text-center transform bg-white rounded-full shadow-md hover:shadow-xl hover:rotate-3 border-1-5 lg:border-2 text-gray"
+        href="{{href}}"
+        {% if download %}download{% else %}target="_blank"{% endif %}>
+        <span class="block w-8 h-8">{% include icon %}</span>
+        
+    </a>
+{% endmacro %} 

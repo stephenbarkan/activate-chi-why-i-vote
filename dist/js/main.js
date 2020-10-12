@@ -7,6 +7,11 @@ var sitePermalink = document.querySelector("body").getAttribute("data-permalink"
 var facebookButton = document.querySelector("[data-facebook-link]");
 var twitterButton = document.querySelector("[data-twitter-link]");
 var downloadButton = document.querySelector("[data-download-link]");
+var allAboveButton = document.querySelector("[data-all-above-link]");
+var copyButton;
+var copyInput;
+var copyConfirmation;
+var copiedTimeout;
 var facebookStem = "https://www.facebook.com/sharer/sharer.php?u=";
 var twitterStem = "https://twitter.com/intent/tweet?text=Who's Next? We get to decide. This is why I'm voting.&url=";
 var twitterCaboose = "&hashtags=activatechi,vote2020,whyivote";
@@ -48,3 +53,29 @@ buttons.forEach(function (button) {
     facebookButton.setAttribute("href", facebookLink);
   });
 });
+allAboveButton.addEventListener("click", function () {
+  window.setTimeout(function () {
+    copyButton = document.querySelector("[data-copy-link]");
+    copyInput = document.querySelector("[data-link-input]");
+    copyConfirmation = document.querySelector("[data-copy-confirmation]");
+    copyButton.addEventListener("click", function (e) {
+      e.preventDefault();
+      copyInput.select();
+      copyInput.setSelectionRange(0, 99999);
+      document.execCommand("copy");
+      window.clearTimeout(copiedTimeout);
+      copyConfirmation.classList.remove("opacity-0");
+      copyConfirmation.classList.remove("hidden");
+      copiedTimeout = window.setTimeout(resetCopied, 2000);
+    });
+  }, 150);
+});
+
+var resetCopied = function resetCopied() {
+  copyConfirmation.classList.add("opacity-0");
+  copyConfirmation.classList.add("duration-500");
+  copyConfirmation.addEventListener("transitionend", function () {
+    copyConfirmation.classList.add("hidden");
+    copyConfirmation.classList.remove("opacity-0");
+  });
+};

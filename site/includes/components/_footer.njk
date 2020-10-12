@@ -1,10 +1,12 @@
+
+
 <footer class="bottom-0 left-0 w-full lg:fixed bg-yellow"
-    x-data="{aboutOpen: false}"
+    x-data="{modalOpen: false}"
     style="background-image: url(/assets/film-grain.png); background-size: 500px; backround-repeat: repeat;">
     <div class="container flex items-center justify-between py-3 text-xl font-bold leading-none border-t-2 sm:text-2xl border-gray">
         <ul class="flex space-x-6">
             <li><a class="hover:underline" href="/">Home</a></li>
-            <li><button class="font-bold hover:underline" @click="aboutOpen=true">
+            <li><button class="font-bold hover:underline" @click="modalOpen=true">
                 About<span class="hidden md:inline"> this website</span>
             </button></li>
         </ul>
@@ -12,50 +14,6 @@
             <span class="hidden md:inline-block">A project by </span> <a href="https://activate-chi.net" class="flex-1 w-32 border-b-2 border-yellow hover:border-gray sm:w-40">{% include "img/activate-chi-logo.svg" %}</a>
         </div>
     </div>
-    <template x-if="aboutOpen">
-        <div 
-        class="fixed inset-0 z-20 flex items-center justify-center py-24"
-        x-transition:enter="transition ease-in duration-150"
-        x-transition:enter-start="opacity-0"
-        x-transition:enter-end="opacity-100"
-        x-transition:leave="transition ease-out duration-150"
-        x-transition:leave-start="opacity-100"
-        x-transition:leave-end="opacity-0"
-        >
-            <dialog open class="container flex flex-col items-center justify-center pointer-events-none bg-none">
-                <div class="z-10 overflow-auto bg-white rounded-lg shadow-xl pointer-events-auto border-1-5 md:border-2 text-gray border-gray"
-                style="max-height: calc(100vh - 2rem)">
-                    <div class="max-w-lg px-6 py-8 space-y-6 md:px-8 md:py-12 md:space-y-8">
-                        <header>
-                            <h2 class="text-xl font-extrabold leading-tight text-center uppercase font-display md:text-3xl">About this website</h2>
-                        </header>
-                        <main class="space-y-6 text-xl tracking-wide leading-comfy sm:text-2xl">
-                            <p>
-                            <b>“Who’s Next?”</b> is  ACTIVATE:CHI’s initiative to increase voter turnout in Chicago.  We want people to choose at the ballot box who’s next to make a change in their community, in Chicago, and in the nation!
-                            </p>
-                            <p>
-                            This website is part of that campaign, to encourage people to share their reason for voting in the 2020 Presidential election. In an election where there are so many reasons to participate, we believe it's important for voters to think about what they want from a President, and inspire others to engage in the process.
-                            </p>
-                            <p>
-                                Site design by <a class="underline" target="_blank" href="https://stephenbarkan.com">Stephen Barkan</a>
-                            </p>
-                        </main>
-                        
-                        <footer>
-                            <button
-                                @click="aboutOpen=false"
-                                class="flex items-center justify-center px-4 py-4 mx-auto space-x-2 transform bg-white rounded-full shadow-md hover:shadow-xl hover:-rotate-3 border-1-5 border-gray">
-                                <span class="block w-6 h-6 text-gray">{% include "img/close.svg" %}</span>
-                                <span class="text-xl font-bold leading-none">Return</span>
-                            </button>
-                        </footer>
-                    </div>
-                </div>
-            </dialog>
-        <div
-            @click="aboutOpen = false"
-            class="absolute inset-0 bg-opacity-75 bg-gray bg-blur"></div>
-        </div>
-    </template>
+            {% include "components/_about-modal.njk" %}
     <div class="origin-center sr-only animate-spin"></div>
 </footer>

@@ -1,0 +1,45 @@
+{% extends "components/_modal.njk" %}
+
+{% block content %}
+    <div class="relative max-w-lg px-6 py-8 space-y-6 md:px-8 md:py-12 md:space-y-8">
+        <main class="space-y-6 text-xl tracking-wide leading-comfy sm:text-2xl">
+            <p class="tracking-normal">
+                <b>We know, it's hard to choose just one reason!</b>
+            </p>
+            <p>
+                But sharing a specific reason online will have a bigger impact on others and is a more meaningful statement about what you value!
+            </p>
+            <p>
+                If you just want to bring awareness to the site, please share the website link with the buttons below.
+            </p>
+
+            <h2 class="text-xl leading-tight text-center uppercase font-display">Share it online!</h2>
+
+            <ul class="grid w-full grid-cols-3 gap-3 lg:gap-4">
+                {% import "components/_shareButton.njk" as shareButton %}
+
+                <li>
+                    {{ shareButton.shareButton(icon='img/copy.svg', tooltip='Copy link to clipboard', dataattr='data-copy-link', href='') }}
+                    <input data-link-input type="text" class="sr-only" value="{{site.permalink}}">
+                </li>
+                <li>
+                    {{ shareButton.shareButton(icon='img/twitter.svg', tooltip='Post image to Twitter', href='https://twitter.com/intent/tweet?text=Who%27s%20Next?%20We%20get%20to%20decide.%20This%20is%20why%20I%27m%20voting.&url=https://vote.activate-chi.org/&hashtags=activatechi,vote2020,whyivote') }}
+                </li>
+                <li>
+                    {{ shareButton.shareButton(icon='img/facebook.svg', tooltip='Post image to Facebook', href='https://www.facebook.com/sharer/sharer.php?u=https://vote.activate-chi.org/') }}
+                </li>
+            </ul>
+        </main>
+            <div class="absolute inset-0 flex items-center justify-center mt-0 transform pointer-events-none -rotate-15">
+        <div
+            data-copy-confirmation
+            class="hidden w-64 max-w-full transition-opacity"
+            style="filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px 4px 6px)">
+                <div class="animate-slam">
+                    {% include "img/link-copied.svg" %}
+                </div>
+        </div>
+    </div>
+    </div>
+
+{% endblock %}

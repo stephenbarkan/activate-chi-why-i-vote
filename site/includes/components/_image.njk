@@ -1,4 +1,5 @@
-{% macro image(change) %}        
+{% macro image(change) %} 
+
     <div 
         x-show="isOpen"
         x-transition:enter="transition ease-in duration-150"
@@ -38,46 +39,25 @@
                 </div>
             </div>
 
-            <h2 class="text-xl font-extrabold leading-tight text-center text-white {% if change%}lg:text-gray{% endif %} uppercase font-display lg:text-3xl ">
+            <h2 class="text-xl leading-tight text-center text-white {% if change%}lg:text-gray{% endif %} uppercase font-display lg:text-3xl ">
                 Share this graphic on social media:
             </h2>
             <ul class="grid w-full grid-cols-3 gap-3 lg:gap-4">
-                <li class="flex flex-col">
-                    <a data-twitter-link
-                        title="Post image to Twitter"
-                        class="flex flex-col items-center justify-center px-12 py-4 space-y-2 text-center transform bg-white rounded-full shadow-md hover:-rotate-3 border-1-5 lg:border-2 text-gray"
-                        href=""
-                        target="_blank">
-                        <span class="block w-8 h-8">{%include "img/twitter.svg" %}</span>
-                        <span class="text-xl font-bold leading-none sr-only">Twitter</span>
-                    </a>
-                </li>
-                <li class="flex flex-col">
-                    <a data-facebook-link
-                        title="Post image to Facebook"
-                        class="flex flex-col items-center justify-center px-12 py-4 space-y-2 text-center transform bg-white rounded-full shadow-md hover:shadow-xl hover:rotate-3 border-1-5 lg:border-2 text-gray"
-                        href=""
-                        target="_blank">
-                        <span class="block w-8 h-8">{%include "img/facebook.svg" %}</span>
-                        <span class="text-xl font-bold leading-none sr-only">Facebook</span>
+                {% import "components/_shareButton.njk" as shareButton %}
 
-                    </a>
+                <li>
+                    {{ shareButton.shareButton(icon='img/twitter.svg', tooltip='Post image to Twitter', dataattr='data-twitter-link', href='') }}
                 </li>
-                <li class="flex flex-col">
-                    <h3 class="sr-only">Download image</h3>
-                    <a data-download-link
-                        title="Download image"
-                        class="flex flex-col items-center justify-center px-12 py-4 space-y-2 text-center transform bg-white rounded-full shadow-md hover:shadow-xl hover:-rotate-3 border-1-5 lg:border-2 text-gray"
-                        href=""
-                        download>
-                        <span class="block w-8 h-8">{%include "img/download.svg" %}</span>
-                        <span class="text-xl font-bold leading-none sr-only">Download</span>
-                    </a>
+                <li>
+                    {{ shareButton.shareButton(icon='img/facebook.svg', tooltip='Post image to Facebook', dataattr='data-facebook-link', href='') }}
+                </li>
+                <li>
+                    {{ shareButton.shareButton(icon='img/download.svg', tooltip='Download image', dataattr='data-download-link', href='', download=true) }}
                 </li>
             </ul>
             <button
                 @click="isOpen=false"
-                class="flex items-center justify-center px-4 py-4 mt-4 mr-4 space-x-2 transform bg-white rounded-full shadow-md hover:shadow-xl {%if change %}lg:hidden{% endif %} hover:rotate-3 border-1-5 border-gray">
+                class="flex items-center justify-center px-4 py-4 mt-4 mr-4 space-x-2 transform bg-white rounded-full shadow-md hover:shadow-xl {%if change %}lg:hidden{% endif %} hover:rotate-3 md:border-2 border-1-5 border-gray">
                 <span class="block w-6 h-6 text-gray">{% include "img/close.svg" %}</span>
                 <span class="text-xl font-bold leading-none">Return to choices</span>
             </button>
