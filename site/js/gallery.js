@@ -21,10 +21,6 @@ buttons.forEach((button) => {
   const url = `/gallery/${filename}.jpg`;
 
   button.addEventListener("click", function () {
-    button.scrollIntoView({
-      behavior: "smooth",
-    });
-
     badges.forEach((badge) => {
       badge.style.display = null;
     });

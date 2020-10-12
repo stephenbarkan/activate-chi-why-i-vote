@@ -14,9 +14,6 @@ buttons.forEach(function (button) {
   var filename = button.getAttribute("data-filename");
   var url = "/gallery/".concat(filename, ".jpg");
   button.addEventListener("click", function () {
-    button.scrollIntoView({
-      behavior: "smooth"
-    });
     badges.forEach(function (badge) {
       badge.style.display = null;
     });

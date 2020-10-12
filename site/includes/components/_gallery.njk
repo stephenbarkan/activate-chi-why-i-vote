@@ -1,3 +1,6 @@
+{% import "components/_image.njk" as image %}
+
+
 {% macro gallery(category) %}
 <div x-data="{isOpen: false}"
     :class="{'overflow-hidden': !isOpen }">
@@ -10,7 +13,7 @@
             {% endfor %}
         </div>
         
-        {% include "components/_image.njk" %}
+        {{ image.image(true) }}
     </div>
 </div>
 {% endmacro %} 

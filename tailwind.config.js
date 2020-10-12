@@ -10,10 +10,11 @@ module.exports = {
       },
     },
     colors: {
-      gray: "#353535",
+      gray: "#303030",
       white: "#FCF9F7",
       yellow: "#FFB906",
       red: "#F86849",
+      "red-light": "#E85E40",
       blue: "#8CCBD9",
       none: "transparent",
     },
@@ -47,6 +48,7 @@ module.exports = {
       lineHeight: {
         tight: "1.15",
         snug: "1.25",
+        comfy: "1.4",
       },
       zIndex: {
         "-1": "-1",
@@ -74,7 +76,7 @@ module.exports = {
         },
       },
       animation: {
-        slam: "slam .15s .35s ease-out both",
+        slam: "slam .15s .15s ease-out both",
         spin: "spin 30s linear infinite",
         "spin-fast": "spin 1s linear infinite",
       },

@@ -1,37 +1,72 @@
 [
   {
-    "Reason": "Ensure the U.S. achieves a 100% clean energy economy and reaches net-zero emissions no later than 2050!",
+    "Reason": "ensure the U.S. achieves a 100% clean energy economy and reaches net-zero emissions no later than 2050!",
     "Link": "https://joebiden.com/climate-plan/",
     "Filename": "clean-energy-2050"
   },
   {
-    "Reason": "Accelerate the deployment of electric vehicles!",
+    "Reason": "accelerate the deployment of electric vehicles!",
     "Link": "https://joebiden.com/climate-plan/",
     "Filename": "electric-vehicles"
   },
   {
-    "Reason": "Mitigate the climate impact of urban sprawl!",
+    "Reason": "mitigate the climate impact of urban sprawl!",
     "Link": "https://joebiden.com/climate-plan/",
     "Filename": "climate-impact-urban"
   },
   {
-    "Reason": "Develop a plan to ensure that America has the cleanest, safest, and fastest rail system in the world!",
+    "Reason": "develop a plan to ensure that America has the cleanest, safest, and fastest rail system in the world!",
     "Link": "https://joebiden.com/climate-plan/",
     "Filename": "clean-rail-system"
   },
   {
-    "Reason": "Require public companies to disclose climate risks and the greenhouse gas emissions in their operations and supply chains!",
+    "Reason": "require public companies to disclose climate risks and the greenhouse gas emissions in their operations and supply chains!",
     "Link": "https://joebiden.com/climate-plan/",
     "Filename": "disclose-climate-risks"
   },
   {
-    "Reason": "Conserve 30% of America’s lands and waters by 2030!",
+    "Reason": "conserve 30% of America’s lands and waters by 2030!",
     "Link": "https://joebiden.com/climate-plan/",
     "Filename": "conserve-water"
   },
   {
-    "Reason": "Accelerate the development and deployment of carbon capture sequestration technology!",
+    "Reason": "accelerate the development and deployment of carbon capture sequestration technology!",
     "Link": "https://joebiden.com/climate-plan/",
     "Filename": "accelerate-carbon-capture-tech"
+  },
+  {
+    "Reason": "apply a carbon adjustment fee against countries that are failing to meet their climate and environmental obligations",
+    "Link": "https://joebiden.com/made-in-america/",
+    "Filename": "carbon-adjustment-fee"
+  },
+  {
+    "Reason": "stand up to the abuse of power by polluters who disproportionately harm communities of color and low-income communities!",
+    "Link": "https://joebiden.com/climate-plan/",
+    "Filename": "stop-abuse-of-power-climate"
+  },
+  {
+    "Reason": "requiring aggressive methane pollution limits for new and existing oil and gas operations!",
+    "Link": "https://joebiden.com/climate-plan/",
+    "Filename": "methane-pollution-limits"
+  },
+  {
+    "Reason": "using the Federal government procurement system – which spends $500 billion every year – to drive towards 100% clean energy and zero-emissions vehicles",
+    "Link": "https://joebiden.com/climate-plan/",
+    "Filename": "100-percent-clean-energy-vehicles"
+  },
+  {
+    "Reason": "establish a new agency to target affordable, game-changing technologies to help America achieve our 100% clean energy target!",
+    "Link": "https://joebiden.com/climate-plan/",
+    "Filename": "advanced-research-projects-agency-climate"
+  },
+  {
+    "Reason": "partner with farmers and ranchers so that better agriculture practices and deployment of digesters generate new sources of revenues!",
+    "Link": "https://joebiden.com/climate-plan/",
+    "Filename": "better-agriculture-practices"
+  },
+  {
+    "Reason": "enact a national strategy to develop a low-carbon manufacturing sector in every state!",
+    "Link": "https://joebiden.com/climate-plan/",
+    "Filename": "national-strategy-low-carbon-manufacturing"
   }
 ]
