@@ -1,11 +1,10 @@
 // write js code here
+const body = document.querySelector("body");
 const buttons = document.querySelectorAll("[data-button]");
 const badges = document.querySelectorAll("[data-badge]");
 const image = document.querySelector("[data-image]");
 const imageLoader = document.querySelector("[data-image-loader]");
-const sitePermalink = document
-  .querySelector("body")
-  .getAttribute("data-permalink");
+const sitePermalink = body.getAttribute("data-permalink");
 
 const facebookButton = document.querySelector("[data-facebook-link]");
 const twitterButton = document.querySelector("[data-twitter-link]");
@@ -95,3 +94,23 @@ const resetCopied = function () {
     copyConfirmation.classList.remove("opacity-0");
   });
 };
+
+// const modalOpen = document.querySelectorAll(`[data-modal-open]`);
+// let modalClose;
+
+// modalOpen.forEach((button) => {
+//   button.addEventListener("click", () => {
+//     body.classList.add("h-screen", "overflow-hidden");
+//     window.setTimeout(function () {
+//       modalClose = document.querySelectorAll(`[data-modal-close]`);
+//       if (modalClose) {
+//         modalClose.forEach((button) => {
+//           button.addEventListener("click", () => {
+//             console.log("hello");
+//             body.classList.remove("h-screen", "overflow-hidden");
+//           });
+//         });
+//       }
+//     }, 150);
+//   });
+// });

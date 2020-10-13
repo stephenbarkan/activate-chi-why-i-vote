@@ -1,14 +1,19 @@
 <template x-if="modalOpen">
     <div x-show="modalOpen"
-        class="fixed inset-0 z-20 flex flex-col items-center justify-center"
+        class="fixed top-0 left-0 z-20 flex flex-col items-center justify-center w-full h-full"
         x-transition:enter="transition ease-in duration-150"
         x-transition:enter-start="opacity-0"
         x-transition:enter-end="opacity-100"
         x-transition:leave="transition ease-out duration-150"
         x-transition:leave-start="opacity-100"
         x-transition:leave-end="opacity-0">
-        <div class="flex flex-col items-center h-full overflow-auto">
-            <dialog open class="container relative flex flex-col items-center justify-center space-y-4 bg-none">
+        <div 
+            data-modal-close
+            class="w-full h-full overflow-auto bg-opacity-75 bg-gray bg-blur">
+            <div 
+                @click.away="modalOpen = false"
+                open
+                class="relative flex flex-col items-center w-auto px-4 py-4 space-y-4 bg-none lg:py-12">
                 <div class="z-10 bg-white rounded-lg shadow-xl border-1-5 md:border-2 text-gray border-gray">
                     {% block content %}
 
@@ -16,18 +21,19 @@
                 </div>
                 <div class="z-10">
                     <button
+                        data-modal-close
                         @click="modalOpen=false"
                         class="flex items-center justify-center px-4 py-4 mx-auto space-x-2 transform bg-white rounded-full shadow-md hover:shadow-xl hover:-rotate-3 border-1-5 md:border-2 border-gray">
                         <span class="block w-6 h-6 text-gray">{% include "img/close.svg" %}</span>
                         <span class="text-xl font-bold leading-none">Return</span>
                     </button>
                 </div>  
-            </dialog>
+            </div>
 
         </div>
-        <div
+        {# <div
             @click="modalOpen = false"
             class="absolute inset-0 bg-opacity-75 bg-gray bg-blur"></div>
-        </div>
+        </div> #}
     </div>
 </template>

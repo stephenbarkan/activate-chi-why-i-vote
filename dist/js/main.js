@@ -1,9 +1,10 @@
 // write js code here
+var body = document.querySelector("body");
 var buttons = document.querySelectorAll("[data-button]");
 var badges = document.querySelectorAll("[data-badge]");
 var image = document.querySelector("[data-image]");
 var imageLoader = document.querySelector("[data-image-loader]");
-var sitePermalink = document.querySelector("body").getAttribute("data-permalink");
+var sitePermalink = body.getAttribute("data-permalink");
 var facebookButton = document.querySelector("[data-facebook-link]");
 var twitterButton = document.querySelector("[data-twitter-link]");
 var downloadButton = document.querySelector("[data-download-link]");
@@ -78,4 +79,21 @@ var resetCopied = function resetCopied() {
     copyConfirmation.classList.add("hidden");
     copyConfirmation.classList.remove("opacity-0");
   });
-};
+}; // const modalOpen = document.querySelectorAll(`[data-modal-open]`);
+// let modalClose;
+// modalOpen.forEach((button) => {
+//   button.addEventListener("click", () => {
+//     body.classList.add("h-screen", "overflow-hidden");
+//     window.setTimeout(function () {
+//       modalClose = document.querySelectorAll(`[data-modal-close]`);
+//       if (modalClose) {
+//         modalClose.forEach((button) => {
+//           button.addEventListener("click", () => {
+//             console.log("hello");
+//             body.classList.remove("h-screen", "overflow-hidden");
+//           });
+//         });
+//       }
+//     }, 150);
+//   });
+// });
