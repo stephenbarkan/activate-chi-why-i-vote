@@ -47,8 +47,8 @@ buttons.forEach(function (button) {
         image.classList.add("opacity-100");
       }, 150);
     });
-    var twitterLink = "".concat(twitterStem).concat(sitePermalink, "/reason/").concat(filename).concat(twitterCaboose);
-    var facebookLink = "".concat(facebookStem).concat(sitePermalink, "/reason/").concat(filename);
+    var twitterLink = "".concat(twitterStem).concat(sitePermalink, "/reason/").concat(filename, "/").concat(twitterCaboose);
+    var facebookLink = "".concat(facebookStem).concat(sitePermalink, "/reason/").concat(filename, "/");
     downloadButton.setAttribute("href", url);
     twitterButton.setAttribute("href", twitterLink);
     facebookButton.setAttribute("href", facebookLink);
