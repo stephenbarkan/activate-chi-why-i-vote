@@ -57,7 +57,7 @@ buttons.forEach((button) => {
       }, 150);
     });
 
-    const twitterLink = `${twitterStem}${sitePermalink}/reason/${filename}${twitterCaboose}/`;
+    const twitterLink = `${twitterStem}${sitePermalink}/reason/${filename}/${twitterCaboose}`;
     const facebookLink = `${facebookStem}${sitePermalink}/reason/${filename}/`;
 
     downloadButton.setAttribute("href", url);
