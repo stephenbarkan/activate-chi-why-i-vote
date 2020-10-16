@@ -23,7 +23,7 @@ const twitterCaboose = "&hashtags=activatechi,vote2020,whyivote";
 
 buttons.forEach((button) => {
   const filename = button.getAttribute("data-filename");
-  const url = `/gallery/${filename}.jpg`;
+  const url = `/gallery/ig/${filename}.jpg`;
 
   button.addEventListener("click", function () {
     badges.forEach((badge) => {

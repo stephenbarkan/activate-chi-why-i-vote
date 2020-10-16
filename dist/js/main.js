@@ -18,7 +18,7 @@ var twitterStem = "https://twitter.com/intent/tweet?text=Who's Next? We get to d
 var twitterCaboose = "&hashtags=activatechi,vote2020,whyivote";
 buttons.forEach(function (button) {
   var filename = button.getAttribute("data-filename");
-  var url = "/gallery/".concat(filename, ".jpg");
+  var url = "/gallery/ig/".concat(filename, ".jpg");
   button.addEventListener("click", function () {
     badges.forEach(function (badge) {
       badge.style.display = null;
